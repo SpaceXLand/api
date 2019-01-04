@@ -1,0 +1,52 @@
+{
+  "name": "spacex-graphql-api",
+  "version": "1.0.0",
+  "description": "Open Source GraphQL API for rocket, core, capsule, pad, and launch data",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "nodemon",
+    "generate": "gql-gen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swcarlosrj/SpaceX-Land"
+  },
+  "keywords": [
+    "graphql",
+    "typescript",
+    "spacex",
+    "mongodb"
+  ],
+  "author": "Carlos Rufo",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/swcarlosrj/SpaceX-Land/issues"
+  },
+  "homepage": "https://github.com/swcarlosrj/SpaceX-Land",
+  "dependencies": {
+    "apollo-server": "^2.2.2",
+    "graphql": "^14.0.2",
+    "lodash": "^4.17.11",
+    "lower-case": "^1.1.4",
+    "moment": "^2.23.0",
+    "mongodb": "^3.1.10"
+  },
+  "devDependencies": {
+    "babel-runtime": "^6.26.0",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-mongodb": "^1.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-security": "^1.4.0",
+    "graphql-code-generator": "^0.15.0",
+    "graphql-codegen-typescript-common": "^0.15.0",
+    "graphql-codegen-typescript-resolvers": "^0.15.0",
+    "graphql-codegen-typescript-server": "^0.15.0",
+    "nodemon": "^1.18.9",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.1"
+  }
+}

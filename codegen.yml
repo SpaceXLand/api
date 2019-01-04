@@ -1,0 +1,13 @@
+schema: src/schema/**/*.ts
+overwrite: true
+watch: true
+require:
+  - ts-node/register
+generates:
+  ./src/types/types.d.ts:
+    config:
+      contextType: ./context#MyContext
+    plugins:
+      - typescript-common
+      - typescript-server
+      - typescript-resolvers
