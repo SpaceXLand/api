@@ -9,7 +9,9 @@ import { getDB } from './context/db';
     context: { ...context, db },
     engine: {
       apiKey: process.env.ENGINE_API_KEY
-    }
+    },
+    playground: true,
+    introspection: true
   });
 
   server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
