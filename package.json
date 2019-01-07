@@ -42,7 +42,7 @@
     "eslint-plugin-jest": "22.1.2",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-mongodb": "1.0.0",
-    "eslint-plugin-react": "7.12.2",
+    "eslint-plugin-react": "7.12.3",
     "eslint-plugin-security": "1.4.0",
     "graphql-code-generator": "0.15.2",
     "graphql-codegen-typescript-common": "0.15.2",
