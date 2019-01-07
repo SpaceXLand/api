@@ -35,19 +35,19 @@
     "typescript": "^3.2.1"
   },
   "devDependencies": {
-    "babel-runtime": "^6.26.0",
-    "eslint": "^5.11.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^22.1.2",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-mongodb": "^1.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-security": "^1.4.0",
-    "graphql-code-generator": "^0.15.0",
-    "graphql-codegen-typescript-common": "^0.15.0",
-    "graphql-codegen-typescript-resolvers": "^0.15.0",
-    "graphql-codegen-typescript-server": "^0.15.0",
-    "nodemon": "^1.18.9"
+    "babel-runtime": "6.26.0",
+    "eslint": "5.11.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "22.1.2",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-mongodb": "1.0.0",
+    "eslint-plugin-react": "7.12.2",
+    "eslint-plugin-security": "1.4.0",
+    "graphql-code-generator": "0.15.2",
+    "graphql-codegen-typescript-common": "0.15.2",
+    "graphql-codegen-typescript-resolvers": "0.15.2",
+    "graphql-codegen-typescript-server": "0.15.2",
+    "nodemon": "1.18.9"
   }
 }

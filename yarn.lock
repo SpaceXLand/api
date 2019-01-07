@@ -564,7 +564,7 @@ axobject-query@^2.0.1:
   dependencies:
     ast-types-flow "0.0.7"
 
-babel-runtime@^6.26.0:
+babel-runtime@6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -1233,7 +1233,7 @@ eslint-config-airbnb-base@^13.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-airbnb@^17.1.0:
+eslint-config-airbnb@17.1.0:
   version "17.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-17.1.0.tgz#3964ed4bc198240315ff52030bf8636f42bc4732"
   dependencies:
@@ -1255,7 +1255,7 @@ eslint-module-utils@^2.2.0:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-import@^2.14.0:
+eslint-plugin-import@2.14.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.14.0.tgz#6b17626d2e3e6ad52cfce8807a845d15e22111a8"
   dependencies:
@@ -1270,11 +1270,11 @@ eslint-plugin-import@^2.14.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-jest@^22.1.2:
+eslint-plugin-jest@22.1.2:
   version "22.1.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.1.2.tgz#1ea36cc3faedbdb788e702ca633d635ca14e91e8"
 
-eslint-plugin-jsx-a11y@^6.1.2:
+eslint-plugin-jsx-a11y@6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.1.2.tgz#69bca4890b36dcf0fe16dd2129d2d88b98f33f88"
   dependencies:
@@ -1287,13 +1287,13 @@ eslint-plugin-jsx-a11y@^6.1.2:
     has "^1.0.3"
     jsx-ast-utils "^2.0.1"
 
-eslint-plugin-mongodb@^1.0.0:
+eslint-plugin-mongodb@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-mongodb/-/eslint-plugin-mongodb-1.0.0.tgz#bbff863dde435664c6bde3bcc51a1c760eedba79"
   dependencies:
     yerror "^2.1.0"
 
-eslint-plugin-react@^7.11.1:
+eslint-plugin-react@7.12.2:
   version "7.12.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.12.2.tgz#95a4d8117011787824625ea57be9e38401d33548"
   dependencies:
@@ -1305,7 +1305,7 @@ eslint-plugin-react@^7.11.1:
     prop-types "^15.6.2"
     resolve "^1.9.0"
 
-eslint-plugin-security@^1.4.0:
+eslint-plugin-security@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-security/-/eslint-plugin-security-1.4.0.tgz#d4f314484a80b1b613b8c8886e84f52efe1526c2"
   dependencies:
@@ -1330,7 +1330,7 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^5.11.0:
+eslint@5.11.1:
   version "5.11.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.11.1.tgz#8deda83db9f354bf9d3f53f9677af7e0e13eadda"
   dependencies:
@@ -1734,7 +1734,7 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
 
-graphql-code-generator@^0.15.0:
+graphql-code-generator@0.15.2:
   version "0.15.2"
   resolved "https://registry.yarnpkg.com/graphql-code-generator/-/graphql-code-generator-0.15.2.tgz#7ffe5b70e8f442c9dffe608f1e013984813783db"
   dependencies:
@@ -1787,7 +1787,7 @@ graphql-codegen-plugin-helpers@0.15.2:
     graphql-codegen-core "0.15.2"
     import-from "2.1.0"
 
-graphql-codegen-typescript-common@0.15.2, graphql-codegen-typescript-common@^0.15.0:
+graphql-codegen-typescript-common@0.15.2:
   version "0.15.2"
   resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-common/-/graphql-codegen-typescript-common-0.15.2.tgz#9368ca0d9a4f2938823d3dc80b364cd337c686df"
   dependencies:
@@ -1796,14 +1796,14 @@ graphql-codegen-typescript-common@0.15.2, graphql-codegen-typescript-common@^0.1
     graphql-codegen-core "0.15.2"
     graphql-codegen-plugin-helpers "0.15.2"
 
-graphql-codegen-typescript-resolvers@^0.15.0:
+graphql-codegen-typescript-resolvers@0.15.2:
   version "0.15.2"
   resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-resolvers/-/graphql-codegen-typescript-resolvers-0.15.2.tgz#bdf22a5f98388e41b918e68a568aca1a92a9dd79"
   dependencies:
     graphql-codegen-plugin-helpers "0.15.2"
     graphql-codegen-typescript-common "0.15.2"
 
-graphql-codegen-typescript-server@^0.15.0:
+graphql-codegen-typescript-server@0.15.2:
   version "0.15.2"
   resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-server/-/graphql-codegen-typescript-server-0.15.2.tgz#dcf6000f22d1f66c7f2d9991fd37372efc61d74b"
   dependencies:
@@ -2774,7 +2774,7 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-nodemon@^1.18.9:
+nodemon@1.18.9:
   version "1.18.9"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.18.9.tgz#90b467efd3b3c81b9453380aeb2a2cba535d0ead"
   dependencies:
