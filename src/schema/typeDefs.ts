@@ -3,7 +3,6 @@ import capsule from './capsule/typeDefs';
 import core from './core/typeDefs';
 import dragon from './dragon/typeDefs';
 import history from './history/typeDefs';
-import info from './info/typeDefs';
 import landpad from './landpad/typeDefs';
 import launch from './launch/typeDefs';
 import launchpad from './launchpad/typeDefs';
@@ -19,7 +18,6 @@ const typeDefs = [
   core,
   dragon,
   history,
-  info,
   landpad,
   launch,
   launchpad,

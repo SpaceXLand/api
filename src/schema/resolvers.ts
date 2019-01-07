@@ -3,7 +3,6 @@ import capsule from './capsule/resolvers';
 import core from './core/resolvers';
 import dragon from './dragon/resolvers';
 import history from './history/resolvers';
-import info from './info/resolvers';
 import landpad from './landpad/resolvers';
 import launch from './launch/resolvers';
 import launchpad from './launchpad/resolvers';
@@ -18,7 +17,6 @@ const resolvers = merge(
   core,
   dragon,
   history,
-  info,
   landpad,
   launch,
   launchpad,

@@ -315,10 +315,6 @@ export interface Query {
 
   history?: Maybe<History>;
 
-  info?: Maybe<Info>;
-
-  api?: Maybe<Api>;
-
   landpads?: Maybe<(Maybe<Landpad>)[]>;
 
   landpad?: Maybe<Landpad>;
@@ -864,60 +860,6 @@ export interface LaunchLinks {
   flickr_images?: Maybe<(Maybe<string>)[]>;
 }
 
-export interface Info {
-  _id?: Maybe<ObjectId>;
-
-  name?: Maybe<string>;
-
-  founder?: Maybe<string>;
-
-  founded?: Maybe<number>;
-
-  employees?: Maybe<number>;
-
-  vehicles?: Maybe<number>;
-
-  launch_sites?: Maybe<number>;
-
-  test_sites?: Maybe<number>;
-
-  ceo?: Maybe<string>;
-
-  cto?: Maybe<string>;
-
-  coo?: Maybe<string>;
-
-  cto_propulsion?: Maybe<string>;
-
-  valuation?: Maybe<number>;
-
-  headquarters?: Maybe<Address>;
-
-  summary?: Maybe<string>;
-}
-
-export interface Address {
-  address?: Maybe<string>;
-
-  city?: Maybe<string>;
-
-  state?: Maybe<string>;
-}
-
-export interface Api {
-  project_name?: Maybe<string>;
-
-  version?: Maybe<string>;
-
-  project_link?: Maybe<string>;
-
-  organization?: Maybe<string>;
-
-  organization_link?: Maybe<string>;
-
-  description?: Maybe<string>;
-}
-
 export interface Landpad {
   _id?: Maybe<ObjectId>;
 
@@ -1116,6 +1058,14 @@ export interface CoreMission {
   flight?: Maybe<number>;
 }
 
+export interface Address {
+  address?: Maybe<string>;
+
+  city?: Maybe<string>;
+
+  state?: Maybe<string>;
+}
+
 // ====================================================
 // Arguments
 // ====================================================
@@ -1236,9 +1186,6 @@ export interface HistoriesQueryArgs {
 export interface HistoryQueryArgs {
   history_id: number;
 
-  id?: Maybe<boolean>;
-}
-export interface InfoQueryArgs {
   id?: Maybe<boolean>;
 }
 export interface LandpadsQueryArgs {
@@ -1483,10 +1430,6 @@ export namespace QueryResolvers {
     >;
 
     history?: HistoryResolver<Maybe<History>, TypeParent, Context>;
-
-    info?: InfoResolver<Maybe<Info>, TypeParent, Context>;
-
-    api?: ApiResolver<Maybe<Api>, TypeParent, Context>;
 
     landpads?: LandpadsResolver<Maybe<(Maybe<Landpad>)[]>, TypeParent, Context>;
 
@@ -1734,20 +1677,6 @@ export namespace QueryResolvers {
     id?: Maybe<boolean>;
   }
 
-  export type InfoResolver<
-    R = Maybe<Info>,
-    Parent = {},
-    Context = MyContext
-  > = Resolver<R, Parent, Context, InfoArgs>;
-  export interface InfoArgs {
-    id?: Maybe<boolean>;
-  }
-
-  export type ApiResolver<
-    R = Maybe<Api>,
-    Parent = {},
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
   export type LandpadsResolver<
     R = Maybe<(Maybe<Landpad>)[]>,
     Parent = {},
@@ -3936,193 +3865,6 @@ export namespace LaunchLinksResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
-export namespace InfoResolvers {
-  export interface Resolvers<Context = MyContext, TypeParent = Info> {
-    _id?: _IdResolver<Maybe<ObjectId>, TypeParent, Context>;
-
-    name?: NameResolver<Maybe<string>, TypeParent, Context>;
-
-    founder?: FounderResolver<Maybe<string>, TypeParent, Context>;
-
-    founded?: FoundedResolver<Maybe<number>, TypeParent, Context>;
-
-    employees?: EmployeesResolver<Maybe<number>, TypeParent, Context>;
-
-    vehicles?: VehiclesResolver<Maybe<number>, TypeParent, Context>;
-
-    launch_sites?: LaunchSitesResolver<Maybe<number>, TypeParent, Context>;
-
-    test_sites?: TestSitesResolver<Maybe<number>, TypeParent, Context>;
-
-    ceo?: CeoResolver<Maybe<string>, TypeParent, Context>;
-
-    cto?: CtoResolver<Maybe<string>, TypeParent, Context>;
-
-    coo?: CooResolver<Maybe<string>, TypeParent, Context>;
-
-    cto_propulsion?: CtoPropulsionResolver<Maybe<string>, TypeParent, Context>;
-
-    valuation?: ValuationResolver<Maybe<number>, TypeParent, Context>;
-
-    headquarters?: HeadquartersResolver<Maybe<Address>, TypeParent, Context>;
-
-    summary?: SummaryResolver<Maybe<string>, TypeParent, Context>;
-  }
-
-  export type _IdResolver<
-    R = Maybe<ObjectId>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type NameResolver<
-    R = Maybe<string>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type FounderResolver<
-    R = Maybe<string>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type FoundedResolver<
-    R = Maybe<number>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type EmployeesResolver<
-    R = Maybe<number>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type VehiclesResolver<
-    R = Maybe<number>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type LaunchSitesResolver<
-    R = Maybe<number>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type TestSitesResolver<
-    R = Maybe<number>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type CeoResolver<
-    R = Maybe<string>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type CtoResolver<
-    R = Maybe<string>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type CooResolver<
-    R = Maybe<string>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type CtoPropulsionResolver<
-    R = Maybe<string>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type ValuationResolver<
-    R = Maybe<number>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type HeadquartersResolver<
-    R = Maybe<Address>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type SummaryResolver<
-    R = Maybe<string>,
-    Parent = Info,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace AddressResolvers {
-  export interface Resolvers<Context = MyContext, TypeParent = Address> {
-    address?: AddressResolver<Maybe<string>, TypeParent, Context>;
-
-    city?: CityResolver<Maybe<string>, TypeParent, Context>;
-
-    state?: StateResolver<Maybe<string>, TypeParent, Context>;
-  }
-
-  export type AddressResolver<
-    R = Maybe<string>,
-    Parent = Address,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type CityResolver<
-    R = Maybe<string>,
-    Parent = Address,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type StateResolver<
-    R = Maybe<string>,
-    Parent = Address,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace ApiResolvers {
-  export interface Resolvers<Context = MyContext, TypeParent = Api> {
-    project_name?: ProjectNameResolver<Maybe<string>, TypeParent, Context>;
-
-    version?: VersionResolver<Maybe<string>, TypeParent, Context>;
-
-    project_link?: ProjectLinkResolver<Maybe<string>, TypeParent, Context>;
-
-    organization?: OrganizationResolver<Maybe<string>, TypeParent, Context>;
-
-    organization_link?: OrganizationLinkResolver<
-      Maybe<string>,
-      TypeParent,
-      Context
-    >;
-
-    description?: DescriptionResolver<Maybe<string>, TypeParent, Context>;
-  }
-
-  export type ProjectNameResolver<
-    R = Maybe<string>,
-    Parent = Api,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type VersionResolver<
-    R = Maybe<string>,
-    Parent = Api,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type ProjectLinkResolver<
-    R = Maybe<string>,
-    Parent = Api,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type OrganizationResolver<
-    R = Maybe<string>,
-    Parent = Api,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type OrganizationLinkResolver<
-    R = Maybe<string>,
-    Parent = Api,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type DescriptionResolver<
-    R = Maybe<string>,
-    Parent = Api,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-}
-
 export namespace LandpadResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Landpad> {
     _id?: _IdResolver<Maybe<ObjectId>, TypeParent, Context>;
@@ -4852,6 +4594,32 @@ export namespace CoreMissionResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
+export namespace AddressResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = Address> {
+    address?: AddressResolver<Maybe<string>, TypeParent, Context>;
+
+    city?: CityResolver<Maybe<string>, TypeParent, Context>;
+
+    state?: StateResolver<Maybe<string>, TypeParent, Context>;
+  }
+
+  export type AddressResolver<
+    R = Maybe<string>,
+    Parent = Address,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type CityResolver<
+    R = Maybe<string>,
+    Parent = Address,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type StateResolver<
+    R = Maybe<string>,
+    Parent = Address,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
 /** Directs the executor to skip this field or fragment when the `if` argument is true. */
 export type SkipDirectiveResolver<Result> = DirectiveResolverFn<
   Result,
@@ -4929,9 +4697,6 @@ export interface IResolvers {
   LaunchTelemetry?: LaunchTelemetryResolvers.Resolvers;
   LaunchSite?: LaunchSiteResolvers.Resolvers;
   LaunchLinks?: LaunchLinksResolvers.Resolvers;
-  Info?: InfoResolvers.Resolvers;
-  Address?: AddressResolvers.Resolvers;
-  Api?: ApiResolvers.Resolvers;
   Landpad?: LandpadResolvers.Resolvers;
   Location?: LocationResolvers.Resolvers;
   Launchpad?: LaunchpadResolvers.Resolvers;
@@ -4942,6 +4707,7 @@ export interface IResolvers {
   Mutation?: MutationResolvers.Resolvers;
   Subscription?: SubscriptionResolvers.Resolvers;
   CoreMission?: CoreMissionResolvers.Resolvers;
+  Address?: AddressResolvers.Resolvers;
   Date?: GraphQLScalarType;
   ObjectId?: GraphQLScalarType;
 }
