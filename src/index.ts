@@ -16,23 +16,26 @@ import { getDB } from './context/db';
     schema,
     context: ctx,
     engine: {
-      apiKey: process.env.ENGINE_API_KEY,
+      apiKey: process.env.ENGINE_API_KEY
     },
     playground: true,
-    introspection: true,
+    introspection: true
   });
 
   graphql.applyMiddleware({
-    app,
+    app
   });
 
   app.use(
-    '/api',
+    '/rest',
     sofa({
       schema,
-      context: ctx,
-    }),
+      context: ctx
+    })
   );
+  app.get('/', (_, res) => {
+    res.redirect(graphql.graphqlPath);
+  });
 
   app.listen({ port }, () => {
     console.log(`🚀  Server ready http://localhost:${port}`);
