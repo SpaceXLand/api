@@ -627,7 +627,7 @@ export interface Rocket {
 
   mass?: Maybe<Mass>;
 
-  payload_weights?: Maybe<RocketPayloadWeight>;
+  payload_weights?: Maybe<(Maybe<RocketPayloadWeight>)[]>;
 
   first_stage?: Maybe<RocketFirstStage>;
 
@@ -747,7 +747,7 @@ export interface LaunchRocketFirstStageCore {
 
   landing_type?: Maybe<string>;
 
-  landing_vehicle?: Maybe<boolean>;
+  landing_vehicle?: Maybe<string>;
 }
 
 export interface LaunchRocketSecondStage {
@@ -2888,7 +2888,7 @@ export namespace RocketResolvers {
     mass?: MassResolver<Maybe<Mass>, TypeParent, Context>;
 
     payload_weights?: PayloadWeightsResolver<
-      Maybe<RocketPayloadWeight>,
+      Maybe<(Maybe<RocketPayloadWeight>)[]>,
       TypeParent,
       Context
     >;
@@ -2990,7 +2990,7 @@ export namespace RocketResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context>;
   export type PayloadWeightsResolver<
-    R = Maybe<RocketPayloadWeight>,
+    R = Maybe<(Maybe<RocketPayloadWeight>)[]>,
     Parent = Rocket,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
@@ -3382,7 +3382,7 @@ export namespace LaunchRocketFirstStageCoreResolvers {
     landing_type?: LandingTypeResolver<Maybe<string>, TypeParent, Context>;
 
     landing_vehicle?: LandingVehicleResolver<
-      Maybe<boolean>,
+      Maybe<string>,
       TypeParent,
       Context
     >;
@@ -3434,7 +3434,7 @@ export namespace LaunchRocketFirstStageCoreResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context>;
   export type LandingVehicleResolver<
-    R = Maybe<boolean>,
+    R = Maybe<string>,
     Parent = LaunchRocketFirstStageCore,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
