@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server';
+import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
@@ -26,8 +26,8 @@ const typeDefs = gql`
     nationality: String
     manufacturer: String
     payload_type: String
-    payload_mass_kg: Int
-    payload_mass_lbs: Int
+    payload_mass_kg: Float
+    payload_mass_lbs: Float
     orbit: String
     orbit_params: PayloadOrbitParams
   }
@@ -35,8 +35,8 @@ const typeDefs = gql`
   type PayloadOrbitParams {
     reference_system: String
     regime: String
-    longitude: Int
-    lifespan_years: Int
+    longitude: Float
+    lifespan_years: Float
     epoch: Date
     mean_motion: Float
     raan: Float
@@ -67,7 +67,7 @@ const typeDefs = gql`
     apoapsis_km: Float
     inclination_deg: Float
     period_min: Float
-    lifespan_years: Int
+    lifespan_years: Float
     epoch: Date
     mean_motion: Float
     raan: Float

@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server';
+import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
@@ -20,7 +20,7 @@ const typeDefs = gql`
     height: Distance
     diameter: Distance
     mass: Mass
-    payload_weights: RocketPayloadWeight
+    payload_weights: [RocketPayloadWeight]
     first_stage: RocketFirstStage
     second_stage: RocketSecondStage
     engines: RocketEngines
@@ -76,7 +76,7 @@ const typeDefs = gql`
     propellant_2: String
     thrust_sea_level: Force
     thrust_vacuum: Force
-    thrust_to_weight: Int
+    thrust_to_weight: Float
   }
 
   type RocketLandingLegs {

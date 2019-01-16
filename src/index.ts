@@ -1,12 +1,20 @@
-import { ApolloServer } from 'apollo-server';
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
+import sofa, { OpenAPI } from 'sofa-api';
 import schema from './schema';
-import context from './context';
+import ctx from './context';
 import { getDB } from './context/db';
+
 (async () => {
+  const port = process.env.PORT || 4000;
+  const app = express();
+
   const db = await getDB();
-  const server = new ApolloServer({
+  const context = { ...ctx, db };
+
+  const graphql = new ApolloServer({
     schema,
-    context: { ...context, db },
+    context,
     engine: {
       apiKey: process.env.ENGINE_API_KEY
     },
@@ -14,7 +22,37 @@ import { getDB } from './context/db';
     introspection: true
   });
 
-  server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
-    console.log(`🚀  Server ready at ${url}`);
+  graphql.applyMiddleware({
+    app
+  });
+
+  const openApi = OpenAPI({
+    schema,
+    info: {
+      title: 'SpaceX Rest API'
+    }
+  });
+
+  app.use(
+    '/rest',
+    sofa({
+      schema,
+      context,
+      onRoute(info) {
+        openApi.addRoute(info);
+      }
+    })
+  );
+
+  // graphql api by default
+  app.get('/', (_, res) => {
+    res.redirect(graphql.graphqlPath);
+  });
+
+  // writes every recorder route
+  openApi.save('./swagger.yml');
+
+  app.listen({ port }, () => {
+    console.log(`🚀  Server ready http://localhost:${port}`);
   });
 })();

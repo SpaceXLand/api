@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server';
+import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
@@ -81,7 +81,7 @@ const typeDefs = gql`
     land_success: Boolean
     landing_intent: Boolean
     landing_type: String
-    landing_vehicle: Boolean
+    landing_vehicle: String
   }
   type LaunchRocketSecondStage {
     block: Int
@@ -171,7 +171,7 @@ const typeDefs = gql`
     apoapsis_km: Float
     inclination_deg: Float
     period_min: Float
-    lifespan_years: Int
+    lifespan_years: Float
     epoch: Date
     mean_motion: Float
     raan: Float
