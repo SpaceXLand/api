@@ -531,7 +531,7 @@ export interface History {
 
   details?: Maybe<string>;
 
-  links?: Maybe<(Maybe<Link>)[]>;
+  links?: Maybe<Link>;
 
   flight?: Maybe<Launch>;
 }
@@ -1025,7 +1025,7 @@ export interface Ship {
 
   course_deg?: Maybe<number>;
 
-  position?: Maybe<Location>;
+  position?: Maybe<ShipLocation>;
 
   successful_landings?: Maybe<number>;
 
@@ -1036,6 +1036,12 @@ export interface Ship {
   url?: Maybe<string>;
 
   image?: Maybe<string>;
+}
+
+export interface ShipLocation {
+  latitude?: Maybe<number>;
+
+  longitude?: Maybe<number>;
 }
 
 export interface ShipMission {
@@ -2552,7 +2558,7 @@ export namespace HistoryResolvers {
 
     details?: DetailsResolver<Maybe<string>, TypeParent, Context>;
 
-    links?: LinksResolver<Maybe<(Maybe<Link>)[]>, TypeParent, Context>;
+    links?: LinksResolver<Maybe<Link>, TypeParent, Context>;
 
     flight?: FlightResolver<Maybe<Launch>, TypeParent, Context>;
   }
@@ -2588,7 +2594,7 @@ export namespace HistoryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context>;
   export type LinksResolver<
-    R = Maybe<(Maybe<Link>)[]>,
+    R = Maybe<Link>,
     Parent = History,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
@@ -4385,7 +4391,7 @@ export namespace ShipResolvers {
 
     course_deg?: CourseDegResolver<Maybe<number>, TypeParent, Context>;
 
-    position?: PositionResolver<Maybe<Location>, TypeParent, Context>;
+    position?: PositionResolver<Maybe<ShipLocation>, TypeParent, Context>;
 
     successful_landings?: SuccessfulLandingsResolver<
       Maybe<number>,
@@ -4501,7 +4507,7 @@ export namespace ShipResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context>;
   export type PositionResolver<
-    R = Maybe<Location>,
+    R = Maybe<ShipLocation>,
     Parent = Ship,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
@@ -4528,6 +4534,25 @@ export namespace ShipResolvers {
   export type ImageResolver<
     R = Maybe<string>,
     Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace ShipLocationResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = ShipLocation> {
+    latitude?: LatitudeResolver<Maybe<number>, TypeParent, Context>;
+
+    longitude?: LongitudeResolver<Maybe<number>, TypeParent, Context>;
+  }
+
+  export type LatitudeResolver<
+    R = Maybe<number>,
+    Parent = ShipLocation,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type LongitudeResolver<
+    R = Maybe<number>,
+    Parent = ShipLocation,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
 }
@@ -4703,6 +4728,7 @@ export interface IResolvers {
   Mission?: MissionResolvers.Resolvers;
   Roadster?: RoadsterResolvers.Resolvers;
   Ship?: ShipResolvers.Resolvers;
+  ShipLocation?: ShipLocationResolvers.Resolvers;
   ShipMission?: ShipMissionResolvers.Resolvers;
   Mutation?: MutationResolvers.Resolvers;
   Subscription?: SubscriptionResolvers.Resolvers;

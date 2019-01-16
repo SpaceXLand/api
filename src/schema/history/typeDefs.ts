@@ -20,7 +20,7 @@ const typeDefs = gql`
     event_date_utc: Date
     event_date_unix: Date
     details: String
-    links: [Link]
+    links: Link
   }
 
   input HistoryFind {

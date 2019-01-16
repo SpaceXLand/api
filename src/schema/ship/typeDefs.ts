@@ -30,14 +30,19 @@ const typeDefs = gql`
     year_built: Int
     home_port: String
     status: String
-    speed_kn: Int
+    speed_kn: Float
     course_deg: Int
-    position: Location
+    position: ShipLocation
     successful_landings: Int
     attempted_landings: Int
     missions: [ShipMission]
     url: String
     image: String
+  }
+
+  type ShipLocation {
+    latitude: Float
+    longitude: Float
   }
 
   type ShipMission {
