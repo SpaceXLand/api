@@ -1,5 +1,6 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
+import sofa from 'sofa-api';
 import schema from './schema';
 import context from './context';
 import { getDB } from './context/db';
@@ -24,6 +25,14 @@ import { getDB } from './context/db';
   graphql.applyMiddleware({
     app,
   });
+
+  app.use(
+    '/api',
+    sofa({
+      schema,
+      context: ctx,
+    }),
+  );
 
   app.listen({ port: process.env.PORT || 4000 }, () => {
     console.log(`🚀  Server ready http://localhost:${port}`);
