@@ -2,7 +2,7 @@ import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import sofa, { OpenAPI } from 'sofa-api';
 import schema from './schema';
-import context from './context';
+import ctx from './context';
 import { getDB } from './context/db';
 
 (async () => {
@@ -10,11 +10,11 @@ import { getDB } from './context/db';
   const app = express();
 
   const db = await getDB();
-  const ctx = { ...context, db };
+  const context = { ...ctx, db };
 
   const graphql = new ApolloServer({
     schema,
-    context: ctx,
+    context,
     engine: {
       apiKey: process.env.ENGINE_API_KEY
     },
@@ -37,12 +37,14 @@ import { getDB } from './context/db';
     '/rest',
     sofa({
       schema,
-      context: ctx,
+      context,
       onRoute(info) {
         openApi.addRoute(info);
       }
     })
   );
+
+  // graphql api by default
   app.get('/', (_, res) => {
     res.redirect(graphql.graphqlPath);
   });
