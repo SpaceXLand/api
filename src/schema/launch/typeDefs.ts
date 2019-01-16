@@ -171,7 +171,7 @@ const typeDefs = gql`
     apoapsis_km: Float
     inclination_deg: Float
     period_min: Float
-    lifespan_years: Int
+    lifespan_years: Float
     epoch: Date
     mean_motion: Float
     raan: Float
