@@ -76,7 +76,7 @@ const typeDefs = gql`
     propellant_2: String
     thrust_sea_level: Force
     thrust_vacuum: Force
-    thrust_to_weight: Int
+    thrust_to_weight: Float
   }
 
   type RocketLandingLegs {
