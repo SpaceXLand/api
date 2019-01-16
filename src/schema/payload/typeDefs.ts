@@ -26,8 +26,8 @@ const typeDefs = gql`
     nationality: String
     manufacturer: String
     payload_type: String
-    payload_mass_kg: Int
-    payload_mass_lbs: Int
+    payload_mass_kg: Float
+    payload_mass_lbs: Float
     orbit: String
     orbit_params: PayloadOrbitParams
   }
@@ -35,7 +35,7 @@ const typeDefs = gql`
   type PayloadOrbitParams {
     reference_system: String
     regime: String
-    longitude: Int
+    longitude: Float
     lifespan_years: Int
     epoch: Date
     mean_motion: Float

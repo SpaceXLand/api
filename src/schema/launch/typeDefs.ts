@@ -81,7 +81,7 @@ const typeDefs = gql`
     land_success: Boolean
     landing_intent: Boolean
     landing_type: String
-    landing_vehicle: Boolean
+    landing_vehicle: String
   }
   type LaunchRocketSecondStage {
     block: Int

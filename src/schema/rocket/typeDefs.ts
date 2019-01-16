@@ -20,7 +20,7 @@ const typeDefs = gql`
     height: Distance
     diameter: Distance
     mass: Mass
-    payload_weights: RocketPayloadWeight
+    payload_weights: [RocketPayloadWeight]
     first_stage: RocketFirstStage
     second_stage: RocketSecondStage
     engines: RocketEngines
