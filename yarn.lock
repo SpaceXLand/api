@@ -3540,9 +3540,9 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-sofa-api@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/sofa-api/-/sofa-api-0.1.0.tgz#a175159683a9f65b099cf3c9534b97e5176e8911"
+sofa-api@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/sofa-api/-/sofa-api-0.1.2.tgz#6c7bb2bcdbb2a06db31ec3273d8e445b7d30038e"
   dependencies:
     change-case "3.0.2"
     yamljs "0.3.0"
