@@ -1,2 +1,2 @@
 # api
-SpaxeX Land API
+SpaceX Land API
