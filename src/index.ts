@@ -4,6 +4,8 @@ import sofa, { OpenAPI } from 'sofa-api';
 import schema from './schema';
 import ctx from './context';
 import { getDB } from './context/db';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from '../swagger.json';
 
 (async () => {
   const port = process.env.PORT || 4000;
@@ -50,7 +52,10 @@ import { getDB } from './context/db';
   });
 
   // writes every recorder route
-  openApi.save('./swagger.yml');
+  openApi.save('./swagger.json');
+
+  // expose rest docs
+  app.use('/rest', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
   app.listen({ port }, () => {
     console.log(`🚀  Server ready http://localhost:${port}`);

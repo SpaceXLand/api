@@ -1,0 +1,3087 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SpaceX Rest API"
+  },
+  "paths": {
+    "/empty": {
+      "get": {
+        "operationId": "emptyQuery",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/capsules": {
+      "get": {
+        "operationId": "capsulesQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CapsulesFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Capsule"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/capsules-past": {
+      "get": {
+        "operationId": "capsulesPastQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CapsulesFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Capsule"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/capsules-upcoming": {
+      "get": {
+        "operationId": "capsulesUpcomingQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CapsulesFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Capsule"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/capsule/:id": {
+      "get": {
+        "operationId": "capsuleQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "capsule_serial",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Capsule"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cores": {
+      "get": {
+        "operationId": "coresQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CoresFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Core"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cores-past": {
+      "get": {
+        "operationId": "coresPastQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CoresFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Core"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cores-upcoming": {
+      "get": {
+        "operationId": "coresUpcomingQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CoresFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Core"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/core/:id": {
+      "get": {
+        "operationId": "coreQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "core_serial",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Core"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dragons": {
+      "get": {
+        "operationId": "dragonsQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Dragon"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dragon/:id": {
+      "get": {
+        "operationId": "dragonQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "capsule",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dragon"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/histories": {
+      "get": {
+        "operationId": "historiesQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/HistoryFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/History"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/history/:id": {
+      "get": {
+        "operationId": "historyQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "history_id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/History"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/landpads": {
+      "get": {
+        "operationId": "landpadsQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Landpad"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/landpad/:id": {
+      "get": {
+        "operationId": "landpadQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "landpad_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Landpad"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launches": {
+      "get": {
+        "operationId": "launchesQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LaunchFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Launch"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launches-past": {
+      "get": {
+        "operationId": "launchesPastQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LaunchFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Launch"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launches-upcoming": {
+      "get": {
+        "operationId": "launchesUpcomingQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LaunchFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Launch"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launch/:id": {
+      "get": {
+        "operationId": "launchQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "flight_number",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Launch"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launch-latest/:id": {
+      "get": {
+        "operationId": "launchLatestQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Launch"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launch-next/:id": {
+      "get": {
+        "operationId": "launchNextQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Launch"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launchpads": {
+      "get": {
+        "operationId": "launchpadsQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Launchpad"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launchpad/:id": {
+      "get": {
+        "operationId": "launchpadQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pad",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Launchpad"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/missions": {
+      "get": {
+        "operationId": "missionsQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/MissionsFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mission"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mission/:id": {
+      "get": {
+        "operationId": "missionQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "mission_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mission"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payloads": {
+      "get": {
+        "operationId": "payloadsQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/PayloadsFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Payload"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payload/:id": {
+      "get": {
+        "operationId": "payloadQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "payload_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payload"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/roadster/:id": {
+      "get": {
+        "operationId": "roadsterQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roadster"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rockets": {
+      "get": {
+        "operationId": "rocketsQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rocket"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rocket/:id": {
+      "get": {
+        "operationId": "rocketQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "rocket",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rocket"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ships": {
+      "get": {
+        "operationId": "shipsQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/ShipsFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ship"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ship/:id": {
+      "get": {
+        "operationId": "shipQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ship_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ship"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Query": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_empty": {
+            "type": "string"
+          },
+          "capsules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Capsule"
+            }
+          },
+          "capsulesPast": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Capsule"
+            }
+          },
+          "capsulesUpcoming": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Capsule"
+            }
+          },
+          "capsule": {
+            "$ref": "#/components/schemas/Capsule"
+          },
+          "cores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Core"
+            }
+          },
+          "coresPast": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Core"
+            }
+          },
+          "coresUpcoming": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Core"
+            }
+          },
+          "core": {
+            "$ref": "#/components/schemas/Core"
+          },
+          "dragons": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Dragon"
+            }
+          },
+          "dragon": {
+            "$ref": "#/components/schemas/Dragon"
+          },
+          "histories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/History"
+            }
+          },
+          "history": {
+            "$ref": "#/components/schemas/History"
+          },
+          "landpads": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Landpad"
+            }
+          },
+          "landpad": {
+            "$ref": "#/components/schemas/Landpad"
+          },
+          "launches": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Launch"
+            }
+          },
+          "launchesPast": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Launch"
+            }
+          },
+          "launchesUpcoming": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Launch"
+            }
+          },
+          "launch": {
+            "$ref": "#/components/schemas/Launch"
+          },
+          "launchLatest": {
+            "$ref": "#/components/schemas/Launch"
+          },
+          "launchNext": {
+            "$ref": "#/components/schemas/Launch"
+          },
+          "launchpads": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Launchpad"
+            }
+          },
+          "launchpad": {
+            "$ref": "#/components/schemas/Launchpad"
+          },
+          "missions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Mission"
+            }
+          },
+          "mission": {
+            "$ref": "#/components/schemas/Mission"
+          },
+          "payloads": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payload"
+            }
+          },
+          "payload": {
+            "$ref": "#/components/schemas/Payload"
+          },
+          "roadster": {
+            "$ref": "#/components/schemas/Roadster"
+          },
+          "rockets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rocket"
+            }
+          },
+          "rocket": {
+            "$ref": "#/components/schemas/Rocket"
+          },
+          "ships": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ship"
+            }
+          },
+          "ship": {
+            "$ref": "#/components/schemas/Ship"
+          }
+        }
+      },
+      "Capsule": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "capsule_serial": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "original_launch": {
+            "type": "object"
+          },
+          "missions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CapsuleMission"
+            }
+          },
+          "landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string"
+          },
+          "reuse_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "capsule": {
+            "$ref": "#/components/schemas/Dragon"
+          }
+        }
+      },
+      "CapsuleMission": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "flight": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Dragon": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "crew_capacity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sidewall_angle_deg": {
+            "type": "number",
+            "format": "float"
+          },
+          "orbit_duration_yr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dry_mass_kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dry_mass_lb": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "first_flight": {
+            "type": "string"
+          },
+          "heat_shield": {
+            "$ref": "#/components/schemas/DragonHeatShield"
+          },
+          "thrusters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DragonThrust"
+            }
+          },
+          "launch_payload_mass": {
+            "$ref": "#/components/schemas/Mass"
+          },
+          "launch_payload_vol": {
+            "$ref": "#/components/schemas/Volume"
+          },
+          "return_payload_mass": {
+            "$ref": "#/components/schemas/Mass"
+          },
+          "return_payload_vol": {
+            "$ref": "#/components/schemas/Volume"
+          },
+          "pressurized_capsule": {
+            "$ref": "#/components/schemas/DragonPressurizedCapsule"
+          },
+          "trunk": {
+            "$ref": "#/components/schemas/DragonTrunk"
+          },
+          "height_w_trunk": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "diameter": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "wikipedia": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "DragonHeatShield": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "material": {
+            "type": "string"
+          },
+          "size_meters": {
+            "type": "number",
+            "format": "float"
+          },
+          "temp_degrees": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dev_partner": {
+            "type": "string"
+          }
+        }
+      },
+      "DragonThrust": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pods": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fuel_1": {
+            "type": "string"
+          },
+          "fuel_2": {
+            "type": "string"
+          },
+          "thrust": {
+            "$ref": "#/components/schemas/Force"
+          }
+        }
+      },
+      "Force": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "kN": {
+            "type": "number",
+            "format": "float"
+          },
+          "lbf": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "Mass": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lb": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Volume": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "cubic_meters": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cubic_feet": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "DragonPressurizedCapsule": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "payload_volume": {
+            "$ref": "#/components/schemas/Volume"
+          }
+        }
+      },
+      "DragonTrunk": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "trunk_volume": {
+            "$ref": "#/components/schemas/Volume"
+          },
+          "cargo": {
+            "$ref": "#/components/schemas/DragonTrunkCargo"
+          }
+        }
+      },
+      "DragonTrunkCargo": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "solar_array": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unpressurized_cargo": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Distance": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "meters": {
+            "type": "number",
+            "format": "float"
+          },
+          "feet": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "Core": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "core_serial": {
+            "type": "string"
+          },
+          "block": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string"
+          },
+          "original_launch": {
+            "type": "object"
+          },
+          "missions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CapsuleMission"
+            }
+          },
+          "reuse_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rtls_attempts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rtls_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asds_attempts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asds_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "water_landing": {
+            "type": "boolean"
+          }
+        }
+      },
+      "History": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "event_date_utc": {
+            "type": "object"
+          },
+          "event_date_unix": {
+            "type": "object"
+          },
+          "details": {
+            "type": "string"
+          },
+          "links": {
+            "$ref": "#/components/schemas/Link"
+          },
+          "flight": {
+            "$ref": "#/components/schemas/Launch"
+          }
+        }
+      },
+      "Link": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "reddit": {
+            "type": "string"
+          },
+          "article": {
+            "type": "string"
+          },
+          "wikipedia": {
+            "type": "string"
+          }
+        }
+      },
+      "Launch": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "flight_number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mission_name": {
+            "type": "string"
+          },
+          "mission_id": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "upcoming": {
+            "type": "boolean"
+          },
+          "launch_year": {
+            "type": "string"
+          },
+          "launch_date_unix": {
+            "type": "object"
+          },
+          "launch_date_utc": {
+            "type": "object"
+          },
+          "launch_date_local": {
+            "type": "object"
+          },
+          "is_tentative": {
+            "type": "boolean"
+          },
+          "tentative_max_precision": {
+            "type": "string"
+          },
+          "rocket": {
+            "$ref": "#/components/schemas/LaunchRocket"
+          },
+          "ships": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "telemetry": {
+            "$ref": "#/components/schemas/LaunchTelemetry"
+          },
+          "launch_site": {
+            "$ref": "#/components/schemas/LaunchSite"
+          },
+          "launch_success": {
+            "type": "boolean"
+          },
+          "links": {
+            "$ref": "#/components/schemas/LaunchLinks"
+          },
+          "details": {
+            "type": "string"
+          },
+          "static_fire_date_utc": {
+            "type": "object"
+          },
+          "static_fire_date_unix": {
+            "type": "object"
+          }
+        }
+      },
+      "LaunchRocket": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "rocket": {
+            "$ref": "#/components/schemas/Rocket"
+          },
+          "rocket_name": {
+            "type": "string"
+          },
+          "rocket_type": {
+            "type": "string"
+          },
+          "first_stage": {
+            "$ref": "#/components/schemas/LaunchRocketFirstStage"
+          },
+          "second_stage": {
+            "$ref": "#/components/schemas/LaunchRocketSecondStage"
+          },
+          "fairings": {
+            "$ref": "#/components/schemas/LaunchRocketFairings"
+          }
+        }
+      },
+      "Rocket": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "stages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "boosters": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cost_per_launch": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "success_rate_pct": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "first_flight": {
+            "type": "object"
+          },
+          "country": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          },
+          "height": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "diameter": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "mass": {
+            "$ref": "#/components/schemas/Mass"
+          },
+          "payload_weights": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RocketPayloadWeight"
+            }
+          },
+          "first_stage": {
+            "$ref": "#/components/schemas/RocketFirstStage"
+          },
+          "second_stage": {
+            "$ref": "#/components/schemas/RocketSecondStage"
+          },
+          "engines": {
+            "$ref": "#/components/schemas/RocketEngines"
+          },
+          "landing_legs": {
+            "$ref": "#/components/schemas/RocketLandingLegs"
+          },
+          "wikipedia": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "rocket_id": {
+            "type": "string"
+          },
+          "rocket_name": {
+            "type": "string"
+          },
+          "rocket_type": {
+            "type": "string"
+          }
+        }
+      },
+      "RocketPayloadWeight": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lb": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RocketFirstStage": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "reusable": {
+            "type": "boolean"
+          },
+          "engines": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fuel_amount_tons": {
+            "type": "number",
+            "format": "float"
+          },
+          "burn_time_sec": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "thrust_sea_level": {
+            "$ref": "#/components/schemas/Force"
+          },
+          "thrust_vacuum": {
+            "$ref": "#/components/schemas/Force"
+          }
+        }
+      },
+      "RocketSecondStage": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "engines": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fuel_amount_tons": {
+            "type": "number",
+            "format": "float"
+          },
+          "burn_time_sec": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "thrust": {
+            "$ref": "#/components/schemas/Force"
+          },
+          "payloads": {
+            "$ref": "#/components/schemas/RocketSecondStagePayloads"
+          }
+        }
+      },
+      "RocketSecondStagePayloads": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "option_1": {
+            "type": "string"
+          },
+          "composite_fairing": {
+            "$ref": "#/components/schemas/RocketSecondStagePayloadCompositeFairing"
+          }
+        }
+      },
+      "RocketSecondStagePayloadCompositeFairing": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "height": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "diameter": {
+            "$ref": "#/components/schemas/Distance"
+          }
+        }
+      },
+      "RocketEngines": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "layout": {
+            "type": "string"
+          },
+          "engine_loss_max": {
+            "type": "string"
+          },
+          "propellant_1": {
+            "type": "string"
+          },
+          "propellant_2": {
+            "type": "string"
+          },
+          "thrust_sea_level": {
+            "$ref": "#/components/schemas/Force"
+          },
+          "thrust_vacuum": {
+            "$ref": "#/components/schemas/Force"
+          },
+          "thrust_to_weight": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "RocketLandingLegs": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "material": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchRocketFirstStage": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "cores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LaunchRocketFirstStageCore"
+            }
+          }
+        }
+      },
+      "LaunchRocketFirstStageCore": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "core": {
+            "$ref": "#/components/schemas/Core"
+          },
+          "flight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "block": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gridfins": {
+            "type": "boolean"
+          },
+          "legs": {
+            "type": "boolean"
+          },
+          "reused": {
+            "type": "boolean"
+          },
+          "land_success": {
+            "type": "boolean"
+          },
+          "landing_intent": {
+            "type": "boolean"
+          },
+          "landing_type": {
+            "type": "string"
+          },
+          "landing_vehicle": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchRocketSecondStage": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "block": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payloads": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payload"
+            }
+          }
+        }
+      },
+      "Payload": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "payload_id": {
+            "type": "string"
+          },
+          "norad_id": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "reused": {
+            "type": "boolean"
+          },
+          "customers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "nationality": {
+            "type": "string"
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "payload_type": {
+            "type": "string"
+          },
+          "payload_mass_kg": {
+            "type": "number",
+            "format": "float"
+          },
+          "payload_mass_lbs": {
+            "type": "number",
+            "format": "float"
+          },
+          "orbit": {
+            "type": "string"
+          },
+          "orbit_params": {
+            "$ref": "#/components/schemas/PayloadOrbitParams"
+          }
+        }
+      },
+      "PayloadOrbitParams": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "reference_system": {
+            "type": "string"
+          },
+          "regime": {
+            "type": "string"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "lifespan_years": {
+            "type": "number",
+            "format": "float"
+          },
+          "epoch": {
+            "type": "object"
+          },
+          "mean_motion": {
+            "type": "number",
+            "format": "float"
+          },
+          "raan": {
+            "type": "number",
+            "format": "float"
+          },
+          "semi_major_axis_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "eccentricity": {
+            "type": "number",
+            "format": "float"
+          },
+          "periapsis_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "apoapsis_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "inclination_deg": {
+            "type": "number",
+            "format": "float"
+          },
+          "period_min": {
+            "type": "number",
+            "format": "float"
+          },
+          "arg_of_pericenter": {
+            "type": "number",
+            "format": "float"
+          },
+          "mean_anomaly": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "LaunchRocketFairings": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "reused": {
+            "type": "boolean"
+          },
+          "recovery_attempt": {
+            "type": "boolean"
+          },
+          "recovered": {
+            "type": "boolean"
+          },
+          "ship": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchTelemetry": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "flight_club": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchSite": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "site_id": {
+            "type": "string"
+          },
+          "site_name": {
+            "type": "string"
+          },
+          "site_name_long": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchLinks": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "mission_patch": {
+            "type": "string"
+          },
+          "mission_patch_small": {
+            "type": "string"
+          },
+          "reddit_campaign": {
+            "type": "string"
+          },
+          "reddit_launch": {
+            "type": "string"
+          },
+          "reddit_recovery": {
+            "type": "string"
+          },
+          "reddit_media": {
+            "type": "string"
+          },
+          "presskit": {
+            "type": "string"
+          },
+          "article_link": {
+            "type": "string"
+          },
+          "wikipedia": {
+            "type": "string"
+          },
+          "video_link": {
+            "type": "string"
+          },
+          "flickr_images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Landpad": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "id": {
+            "type": "string"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "landing_type": {
+            "type": "string"
+          },
+          "attempted_landings": {
+            "type": "string"
+          },
+          "successful_landings": {
+            "type": "string"
+          },
+          "wikipedia": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          }
+        }
+      },
+      "Location": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "Launchpad": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "vehicles_launched": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rocket"
+            }
+          },
+          "attempted_launches": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "successful_launches": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wikipedia": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "site_id": {
+            "type": "string"
+          },
+          "site_name_long": {
+            "type": "string"
+          }
+        }
+      },
+      "Mission": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "mission_name": {
+            "type": "string"
+          },
+          "mission_id": {
+            "type": "string"
+          },
+          "manufacturers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "wikipedia": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "payloads": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payload"
+            }
+          }
+        }
+      },
+      "Roadster": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          },
+          "launch_date_utc": {
+            "type": "object"
+          },
+          "launch_date_unix": {
+            "type": "object"
+          },
+          "launch_mass_kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "launch_mass_lbs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "norad_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "epoch_jd": {
+            "type": "number",
+            "format": "float"
+          },
+          "orbit_type": {
+            "type": "number",
+            "format": "float"
+          },
+          "apoapsis_au": {
+            "type": "number",
+            "format": "float"
+          },
+          "periapsis_au": {
+            "type": "number",
+            "format": "float"
+          },
+          "semi_major_axis_au": {
+            "type": "number",
+            "format": "float"
+          },
+          "eccentricity": {
+            "type": "number",
+            "format": "float"
+          },
+          "inclination": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "periapsis_arg": {
+            "type": "number",
+            "format": "float"
+          },
+          "period_days": {
+            "type": "number",
+            "format": "float"
+          },
+          "speed_kph": {
+            "type": "number",
+            "format": "float"
+          },
+          "speed_mph": {
+            "type": "number",
+            "format": "float"
+          },
+          "earth_distance_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "earth_distance_mi": {
+            "type": "number",
+            "format": "float"
+          },
+          "mars_distance_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "mars_distance_mi": {
+            "type": "number",
+            "format": "float"
+          },
+          "wikipedia": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          }
+        }
+      },
+      "Ship": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "ship_id": {
+            "type": "string"
+          },
+          "ship_name": {
+            "type": "string"
+          },
+          "ship_model": {
+            "type": "string"
+          },
+          "ship_type": {
+            "type": "string"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "imo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mmsi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "abs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "class": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight_lbs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight_kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year_built": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "home_port": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "speed_kn": {
+            "type": "number",
+            "format": "float"
+          },
+          "course_deg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "position": {
+            "$ref": "#/components/schemas/ShipLocation"
+          },
+          "successful_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attempted_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "missions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShipMission"
+            }
+          },
+          "url": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          }
+        }
+      },
+      "ShipLocation": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "ShipMission": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "flight": {
+            "type": "string"
+          }
+        }
+      },
+      "Address": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        }
+      },
+      "CoreMission": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "flight": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    }
+  }
+}
