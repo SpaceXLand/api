@@ -1,2 +1,2 @@
 # api
-GraphQL API
+SpaxeX Land API
