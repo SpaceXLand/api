@@ -28,6 +28,11 @@ import swaggerDocument from '../swagger.json';
     app
   });
 
+  // graphql api by default
+  app.get('/', (_, res) => {
+    res.redirect(graphql.graphqlPath);
+  });
+
   const openApi = OpenAPI({
     schema,
     info: {
@@ -35,28 +40,24 @@ import swaggerDocument from '../swagger.json';
     }
   });
 
+  const basePath = '/rest';
+
   app.use(
-    '/rest',
+    basePath,
     sofa({
       schema,
       context,
       onRoute(info) {
-        info.path = `/rest${info.path}`;
-        openApi.addRoute(info);
+        openApi.addRoute(info, { basePath });
       }
     })
   );
-
-  // graphql api by default
-  app.get('/', (_, res) => {
-    res.redirect(graphql.graphqlPath);
-  });
 
   // writes every recorder route
   openApi.save('./swagger.json');
 
   // expose rest docs
-  app.use('/rest', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+  app.use(basePath, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
   app.listen({ port }, () => {
     console.log(`🚀  Server ready http://localhost:${port}`);
