@@ -41,6 +41,7 @@ import swaggerDocument from '../swagger.json';
       schema,
       context,
       onRoute(info) {
+        info.path = `/rest${info.path}`;
         openApi.addRoute(info);
       }
     })
