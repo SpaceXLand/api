@@ -4,7 +4,7 @@
     "title": "SpaceX Rest API"
   },
   "paths": {
-    "/empty": {
+    "/rest/empty": {
       "get": {
         "operationId": "emptyQuery",
         "parameters": [],
@@ -21,7 +21,7 @@
         }
       }
     },
-    "/capsules": {
+    "/rest/capsules": {
       "get": {
         "operationId": "capsulesQuery",
         "parameters": [
@@ -92,7 +92,7 @@
         }
       }
     },
-    "/capsules-past": {
+    "/rest/capsules-past": {
       "get": {
         "operationId": "capsulesPastQuery",
         "parameters": [
@@ -163,7 +163,7 @@
         }
       }
     },
-    "/capsules-upcoming": {
+    "/rest/capsules-upcoming": {
       "get": {
         "operationId": "capsulesUpcomingQuery",
         "parameters": [
@@ -234,7 +234,7 @@
         }
       }
     },
-    "/capsule/:id": {
+    "/rest/capsule/:id": {
       "get": {
         "operationId": "capsuleQuery",
         "parameters": [
@@ -268,7 +268,7 @@
         }
       }
     },
-    "/cores": {
+    "/rest/cores": {
       "get": {
         "operationId": "coresQuery",
         "parameters": [
@@ -339,7 +339,7 @@
         }
       }
     },
-    "/cores-past": {
+    "/rest/cores-past": {
       "get": {
         "operationId": "coresPastQuery",
         "parameters": [
@@ -410,7 +410,7 @@
         }
       }
     },
-    "/cores-upcoming": {
+    "/rest/cores-upcoming": {
       "get": {
         "operationId": "coresUpcomingQuery",
         "parameters": [
@@ -481,7 +481,7 @@
         }
       }
     },
-    "/core/:id": {
+    "/rest/core/:id": {
       "get": {
         "operationId": "coreQuery",
         "parameters": [
@@ -515,7 +515,7 @@
         }
       }
     },
-    "/dragons": {
+    "/rest/dragons": {
       "get": {
         "operationId": "dragonsQuery",
         "parameters": [
@@ -562,7 +562,7 @@
         }
       }
     },
-    "/dragon/:id": {
+    "/rest/dragon/:id": {
       "get": {
         "operationId": "dragonQuery",
         "parameters": [
@@ -596,7 +596,7 @@
         }
       }
     },
-    "/histories": {
+    "/rest/histories": {
       "get": {
         "operationId": "historiesQuery",
         "parameters": [
@@ -667,7 +667,7 @@
         }
       }
     },
-    "/history/:id": {
+    "/rest/history/:id": {
       "get": {
         "operationId": "historyQuery",
         "parameters": [
@@ -702,7 +702,7 @@
         }
       }
     },
-    "/landpads": {
+    "/rest/landpads": {
       "get": {
         "operationId": "landpadsQuery",
         "parameters": [
@@ -749,7 +749,7 @@
         }
       }
     },
-    "/landpad/:id": {
+    "/rest/landpad/:id": {
       "get": {
         "operationId": "landpadQuery",
         "parameters": [
@@ -783,7 +783,7 @@
         }
       }
     },
-    "/launches": {
+    "/rest/launches": {
       "get": {
         "operationId": "launchesQuery",
         "parameters": [
@@ -854,7 +854,7 @@
         }
       }
     },
-    "/launches-past": {
+    "/rest/launches-past": {
       "get": {
         "operationId": "launchesPastQuery",
         "parameters": [
@@ -925,7 +925,7 @@
         }
       }
     },
-    "/launches-upcoming": {
+    "/rest/launches-upcoming": {
       "get": {
         "operationId": "launchesUpcomingQuery",
         "parameters": [
@@ -996,7 +996,7 @@
         }
       }
     },
-    "/launch/:id": {
+    "/rest/launch/:id": {
       "get": {
         "operationId": "launchQuery",
         "parameters": [
@@ -1031,7 +1031,7 @@
         }
       }
     },
-    "/launch-latest/:id": {
+    "/rest/launch-latest/:id": {
       "get": {
         "operationId": "launchLatestQuery",
         "parameters": [
@@ -1066,7 +1066,7 @@
         }
       }
     },
-    "/launch-next/:id": {
+    "/rest/launch-next/:id": {
       "get": {
         "operationId": "launchNextQuery",
         "parameters": [
@@ -1101,7 +1101,7 @@
         }
       }
     },
-    "/launchpads": {
+    "/rest/launchpads": {
       "get": {
         "operationId": "launchpadsQuery",
         "parameters": [
@@ -1148,7 +1148,7 @@
         }
       }
     },
-    "/launchpad/:id": {
+    "/rest/launchpad/:id": {
       "get": {
         "operationId": "launchpadQuery",
         "parameters": [
@@ -1182,7 +1182,7 @@
         }
       }
     },
-    "/missions": {
+    "/rest/missions": {
       "get": {
         "operationId": "missionsQuery",
         "parameters": [
@@ -1237,7 +1237,7 @@
         }
       }
     },
-    "/mission/:id": {
+    "/rest/mission/:id": {
       "get": {
         "operationId": "missionQuery",
         "parameters": [
@@ -1271,7 +1271,7 @@
         }
       }
     },
-    "/payloads": {
+    "/rest/payloads": {
       "get": {
         "operationId": "payloadsQuery",
         "parameters": [
@@ -1342,7 +1342,7 @@
         }
       }
     },
-    "/payload/:id": {
+    "/rest/payload/:id": {
       "get": {
         "operationId": "payloadQuery",
         "parameters": [
@@ -1368,7 +1368,7 @@
         }
       }
     },
-    "/roadster/:id": {
+    "/rest/roadster/:id": {
       "get": {
         "operationId": "roadsterQuery",
         "parameters": [
@@ -1394,7 +1394,7 @@
         }
       }
     },
-    "/rockets": {
+    "/rest/rockets": {
       "get": {
         "operationId": "rocketsQuery",
         "parameters": [
@@ -1441,7 +1441,7 @@
         }
       }
     },
-    "/rocket/:id": {
+    "/rest/rocket/:id": {
       "get": {
         "operationId": "rocketQuery",
         "parameters": [
@@ -1475,7 +1475,7 @@
         }
       }
     },
-    "/ships": {
+    "/rest/ships": {
       "get": {
         "operationId": "shipsQuery",
         "parameters": [
@@ -1546,7 +1546,7 @@
         }
       }
     },
-    "/ship/:id": {
+    "/rest/ship/:id": {
       "get": {
         "operationId": "shipQuery",
         "parameters": [
