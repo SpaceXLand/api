@@ -2,17 +2,11 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    missions(
-      find: MissionsFind
-      id: Boolean
-      limit: Int
-      offset: Int
-    ): [Mission]
-    mission(mission_id: String!, id: Boolean): Mission
+    missions(find: MissionsFind, limit: Int, offset: Int): [Mission]
+    mission(mission_id: String!): Mission
   }
 
   type Mission {
-    _id: ObjectID
     mission_name: String
     mission_id: String
     manufacturers: [String]

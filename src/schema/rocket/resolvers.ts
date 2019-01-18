@@ -3,11 +3,10 @@ import { QueryResolvers } from '../../types/types';
 const collection = 'rocket';
 
 const Query: QueryResolvers.Resolvers = {
-  rockets: async (obj, { id, limit, offset }, context) => {
+  rockets: async (obj, { limit, offset }, context) => {
     const data = await context.db
       .collection(collection)
       .find({})
-      .project(context.project({ id }))
       .sort({ first_flight: 1 })
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
@@ -15,11 +14,10 @@ const Query: QueryResolvers.Resolvers = {
       .toArray();
     return data;
   },
-  rocket: async (obj, { rocket, id }, context) => {
+  rocket: async (obj, { rocket }, context) => {
     const [data] = await context.db
       .collection(collection)
       .find({ id: rocket })
-      .project(context.project({ id }))
       .limit(1)
       .map(parseRockets)
       .toArray();

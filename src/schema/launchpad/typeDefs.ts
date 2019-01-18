@@ -2,12 +2,11 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    launchpads(id: Boolean, limit: Int, offset: Int): [Launchpad]
-    launchpad(pad: String!, id: Boolean): Launchpad
+    launchpads(limit: Int, offset: Int): [Launchpad]
+    launchpad(pad: String!): Launchpad
   }
 
   type Launchpad {
-    _id: ObjectID
     id: Int
     status: String
     location: Location
