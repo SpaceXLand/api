@@ -2,11 +2,10 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    roadster(id: Boolean): Roadster
+    roadster: Roadster
   }
 
   type Roadster {
-    _id: ObjectID
     name: String
     launch_date_utc: Date
     launch_date_unix: Date

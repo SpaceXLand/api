@@ -2,8 +2,8 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    dragons(id: Boolean, limit: Int, offset: Int): [Dragon]
-    dragon(capsule: String!, id: Boolean): Dragon
+    dragons(limit: Int, offset: Int): [Dragon]
+    dragon(capsule: String!): Dragon
   }
 
   extend type Capsule {
@@ -11,7 +11,6 @@ const typeDefs = gql`
   }
 
   type Dragon {
-    _id: ObjectID
     id: String
     name: String
     type: String

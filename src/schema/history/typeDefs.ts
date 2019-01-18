@@ -4,17 +4,15 @@ const typeDefs = gql`
   extend type Query {
     histories(
       find: HistoryFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
       sort: String
     ): [History]
-    history(history_id: Int!, id: Boolean): History
+    history(history_id: Int!): History
   }
 
   type History {
-    _id: ObjectID
     id: Int
     title: String
     event_date_utc: Date

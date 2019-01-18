@@ -2,10 +2,9 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    company(id: Boolean): Info
+    company: Info
   }
   type Info {
-    _id: ObjectID
     name: String
     founder: String
     founded: Int

@@ -4,17 +4,15 @@ const typeDefs = gql`
   extend type Query {
     ships(
       find: ShipsFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
       sort: String
     ): [Ship]
-    ship(ship_id: String!, id: Boolean): Ship
+    ship(ship_id: String!): Ship
   }
 
   type Ship {
-    _id: ObjectID
     ship_id: String
     ship_name: String
     ship_model: String
