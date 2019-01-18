@@ -226,18 +226,6 @@
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
 
-"@types/redis-mock@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@types/redis-mock/-/redis-mock-0.17.0.tgz#13c56c8cf3f748ae1656efc2da9bd6a97cc38e4d"
-  dependencies:
-    "@types/redis" "*"
-
-"@types/redis@*":
-  version "2.8.10"
-  resolved "https://registry.yarnpkg.com/@types/redis/-/redis-2.8.10.tgz#27130c3bcc803265a51cb978538ca330dff2e748"
-  dependencies:
-    "@types/node" "*"
-
 "@types/serve-static@*":
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.2.tgz#f5ac4d7a6420a99a6a45af4719f4dcd8cd907a48"
@@ -1840,15 +1828,6 @@ graphql-import@0.7.1, graphql-import@^0.7.1:
     lodash "^4.17.4"
     resolve-from "^4.0.0"
 
-graphql-rate-limit@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/graphql-rate-limit/-/graphql-rate-limit-1.2.1.tgz#3c95b534f505d1f7c89ce311e43ad0b98ab2dfa5"
-  dependencies:
-    "@types/redis-mock" "^0.17.0"
-    graphql-tools "^4.0.3"
-    lodash.get "^4.4.2"
-    ms "^2.1.1"
-
 graphql-request@^1.5.0:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-1.8.2.tgz#398d10ae15c585676741bde3fc01d5ca948f8fbe"
@@ -1875,7 +1854,7 @@ graphql-tag@2.10.0, graphql-tag@^2.10.0, graphql-tag@^2.9.2:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.0.tgz#87da024be863e357551b2b8700e496ee2d4353ae"
 
-graphql-tools@4.0.3, graphql-tools@^4.0.0, graphql-tools@^4.0.3:
+graphql-tools@4.0.3, graphql-tools@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-4.0.3.tgz#23b5cb52c519212b1b2e4630a361464396ad264b"
   dependencies:
@@ -2512,10 +2491,6 @@ locate-path@^2.0.0:
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
-
-lodash.get@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
 
 lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0:
   version "4.17.11"
