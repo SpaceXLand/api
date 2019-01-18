@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import capsule from './capsule/resolvers';
+import company from './company/resolvers';
 import core from './core/resolvers';
 import dragon from './dragon/resolvers';
 import history from './history/resolvers';
@@ -14,6 +15,7 @@ import ship from './ship/resolvers';
 
 const resolvers = merge(
   capsule,
+  company,
   core,
   dragon,
   history,

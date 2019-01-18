@@ -268,6 +268,32 @@
         }
       }
     },
+    "/rest/company/:id": {
+      "get": {
+        "operationId": "companyQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Info"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/rest/cores": {
       "get": {
         "operationId": "coresQuery",
@@ -1611,6 +1637,9 @@
           "capsule": {
             "$ref": "#/components/schemas/Capsule"
           },
+          "company": {
+            "$ref": "#/components/schemas/Info"
+          },
           "cores": {
             "type": "array",
             "items": {
@@ -2003,6 +2032,99 @@
           "feet": {
             "type": "number",
             "format": "float"
+          }
+        }
+      },
+      "Info": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          },
+          "founder": {
+            "type": "string"
+          },
+          "founded": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employees": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicles": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "launch_sites": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "test_sites": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ceo": {
+            "type": "string"
+          },
+          "cto": {
+            "type": "string"
+          },
+          "coo": {
+            "type": "string"
+          },
+          "cto_propulsion": {
+            "type": "string"
+          },
+          "valuation": {
+            "type": "number",
+            "format": "float"
+          },
+          "headquarters": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "links": {
+            "$ref": "#/components/schemas/InfoLinks"
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      },
+      "Address": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        }
+      },
+      "InfoLinks": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "website": {
+            "type": "string"
+          },
+          "flickr": {
+            "type": "string"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "elon_twitter": {
+            "type": "string"
           }
         }
       },
@@ -3050,21 +3172,6 @@
             "type": "string"
           },
           "flight": {
-            "type": "string"
-          }
-        }
-      },
-      "Address": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "address": {
-            "type": "string"
-          },
-          "city": {
-            "type": "string"
-          },
-          "state": {
             "type": "string"
           }
         }

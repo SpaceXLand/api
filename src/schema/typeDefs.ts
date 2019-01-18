@@ -1,5 +1,6 @@
 import global from './global/typeDefs';
 import capsule from './capsule/typeDefs';
+import company from './company/typeDefs';
 import core from './core/typeDefs';
 import dragon from './dragon/typeDefs';
 import history from './history/typeDefs';
@@ -15,6 +16,7 @@ import payload from './payload/typeDefs';
 const typeDefs = [
   ...global,
   capsule,
+  company,
   core,
   dragon,
   history,
