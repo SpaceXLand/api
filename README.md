@@ -8,8 +8,7 @@ SpaceX Land API
 yarn && yarn start
 ```
 
-## Contributing
-```bash
-# installing deps & execute the dev server
-yarn && yarn dev
+## Help & Community [![Slack Status](https://slack.spacexland.com/badge.svg)](https://spacexland.slack.com)
+
+Join our [Slack community](http://spacexland.slack.com) if you run into issues or have questions. We love talking to you!
 ```
