@@ -6,7 +6,7 @@
 
 **Via web**
 
-💜GraphQL 🔗 https://api.spacex.land/graphql
+💜GraphQL 🔗https://api.spacex.land/graphql
 ```bash
 curl \
   -X POST \
@@ -15,7 +15,7 @@ curl \
   https://api.spacex.land/graphql
 ```
 
-🖤REST 🔗 https://api.spacex.land/rest
+🖤REST 🔗https://api.spacex.land/rest
 ```bash
 curl -s https://api.spacex.land/rest/rockets
 ```
@@ -24,11 +24,11 @@ curl -s https://api.spacex.land/rest/rockets
 
 It was never easier to create & share 💯web application projects using your favs FE libraries. Whether you're starting with GraphQL or not, give a 👀at the differents live examples, you could discover interesting things!
 
-❤️Angular 🔗 https://codesandbox.io/s/o9nmplk96y
+❤️Angular 🔗https://codesandbox.io/s/o9nmplk96y
 
-💙React 🔗 https://codesandbox.io/s/r4p8q1kmvp
+💙React 🔗https://codesandbox.io/s/r4p8q1kmvp
 
-💚Vue 🔗 https://codesandbox.io/s/m3v8yv0nw9
+💚Vue 🔗https://codesandbox.io/s/m3v8yv0nw9
 
 Pick whichever programming language & FE library you feel confident with, schedule some ⏳in your agenda & enjoy coding 👌webapps!
 
