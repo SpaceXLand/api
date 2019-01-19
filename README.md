@@ -58,4 +58,4 @@ This project has adopted the [Contributor Covenant Code of Conduct](https://www.
 Join our [Slack community](http://spacexland.slack.com) if you run into issues or have questions. We love talking to you!
 
 ## License
-SpaceX Land API is MIT licensed, as found in the LICENSE file.
+SpaceX Land API is MIT licensed, as found in the [LICENSE](https://github.com/spacexland/api/blob/master/LICENSE.md) file.
