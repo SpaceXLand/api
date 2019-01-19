@@ -5,7 +5,6 @@ export const LaunchRocket = {
     const [data] = await context.db
       .collection('rocket')
       .find({ id: rocket_id })
-      .project(context.project({ id: true }))
       .limit(1)
       .map(parseRocket)
       .toArray();

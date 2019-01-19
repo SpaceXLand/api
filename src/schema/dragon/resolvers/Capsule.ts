@@ -5,7 +5,6 @@ export const Capsule = {
     const [data] = await context.db
       .collection(collection)
       .find({ id: capsule_id })
-      .project(context.project({ id: true }))
       .limit(1)
       .toArray();
     return data;

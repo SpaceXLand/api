@@ -5,7 +5,6 @@ export const History = {
     const [data] = await context.db
       .collection(collection)
       .find({ flight_number })
-      .project(context.project({ id: true }))
       .limit(1)
       .toArray();
     return data;

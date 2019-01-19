@@ -6,7 +6,6 @@ export const Launchpad = {
       const [data] = await context.db
         .collection('rocket')
         .find({ name })
-        .project(context.project({ id: true }))
         .limit(1)
         .map(parseRocket)
         .toArray();
