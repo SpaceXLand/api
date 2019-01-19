@@ -1,25 +1,33 @@
 ---
-name: Bug report
-about: Create a bug report to help us improve
+name: 🐛 Bug Report
+about: Report a reproducible bug or regression.
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!-- Requirements: please go through this checklist before opening a new issue -->
 
-**To Reproduce**
+- [ ] Search for existing issues: https://github.com/spacexland/api/issues
+- [ ] Use the latest version: https://github.com/spacexland/api
+
+## Description
+
+Describe your issue in detail. Include screenshots if needed. If this is a regression, let us know.
+
+## To Reproduce
+
 Steps to reproduce the behavior:
 
-1. Use '...' as Query
-2. Use '...' as Arguments
+1. Use '...' as typeDefs
+2. Use '...' as resolvers
 3. Run the following command: `yarn dev ...`
 
-**Expected behavior**
+## Expected behavior
+
 A clear and concise description of what you expected to happen.
 
-**Environment:**
+## Additional context
 
-- OS:
-- Node:
-
-**Additional context**
 Add any other context about the problem here.
+
+## Reproducible Demo
+
+Let us know how to reproduce the issue. Include a code sample, share a project, or share an use case that reproduces the issue using https://codesandbox.io/s/github/spacexland/api.
