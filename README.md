@@ -1,7 +1,4 @@
-# API &middot;
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#feature)
-[![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://spacexland.slack.com)
+# API &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#feature) [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://spacexland.slack.com)
 
 SpaceX Land API
 
