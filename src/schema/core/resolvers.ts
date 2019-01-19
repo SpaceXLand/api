@@ -28,10 +28,17 @@ const Query: QueryResolvers.Resolvers = {
       .limit(context.limit({ limit }))
       .toArray();
 
-    if (context.order({ query: { order } }) === -1) {
-      return null_dates.concat(not_null_dates);
+    let data = null;
+    if (context.order({ order }) === -1) {
+      data = null_dates.concat(not_null_dates);
     } else {
-      return not_null_dates.concat(null_dates);
+      data = not_null_dates.concat(null_dates);
+    }
+
+    if (limit) {
+      return data.slice(0, limit);
+    } else {
+      return data;
     }
   },
   coresPast: async (obj, { find, offset, order, sort, limit }, context) => {
