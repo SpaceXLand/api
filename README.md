@@ -1,11 +1,55 @@
 # API &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#feature) [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://spacexland.slack.com)
 
-SpaceX Land API
+🚀GraphQL & REST APIs to explore all the rockets, launches & other SpaceX's data!
+
+## Usage
+
+**Via web**
+
+💜GraphQL 🔗 https://api.spacex.land/graphql
+
+🖤REST 🔗 https://api.spacex.land/rest
+
+**Via terminal**
+
+💜GraphQL
+```bash
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{ "query": "{ rockets { rocket_name } }" }' \
+  https://api.spacex.land/graphql
+```
+
+🖤REST
+```bash
+curl -s https://api.spacex.land/rest/rockets
+```
+
+## Buil cool 🚀 stuff
+
+It was never easier to create & share 💯web application projects using your favs FE libraries. Whether you're starting with GraphQL or not, give a 👀at the differents live examples, you could discover interesting things!
+
+❤️Angular 🔗 https://codesandbox.io/s/o9nmplk96y
+
+💙React 🔗 https://codesandbox.io/s/r4p8q1kmvp
+
+💚Vue 🔗 https://codesandbox.io/s/m3v8yv0nw9
+
+Pick whichever programming language & FE library you feel confident with, schedule some ⏳in your agenda & enjoy coding 👌webapps!
 
 ## Installation
+
+**Production**
 ```bash
 # installing deps & execute the server
 yarn && yarn start
+```
+
+**Development**
+```bash
+# installing deps & execute the server
+yarn && yarn dev
 ```
 
 ## Contribute
