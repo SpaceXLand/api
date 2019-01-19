@@ -7,12 +7,6 @@
 **Via web**
 
 💜GraphQL 🔗 https://api.spacex.land/graphql
-
-🖤REST 🔗 https://api.spacex.land/rest
-
-**Via terminal**
-
-💜GraphQL
 ```bash
 curl \
   -X POST \
@@ -21,7 +15,7 @@ curl \
   https://api.spacex.land/graphql
 ```
 
-🖤REST
+🖤REST 🔗 https://api.spacex.land/rest
 ```bash
 curl -s https://api.spacex.land/rest/rockets
 ```
