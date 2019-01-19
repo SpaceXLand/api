@@ -1,10 +1,15 @@
-# API &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#feature) [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://spacexland.slack.com)
+<h1 align="center">SpaceX Land API</h1>
 
-🚀GraphQL & REST APIs to explore all the rockets, launches & other SpaceX's data!
+<p align="center">
+<a href="https://github.com/spacexland/api/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+<a href="https://github.com/spacexland/api/blob/master/CONTRIBUTING.md#feature"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
+<a href="https://spacexland.slack.com"><img src="https://img.shields.io/badge/slack-join-orange.svg"></a>
+</p>
+<p align="center">🚀GraphQL & REST APIs to explore all the rockets, launches & other SpaceX's data!</p>
+<p align="center"><img src="https://cdn-images-1.medium.com/max/2600/1*ixnzMP6t4Iot9nZpBmr1Vw.png"></p>
 
 ## Usage
-
-**Via web**
+Navigate through all the 🌌data via either browser or terminal. Both APIs provide full & updated docs in order to make easy fetching the data. 
 
 💜GraphQL 🔗https://api.spacex.land/graphql
 ```bash
