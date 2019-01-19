@@ -2,12 +2,11 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    rockets(id: Boolean, limit: Int, offset: Int): [Rocket]
-    rocket(rocket: String!, id: Boolean): Rocket
+    rockets(limit: Int, offset: Int): [Rocket]
+    rocket(rocket: String!): Rocket
   }
 
   type Rocket {
-    _id: ObjectID
     id: Int
     active: Boolean
     stages: Int

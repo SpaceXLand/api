@@ -4,7 +4,6 @@ const typeDefs = gql`
   extend type Query {
     capsules(
       find: CapsulesFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
@@ -12,7 +11,6 @@ const typeDefs = gql`
     ): [Capsule]
     capsulesPast(
       find: CapsulesFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
@@ -20,17 +18,15 @@ const typeDefs = gql`
     ): [Capsule]
     capsulesUpcoming(
       find: CapsulesFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
       sort: String
     ): [Capsule]
-    capsule(capsule_serial: String!, id: Boolean): Capsule
+    capsule(capsule_serial: String!): Capsule
   }
 
   type Capsule {
-    _id: ObjectID
     capsule_serial: String
     status: String
     original_launch: Date

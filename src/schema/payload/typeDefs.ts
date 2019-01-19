@@ -4,7 +4,6 @@ const typeDefs = gql`
   extend type Query {
     payloads(
       find: PayloadsFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
@@ -18,7 +17,6 @@ const typeDefs = gql`
   }
 
   type Payload {
-    _id: ObjectID
     payload_id: String
     norad_id: [Int]
     reused: Boolean

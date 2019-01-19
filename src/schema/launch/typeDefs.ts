@@ -4,7 +4,6 @@ const typeDefs = gql`
   extend type Query {
     launches(
       find: LaunchFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
@@ -12,7 +11,6 @@ const typeDefs = gql`
     ): [Launch]
     launchesPast(
       find: LaunchFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
@@ -20,15 +18,14 @@ const typeDefs = gql`
     ): [Launch]
     launchesUpcoming(
       find: LaunchFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
       sort: String
     ): [Launch]
-    launch(flight_number: Int!, id: Boolean): Launch
-    launchLatest(id: Boolean, offset: Int): Launch
-    launchNext(id: Boolean, offset: Int): Launch
+    launch(flight_number: Int!): Launch
+    launchLatest(offset: Int): Launch
+    launchNext(offset: Int): Launch
   }
 
   extend type History {
@@ -36,7 +33,6 @@ const typeDefs = gql`
   }
 
   type Launch {
-    _id: ObjectID
     flight_number: Int
     mission_name: String
     mission_id: [String]

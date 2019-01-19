@@ -1,4 +1,3 @@
-
 import { Query } from './entryPoints';
 import scalars from './scalars';
 import spaceX from './spaceX';

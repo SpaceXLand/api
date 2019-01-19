@@ -35,14 +35,6 @@
           },
           {
             "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -102,14 +94,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/CapsulesFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -177,14 +161,6 @@
           },
           {
             "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -245,14 +221,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -271,16 +239,7 @@
     "/rest/company/:id": {
       "get": {
         "operationId": "companyQuery",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -304,14 +263,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/CoresFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -379,14 +330,6 @@
           },
           {
             "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -446,14 +389,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/CoresFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -518,14 +453,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -545,14 +472,6 @@
       "get": {
         "operationId": "dragonsQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
@@ -599,14 +518,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -632,14 +543,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/HistoryFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -705,14 +608,6 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -732,14 +627,6 @@
       "get": {
         "operationId": "landpadsQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
@@ -786,14 +673,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -819,14 +698,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/LaunchFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -894,14 +765,6 @@
           },
           {
             "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -961,14 +824,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/LaunchFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -1034,14 +889,6 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -1061,14 +908,6 @@
       "get": {
         "operationId": "launchLatestQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
           {
             "in": "query",
             "name": "offset",
@@ -1098,14 +937,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "in": "query",
             "name": "offset",
             "required": false,
             "schema": {
@@ -1131,14 +962,6 @@
       "get": {
         "operationId": "launchpadsQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
@@ -1185,14 +1008,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -1218,14 +1033,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/MissionsFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -1274,14 +1081,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -1307,14 +1106,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/PayloadsFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -1397,16 +1188,7 @@
     "/rest/roadster/:id": {
       "get": {
         "operationId": "roadsterQuery",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -1424,14 +1206,6 @@
       "get": {
         "operationId": "rocketsQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
@@ -1478,14 +1252,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -1511,14 +1277,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/ShipsFind"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -1582,14 +1340,6 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "id",
-            "required": false,
-            "schema": {
-              "type": "boolean"
             }
           }
         ],
@@ -1769,9 +1519,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "capsule_serial": {
             "type": "string"
           },
@@ -1820,9 +1567,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "id": {
             "type": "string"
           },
@@ -2039,9 +1783,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "name": {
             "type": "string"
           },
@@ -2132,9 +1873,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "core_serial": {
             "type": "string"
           },
@@ -2183,9 +1921,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "id": {
             "type": "integer",
             "format": "int32"
@@ -2229,9 +1964,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "flight_number": {
             "type": "integer",
             "format": "int32"
@@ -2326,9 +2058,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "id": {
             "type": "integer",
             "format": "int32"
@@ -2621,9 +2350,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "payload_id": {
             "type": "string"
           },
@@ -2819,9 +2545,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "id": {
             "type": "string"
           },
@@ -2875,9 +2598,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "id": {
             "type": "integer",
             "format": "int32"
@@ -2920,9 +2640,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "mission_name": {
             "type": "string"
           },
@@ -2959,9 +2676,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "name": {
             "type": "string"
           },
@@ -3059,9 +2773,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_id": {
-            "type": "object"
-          },
           "ship_id": {
             "type": "string"
           },

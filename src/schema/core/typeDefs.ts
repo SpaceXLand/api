@@ -4,7 +4,6 @@ const typeDefs = gql`
   extend type Query {
     cores(
       find: CoresFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
@@ -12,7 +11,6 @@ const typeDefs = gql`
     ): [Core]
     coresPast(
       find: CoresFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
@@ -20,17 +18,15 @@ const typeDefs = gql`
     ): [Core]
     coresUpcoming(
       find: CoresFind
-      id: Boolean
       limit: Int
       offset: Int
       order: String
       sort: String
     ): [Core]
-    core(core_serial: String!, id: Boolean): Core
+    core(core_serial: String!): Core
   }
 
   type Core {
-    _id: ObjectID
     core_serial: String
     block: Int
     status: String

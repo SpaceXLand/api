@@ -2,11 +2,10 @@ import { collection, url, parseLaunch } from '../utils';
 import { QueryResolvers } from '../../../types/types';
 
 export const Query: QueryResolvers.Resolvers = {
-  launches: async (obj, { find, offset, order, sort, limit, id }, context) => {
+  launches: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)
       .find(context.find({ query: { ...find }, url }))
-      .project(context.project({ id }))
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
@@ -15,15 +14,10 @@ export const Query: QueryResolvers.Resolvers = {
 
     return data;
   },
-  launchesPast: async (
-    obj,
-    { find, offset, order, sort, limit, id },
-    context
-  ) => {
+  launchesPast: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)
       .find({ upcoming: false, ...context.find({ query: { ...find }, url }) })
-      .project(context.project({ id }))
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
@@ -34,13 +28,12 @@ export const Query: QueryResolvers.Resolvers = {
   },
   launchesUpcoming: async (
     obj,
-    { find, offset, order, sort, limit, id },
+    { find, offset, order, sort, limit },
     context
   ) => {
     const data = await context.db
       .collection(collection)
       .find({ upcoming: true, ...context.find({ query: { ...find }, url }) })
-      .project(context.project({ id }))
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
@@ -49,21 +42,19 @@ export const Query: QueryResolvers.Resolvers = {
 
     return data;
   },
-  launch: async (obj, { flight_number, id }, context) => {
+  launch: async (obj, { flight_number }, context) => {
     const [data] = await context.db
       .collection(collection)
       .find({ flight_number })
-      .project(context.project({ id }))
       .map(parseLaunch)
       .toArray();
 
     return data;
   },
-  launchLatest: async (obj, { id, offset }, context) => {
+  launchLatest: async (obj, { offset }, context) => {
     const [data] = await context.db
       .collection(collection)
       .find({ upcoming: false })
-      .project(context.project({ id }))
       .sort({ flight_number: -1 })
       .skip(context.offset({ offset }))
       .limit(1)
@@ -72,11 +63,10 @@ export const Query: QueryResolvers.Resolvers = {
 
     return data;
   },
-  launchNext: async (obj, { id, offset }, context) => {
+  launchNext: async (obj, { offset }, context) => {
     const [data] = await context.db
       .collection(collection)
       .find({ upcoming: true })
-      .project(context.project({ id }))
       .sort({ flight_number: 1 })
       .skip(context.offset({ offset }))
       .limit(1)
