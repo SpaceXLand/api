@@ -4608,21 +4608,6 @@ export namespace CoreMissionResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
-export type RateLimitDirectiveResolver<Result> = DirectiveResolverFn<
-  Result,
-  RateLimitDirectiveArgs,
-  MyContext
->;
-export interface RateLimitDirectiveArgs {
-  max?: Maybe<number>;
-
-  window?: Maybe<string>;
-
-  message?: Maybe<string>;
-
-  identityArgs?: Maybe<(Maybe<string>)[]>;
-}
-
 /** Directs the executor to skip this field or fragment when the `if` argument is true. */
 export type SkipDirectiveResolver<Result> = DirectiveResolverFn<
   Result,
@@ -4719,7 +4704,6 @@ export interface IResolvers {
 }
 
 export interface IDirectiveResolvers<Result> {
-  rateLimit?: RateLimitDirectiveResolver<Result>;
   skip?: SkipDirectiveResolver<Result>;
   include?: IncludeDirectiveResolver<Result>;
   deprecated?: DeprecatedDirectiveResolver<Result>;
