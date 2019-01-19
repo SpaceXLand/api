@@ -35,7 +35,7 @@ It was never easier to create & share 💯web application projects using your fa
 
 💚Vue 🔗https://codesandbox.io/s/m3v8yv0nw9
 
-Pick whichever programming language & FE library you feel confident with, schedule some ⏳in your agenda & enjoy coding 👌webapps!
+Pick whichever programming language & the FE library you feel confident with, schedule some ⏳in your agenda & enjoy coding 👌webapps!
 
 ## Installation
 
