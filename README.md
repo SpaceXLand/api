@@ -36,13 +36,11 @@ Pick whichever programming language & FE library you feel confident with, schedu
 
 **Production**
 ```bash
-# installing deps & execute the server
 yarn && yarn start
 ```
 
 **Development**
 ```bash
-# installing deps & execute the server
 yarn && yarn dev
 ```
 
