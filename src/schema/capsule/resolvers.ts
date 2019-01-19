@@ -9,8 +9,8 @@ const Query: QueryResolvers.Resolvers = {
       null_dates = await context.db
         .collection(collection)
         .find({
-          ...context.find({ query: { ...find }, url }),
-          original_launch: null
+          original_launch: null,
+          ...context.find({ query: { ...find }, url })
         })
         .sort(context.sort({ query: { order, sort }, url }))
         .skip(context.offset({ offset }))
@@ -20,8 +20,8 @@ const Query: QueryResolvers.Resolvers = {
     const not_null_dates = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: { $ne: null }
+        original_launch: { $ne: null },
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
@@ -38,8 +38,8 @@ const Query: QueryResolvers.Resolvers = {
     const data = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: { $ne: null }
+        original_launch: { $ne: null },
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
@@ -55,8 +55,8 @@ const Query: QueryResolvers.Resolvers = {
     const data = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: null
+        original_launch: null,
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
