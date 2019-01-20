@@ -667,10 +667,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "landpad_id",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -2544,7 +2544,7 @@
         "required": [],
         "properties": {
           "id": {
-            "type": "string"
+            "type": "object"
           },
           "full_name": {
             "type": "string"

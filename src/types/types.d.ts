@@ -1194,7 +1194,7 @@ export interface LandpadsQueryArgs {
   offset?: Maybe<number>;
 }
 export interface LandpadQueryArgs {
-  landpad_id: string;
+  id: string;
 }
 export interface LaunchesQueryArgs {
   find?: Maybe<LaunchFind>;
@@ -1640,7 +1640,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, LandpadArgs>;
   export interface LandpadArgs {
-    landpad_id: string;
+    id: string;
   }
 
   export type LaunchesResolver<
