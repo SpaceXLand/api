@@ -641,7 +641,11 @@ export interface LaunchRocket {
 }
 
 export interface Rocket {
-  id?: Maybe<number>;
+  id?: Maybe<string>;
+
+  name?: Maybe<string>;
+
+  type?: Maybe<string>;
 
   active?: Maybe<boolean>;
 
@@ -678,12 +682,6 @@ export interface Rocket {
   wikipedia?: Maybe<string>;
 
   description?: Maybe<string>;
-
-  rocket_id?: Maybe<string>;
-
-  rocket_name?: Maybe<string>;
-
-  rocket_type?: Maybe<string>;
 }
 
 export interface RocketPayloadWeight {
@@ -1276,7 +1274,7 @@ export interface RocketsQueryArgs {
   offset?: Maybe<number>;
 }
 export interface RocketQueryArgs {
-  rocket: string;
+  id: string;
 }
 export interface ShipsQueryArgs {
   find?: Maybe<ShipsFind>;
@@ -1811,7 +1809,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, RocketArgs>;
   export interface RocketArgs {
-    rocket: string;
+    id: string;
   }
 
   export type ShipsResolver<
@@ -2893,7 +2891,11 @@ export namespace LaunchRocketResolvers {
 
 export namespace RocketResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Rocket> {
-    id?: IdResolver<Maybe<number>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
+
+    name?: NameResolver<Maybe<string>, TypeParent, Context>;
+
+    type?: TypeResolver<Maybe<string>, TypeParent, Context>;
 
     active?: ActiveResolver<Maybe<boolean>, TypeParent, Context>;
 
@@ -2950,16 +2952,20 @@ export namespace RocketResolvers {
     wikipedia?: WikipediaResolver<Maybe<string>, TypeParent, Context>;
 
     description?: DescriptionResolver<Maybe<string>, TypeParent, Context>;
-
-    rocket_id?: RocketIdResolver<Maybe<string>, TypeParent, Context>;
-
-    rocket_name?: RocketNameResolver<Maybe<string>, TypeParent, Context>;
-
-    rocket_type?: RocketTypeResolver<Maybe<string>, TypeParent, Context>;
   }
 
   export type IdResolver<
-    R = Maybe<number>,
+    R = Maybe<string>,
+    Parent = Rocket,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type NameResolver<
+    R = Maybe<string>,
+    Parent = Rocket,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type TypeResolver<
+    R = Maybe<string>,
     Parent = Rocket,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
@@ -3049,21 +3055,6 @@ export namespace RocketResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context>;
   export type DescriptionResolver<
-    R = Maybe<string>,
-    Parent = Rocket,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type RocketIdResolver<
-    R = Maybe<string>,
-    Parent = Rocket,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type RocketNameResolver<
-    R = Maybe<string>,
-    Parent = Rocket,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type RocketTypeResolver<
     R = Maybe<string>,
     Parent = Rocket,
     Context = MyContext

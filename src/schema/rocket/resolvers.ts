@@ -10,28 +10,17 @@ const Query: QueryResolvers.Resolvers = {
       .sort({ first_flight: 1 })
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
-      .map(parseRockets)
       .toArray();
     return data;
   },
-  rocket: async (obj, { rocket }, context) => {
+  rocket: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ id: rocket })
+      .find({ id })
       .limit(1)
-      .map(parseRockets)
       .toArray();
     return data;
   }
-};
-
-const parseRockets = rocket => {
-  rocket.rocket_id = rocket.id;
-  rocket.id = rocket.rocketid;
-  rocket.rocket_name = rocket.name;
-  rocket.rocket_type = rocket.type;
-  const { rocketid, name, type, ...rocketParsed } = rocket;
-  return rocketParsed;
 };
 
 export default { Query };

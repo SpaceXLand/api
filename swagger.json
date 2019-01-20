@@ -1246,10 +1246,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "rocket",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -2057,8 +2057,13 @@
         "required": [],
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32"
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
           },
           "active": {
             "type": "boolean"
@@ -2119,15 +2124,6 @@
             "type": "string"
           },
           "description": {
-            "type": "string"
-          },
-          "rocket_id": {
-            "type": "string"
-          },
-          "rocket_name": {
-            "type": "string"
-          },
-          "rocket_type": {
             "type": "string"
           }
         }
