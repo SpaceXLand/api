@@ -357,7 +357,7 @@ export interface Query {
 }
 
 export interface Capsule {
-  capsule_serial?: Maybe<string>;
+  id?: Maybe<string>;
 
   status?: Maybe<string>;
 
@@ -1130,7 +1130,7 @@ export interface CapsulesUpcomingQueryArgs {
   sort?: Maybe<string>;
 }
 export interface CapsuleQueryArgs {
-  capsule_serial: string;
+  id: string;
 }
 export interface CoresQueryArgs {
   find?: Maybe<CoresFind>;
@@ -1506,7 +1506,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, CapsuleArgs>;
   export interface CapsuleArgs {
-    capsule_serial: string;
+    id: string;
   }
 
   export type CompanyResolver<
@@ -1845,7 +1845,7 @@ export namespace QueryResolvers {
 
 export namespace CapsuleResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Capsule> {
-    capsule_serial?: CapsuleSerialResolver<Maybe<string>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
 
     status?: StatusResolver<Maybe<string>, TypeParent, Context>;
 
@@ -1866,7 +1866,7 @@ export namespace CapsuleResolvers {
     capsule?: CapsuleResolver<Maybe<Dragon>, TypeParent, Context>;
   }
 
-  export type CapsuleSerialResolver<
+  export type IdResolver<
     R = Maybe<string>,
     Parent = Capsule,
     Context = MyContext

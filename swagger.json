@@ -216,10 +216,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "capsule_serial",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -1519,8 +1519,8 @@
         "type": "object",
         "required": [],
         "properties": {
-          "capsule_serial": {
-            "type": "string"
+          "id": {
+            "type": "object"
           },
           "status": {
             "type": "string"

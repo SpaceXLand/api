@@ -23,11 +23,11 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [Capsule]
-    capsule(capsule_serial: String!): Capsule
+    capsule(id: ID!): Capsule
   }
 
   type Capsule {
-    capsule_serial: String
+    id: ID
     status: String
     original_launch: Date
     missions: [CapsuleMission]
