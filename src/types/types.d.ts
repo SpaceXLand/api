@@ -1,9 +1,7 @@
 export type Maybe<T> = T | null;
 
 export interface CapsulesFind {
-  capsule_serial?: Maybe<string>;
-
-  capsule_id?: Maybe<string>;
+  id?: Maybe<string>;
 
   status?: Maybe<string>;
 

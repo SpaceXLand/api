@@ -37,8 +37,7 @@ const typeDefs = gql`
   }
 
   input CapsulesFind {
-    capsule_serial: String
-    capsule_id: String
+    id: ID
     status: String
     original_launch: Date
     mission: String

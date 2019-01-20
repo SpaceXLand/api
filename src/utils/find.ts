@@ -261,11 +261,8 @@ export default r => {
     //                       Capsule Fields
     //------------------------------------------------------------
 
-    if (r.query.capsule_serial) {
-      query.capsule_serial = r.query.capsule_serial;
-    }
-    if (r.query.capsule_id) {
-      query.capsule_id = r.query.capsule_id;
+    if (r.query.id) {
+      query.capsule_serial = r.query.id;
     }
     if (r.query.status) {
       query.status = r.query.status;
