@@ -10,17 +10,27 @@ const Query: QueryResolvers.Resolvers = {
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseShips)
       .toArray();
     return data;
   },
-  ship: async (obj, { ship_id }, context) => {
+  ship: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ ship_id })
+      .find({ ship_id: id })
       .limit(1)
+      .map(parseShips)
       .toArray();
     return data;
   }
 };
+
+const parseShips = ship => ({
+  ...ship,
+  id: ship.ship_id,
+  name: ship.ship_name,
+  model: ship.ship_model,
+  type: ship.ship_type
+});
 
 export default { Query };

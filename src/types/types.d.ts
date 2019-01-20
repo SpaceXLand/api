@@ -229,13 +229,13 @@ export interface PayloadsFind {
 }
 
 export interface ShipsFind {
-  ship_id?: Maybe<string>;
+  id?: Maybe<string>;
 
-  ship_name?: Maybe<string>;
+  name?: Maybe<string>;
 
-  ship_model?: Maybe<string>;
+  model?: Maybe<string>;
 
-  ship_type?: Maybe<string>;
+  type?: Maybe<string>;
 
   role?: Maybe<string>;
 
@@ -1015,13 +1015,13 @@ export interface Roadster {
 }
 
 export interface Ship {
-  ship_id?: Maybe<string>;
+  id?: Maybe<string>;
 
-  ship_name?: Maybe<string>;
+  name?: Maybe<string>;
 
-  ship_model?: Maybe<string>;
+  model?: Maybe<string>;
 
-  ship_type?: Maybe<string>;
+  type?: Maybe<string>;
 
   roles?: Maybe<(Maybe<string>)[]>;
 
@@ -1288,7 +1288,7 @@ export interface ShipsQueryArgs {
   sort?: Maybe<string>;
 }
 export interface ShipQueryArgs {
-  ship_id: string;
+  id: string;
 }
 
 import {
@@ -1835,7 +1835,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, ShipArgs>;
   export interface ShipArgs {
-    ship_id: string;
+    id: string;
   }
 }
 
@@ -4340,13 +4340,13 @@ export namespace RoadsterResolvers {
 
 export namespace ShipResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Ship> {
-    ship_id?: ShipIdResolver<Maybe<string>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
 
-    ship_name?: ShipNameResolver<Maybe<string>, TypeParent, Context>;
+    name?: NameResolver<Maybe<string>, TypeParent, Context>;
 
-    ship_model?: ShipModelResolver<Maybe<string>, TypeParent, Context>;
+    model?: ModelResolver<Maybe<string>, TypeParent, Context>;
 
-    ship_type?: ShipTypeResolver<Maybe<string>, TypeParent, Context>;
+    type?: TypeResolver<Maybe<string>, TypeParent, Context>;
 
     roles?: RolesResolver<Maybe<(Maybe<string>)[]>, TypeParent, Context>;
 
@@ -4399,22 +4399,22 @@ export namespace ShipResolvers {
     image?: ImageResolver<Maybe<string>, TypeParent, Context>;
   }
 
-  export type ShipIdResolver<
+  export type IdResolver<
     R = Maybe<string>,
     Parent = Ship,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
-  export type ShipNameResolver<
+  export type NameResolver<
     R = Maybe<string>,
     Parent = Ship,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
-  export type ShipModelResolver<
+  export type ModelResolver<
     R = Maybe<string>,
     Parent = Ship,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
-  export type ShipTypeResolver<
+  export type TypeResolver<
     R = Maybe<string>,
     Parent = Ship,
     Context = MyContext

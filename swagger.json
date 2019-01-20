@@ -1335,10 +1335,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "ship_id",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -2767,16 +2767,16 @@
         "type": "object",
         "required": [],
         "properties": {
-          "ship_id": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
             "type": "string"
           },
-          "ship_name": {
+          "model": {
             "type": "string"
           },
-          "ship_model": {
-            "type": "string"
-          },
-          "ship_type": {
+          "type": {
             "type": "string"
           },
           "roles": {

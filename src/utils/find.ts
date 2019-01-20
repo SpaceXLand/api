@@ -339,17 +339,17 @@ export default r => {
     //                     Ships Fields
     //------------------------------------------------------------
 
-    if (r.query.ship_id) {
-      query.ship_id = r.query.ship_id;
+    if (r.query.id) {
+      query.ship_id = r.query.id;
     }
-    if (r.query.ship_name) {
-      query.ship_name = r.query.ship_name;
+    if (r.query.name) {
+      query.ship_name = r.query.name;
     }
-    if (r.query.ship_model) {
-      query.ship_model = r.query.ship_model;
+    if (r.query.model) {
+      query.ship_model = r.query.model;
     }
-    if (r.query.ship_type) {
-      query.ship_type = r.query.ship_type;
+    if (r.query.type) {
+      query.ship_type = r.query.type;
     }
     if (r.query.role) {
       query.roles = r.query.role;
