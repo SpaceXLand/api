@@ -12,6 +12,10 @@ const typeDefs = gql`
     ship(id: ID!): Ship
   }
 
+  extend type Launch {
+    ships: [Ship]
+  }
+
   type Ship {
     id: ID
     name: String

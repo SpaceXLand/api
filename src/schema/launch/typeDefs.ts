@@ -44,7 +44,6 @@ const typeDefs = gql`
     is_tentative: Boolean
     tentative_max_precision: String
     rocket: LaunchRocket
-    ships: [String]
     telemetry: LaunchTelemetry
     launch_site: LaunchSite
     launch_success: Boolean

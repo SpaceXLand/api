@@ -1997,12 +1997,6 @@
           "rocket": {
             "$ref": "#/components/schemas/LaunchRocket"
           },
-          "ships": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "telemetry": {
             "$ref": "#/components/schemas/LaunchTelemetry"
           },
@@ -2023,6 +2017,12 @@
           },
           "static_fire_date_unix": {
             "type": "object"
+          },
+          "ships": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ship"
+            }
           }
         }
       },
@@ -2533,6 +2533,124 @@
           }
         }
       },
+      "Ship": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "imo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mmsi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "abs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "class": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight_lbs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight_kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year_built": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "home_port": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "speed_kn": {
+            "type": "number",
+            "format": "float"
+          },
+          "course_deg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "position": {
+            "$ref": "#/components/schemas/ShipLocation"
+          },
+          "successful_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attempted_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "missions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShipMission"
+            }
+          },
+          "url": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          }
+        }
+      },
+      "ShipLocation": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "ShipMission": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "flight": {
+            "type": "string"
+          }
+        }
+      },
       "Landpad": {
         "type": "object",
         "required": [],
@@ -2757,124 +2875,6 @@
             "type": "string"
           },
           "details": {
-            "type": "string"
-          }
-        }
-      },
-      "Ship": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "id": {
-            "type": "object"
-          },
-          "name": {
-            "type": "string"
-          },
-          "model": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "roles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "imo": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "mmsi": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "abs": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "class": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "weight_lbs": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "weight_kg": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "year_built": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "home_port": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "speed_kn": {
-            "type": "number",
-            "format": "float"
-          },
-          "course_deg": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "position": {
-            "$ref": "#/components/schemas/ShipLocation"
-          },
-          "successful_landings": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "attempted_landings": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "missions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ShipMission"
-            }
-          },
-          "url": {
-            "type": "string"
-          },
-          "image": {
-            "type": "string"
-          }
-        }
-      },
-      "ShipLocation": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "latitude": {
-            "type": "number",
-            "format": "float"
-          },
-          "longitude": {
-            "type": "number",
-            "format": "float"
-          }
-        }
-      },
-      "ShipMission": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "flight": {
             "type": "string"
           }
         }

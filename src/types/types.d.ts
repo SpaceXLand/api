@@ -607,8 +607,6 @@ export interface Launch {
 
   rocket?: Maybe<LaunchRocket>;
 
-  ships?: Maybe<(Maybe<string>)[]>;
-
   telemetry?: Maybe<LaunchTelemetry>;
 
   launch_site?: Maybe<LaunchSite>;
@@ -622,6 +620,8 @@ export interface Launch {
   static_fire_date_utc?: Maybe<Date>;
 
   static_fire_date_unix?: Maybe<Date>;
+
+  ships?: Maybe<(Maybe<Ship>)[]>;
 }
 
 export interface LaunchRocket {
@@ -892,6 +892,66 @@ export interface LaunchLinks {
   flickr_images?: Maybe<(Maybe<string>)[]>;
 }
 
+export interface Ship {
+  id?: Maybe<string>;
+
+  name?: Maybe<string>;
+
+  model?: Maybe<string>;
+
+  type?: Maybe<string>;
+
+  roles?: Maybe<(Maybe<string>)[]>;
+
+  active?: Maybe<boolean>;
+
+  imo?: Maybe<number>;
+
+  mmsi?: Maybe<number>;
+
+  abs?: Maybe<number>;
+
+  class?: Maybe<number>;
+
+  weight_lbs?: Maybe<number>;
+
+  weight_kg?: Maybe<number>;
+
+  year_built?: Maybe<number>;
+
+  home_port?: Maybe<string>;
+
+  status?: Maybe<string>;
+
+  speed_kn?: Maybe<number>;
+
+  course_deg?: Maybe<number>;
+
+  position?: Maybe<ShipLocation>;
+
+  successful_landings?: Maybe<number>;
+
+  attempted_landings?: Maybe<number>;
+
+  missions?: Maybe<(Maybe<ShipMission>)[]>;
+
+  url?: Maybe<string>;
+
+  image?: Maybe<string>;
+}
+
+export interface ShipLocation {
+  latitude?: Maybe<number>;
+
+  longitude?: Maybe<number>;
+}
+
+export interface ShipMission {
+  name?: Maybe<string>;
+
+  flight?: Maybe<string>;
+}
+
 export interface Landpad {
   id?: Maybe<string>;
 
@@ -1010,66 +1070,6 @@ export interface Roadster {
   wikipedia?: Maybe<string>;
 
   details?: Maybe<string>;
-}
-
-export interface Ship {
-  id?: Maybe<string>;
-
-  name?: Maybe<string>;
-
-  model?: Maybe<string>;
-
-  type?: Maybe<string>;
-
-  roles?: Maybe<(Maybe<string>)[]>;
-
-  active?: Maybe<boolean>;
-
-  imo?: Maybe<number>;
-
-  mmsi?: Maybe<number>;
-
-  abs?: Maybe<number>;
-
-  class?: Maybe<number>;
-
-  weight_lbs?: Maybe<number>;
-
-  weight_kg?: Maybe<number>;
-
-  year_built?: Maybe<number>;
-
-  home_port?: Maybe<string>;
-
-  status?: Maybe<string>;
-
-  speed_kn?: Maybe<number>;
-
-  course_deg?: Maybe<number>;
-
-  position?: Maybe<ShipLocation>;
-
-  successful_landings?: Maybe<number>;
-
-  attempted_landings?: Maybe<number>;
-
-  missions?: Maybe<(Maybe<ShipMission>)[]>;
-
-  url?: Maybe<string>;
-
-  image?: Maybe<string>;
-}
-
-export interface ShipLocation {
-  latitude?: Maybe<number>;
-
-  longitude?: Maybe<number>;
-}
-
-export interface ShipMission {
-  name?: Maybe<string>;
-
-  flight?: Maybe<string>;
 }
 
 export interface Mutation {
@@ -2706,8 +2706,6 @@ export namespace LaunchResolvers {
 
     rocket?: RocketResolver<Maybe<LaunchRocket>, TypeParent, Context>;
 
-    ships?: ShipsResolver<Maybe<(Maybe<string>)[]>, TypeParent, Context>;
-
     telemetry?: TelemetryResolver<Maybe<LaunchTelemetry>, TypeParent, Context>;
 
     launch_site?: LaunchSiteResolver<Maybe<LaunchSite>, TypeParent, Context>;
@@ -2729,6 +2727,8 @@ export namespace LaunchResolvers {
       TypeParent,
       Context
     >;
+
+    ships?: ShipsResolver<Maybe<(Maybe<Ship>)[]>, TypeParent, Context>;
   }
 
   export type IdResolver<
@@ -2786,11 +2786,6 @@ export namespace LaunchResolvers {
     Parent = Launch,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
-  export type ShipsResolver<
-    R = Maybe<(Maybe<string>)[]>,
-    Parent = Launch,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
   export type TelemetryResolver<
     R = Maybe<LaunchTelemetry>,
     Parent = Launch,
@@ -2823,6 +2818,11 @@ export namespace LaunchResolvers {
   > = Resolver<R, Parent, Context>;
   export type StaticFireDateUnixResolver<
     R = Maybe<Date>,
+    Parent = Launch,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type ShipsResolver<
+    R = Maybe<(Maybe<Ship>)[]>,
     Parent = Launch,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
@@ -3882,6 +3882,222 @@ export namespace LaunchLinksResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
+export namespace ShipResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = Ship> {
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
+
+    name?: NameResolver<Maybe<string>, TypeParent, Context>;
+
+    model?: ModelResolver<Maybe<string>, TypeParent, Context>;
+
+    type?: TypeResolver<Maybe<string>, TypeParent, Context>;
+
+    roles?: RolesResolver<Maybe<(Maybe<string>)[]>, TypeParent, Context>;
+
+    active?: ActiveResolver<Maybe<boolean>, TypeParent, Context>;
+
+    imo?: ImoResolver<Maybe<number>, TypeParent, Context>;
+
+    mmsi?: MmsiResolver<Maybe<number>, TypeParent, Context>;
+
+    abs?: AbsResolver<Maybe<number>, TypeParent, Context>;
+
+    class?: ClassResolver<Maybe<number>, TypeParent, Context>;
+
+    weight_lbs?: WeightLbsResolver<Maybe<number>, TypeParent, Context>;
+
+    weight_kg?: WeightKgResolver<Maybe<number>, TypeParent, Context>;
+
+    year_built?: YearBuiltResolver<Maybe<number>, TypeParent, Context>;
+
+    home_port?: HomePortResolver<Maybe<string>, TypeParent, Context>;
+
+    status?: StatusResolver<Maybe<string>, TypeParent, Context>;
+
+    speed_kn?: SpeedKnResolver<Maybe<number>, TypeParent, Context>;
+
+    course_deg?: CourseDegResolver<Maybe<number>, TypeParent, Context>;
+
+    position?: PositionResolver<Maybe<ShipLocation>, TypeParent, Context>;
+
+    successful_landings?: SuccessfulLandingsResolver<
+      Maybe<number>,
+      TypeParent,
+      Context
+    >;
+
+    attempted_landings?: AttemptedLandingsResolver<
+      Maybe<number>,
+      TypeParent,
+      Context
+    >;
+
+    missions?: MissionsResolver<
+      Maybe<(Maybe<ShipMission>)[]>,
+      TypeParent,
+      Context
+    >;
+
+    url?: UrlResolver<Maybe<string>, TypeParent, Context>;
+
+    image?: ImageResolver<Maybe<string>, TypeParent, Context>;
+  }
+
+  export type IdResolver<
+    R = Maybe<string>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type NameResolver<
+    R = Maybe<string>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type ModelResolver<
+    R = Maybe<string>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type TypeResolver<
+    R = Maybe<string>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type RolesResolver<
+    R = Maybe<(Maybe<string>)[]>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type ActiveResolver<
+    R = Maybe<boolean>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type ImoResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type MmsiResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type AbsResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type ClassResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type WeightLbsResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type WeightKgResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type YearBuiltResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type HomePortResolver<
+    R = Maybe<string>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type StatusResolver<
+    R = Maybe<string>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type SpeedKnResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type CourseDegResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type PositionResolver<
+    R = Maybe<ShipLocation>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type SuccessfulLandingsResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type AttemptedLandingsResolver<
+    R = Maybe<number>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type MissionsResolver<
+    R = Maybe<(Maybe<ShipMission>)[]>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type UrlResolver<
+    R = Maybe<string>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type ImageResolver<
+    R = Maybe<string>,
+    Parent = Ship,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace ShipLocationResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = ShipLocation> {
+    latitude?: LatitudeResolver<Maybe<number>, TypeParent, Context>;
+
+    longitude?: LongitudeResolver<Maybe<number>, TypeParent, Context>;
+  }
+
+  export type LatitudeResolver<
+    R = Maybe<number>,
+    Parent = ShipLocation,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type LongitudeResolver<
+    R = Maybe<number>,
+    Parent = ShipLocation,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace ShipMissionResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = ShipMission> {
+    name?: NameResolver<Maybe<string>, TypeParent, Context>;
+
+    flight?: FlightResolver<Maybe<string>, TypeParent, Context>;
+  }
+
+  export type NameResolver<
+    R = Maybe<string>,
+    Parent = ShipMission,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type FlightResolver<
+    R = Maybe<string>,
+    Parent = ShipMission,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
 export namespace LandpadResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Landpad> {
     id?: IdResolver<Maybe<string>, TypeParent, Context>;
@@ -4336,222 +4552,6 @@ export namespace RoadsterResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
-export namespace ShipResolvers {
-  export interface Resolvers<Context = MyContext, TypeParent = Ship> {
-    id?: IdResolver<Maybe<string>, TypeParent, Context>;
-
-    name?: NameResolver<Maybe<string>, TypeParent, Context>;
-
-    model?: ModelResolver<Maybe<string>, TypeParent, Context>;
-
-    type?: TypeResolver<Maybe<string>, TypeParent, Context>;
-
-    roles?: RolesResolver<Maybe<(Maybe<string>)[]>, TypeParent, Context>;
-
-    active?: ActiveResolver<Maybe<boolean>, TypeParent, Context>;
-
-    imo?: ImoResolver<Maybe<number>, TypeParent, Context>;
-
-    mmsi?: MmsiResolver<Maybe<number>, TypeParent, Context>;
-
-    abs?: AbsResolver<Maybe<number>, TypeParent, Context>;
-
-    class?: ClassResolver<Maybe<number>, TypeParent, Context>;
-
-    weight_lbs?: WeightLbsResolver<Maybe<number>, TypeParent, Context>;
-
-    weight_kg?: WeightKgResolver<Maybe<number>, TypeParent, Context>;
-
-    year_built?: YearBuiltResolver<Maybe<number>, TypeParent, Context>;
-
-    home_port?: HomePortResolver<Maybe<string>, TypeParent, Context>;
-
-    status?: StatusResolver<Maybe<string>, TypeParent, Context>;
-
-    speed_kn?: SpeedKnResolver<Maybe<number>, TypeParent, Context>;
-
-    course_deg?: CourseDegResolver<Maybe<number>, TypeParent, Context>;
-
-    position?: PositionResolver<Maybe<ShipLocation>, TypeParent, Context>;
-
-    successful_landings?: SuccessfulLandingsResolver<
-      Maybe<number>,
-      TypeParent,
-      Context
-    >;
-
-    attempted_landings?: AttemptedLandingsResolver<
-      Maybe<number>,
-      TypeParent,
-      Context
-    >;
-
-    missions?: MissionsResolver<
-      Maybe<(Maybe<ShipMission>)[]>,
-      TypeParent,
-      Context
-    >;
-
-    url?: UrlResolver<Maybe<string>, TypeParent, Context>;
-
-    image?: ImageResolver<Maybe<string>, TypeParent, Context>;
-  }
-
-  export type IdResolver<
-    R = Maybe<string>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type NameResolver<
-    R = Maybe<string>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type ModelResolver<
-    R = Maybe<string>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type TypeResolver<
-    R = Maybe<string>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type RolesResolver<
-    R = Maybe<(Maybe<string>)[]>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type ActiveResolver<
-    R = Maybe<boolean>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type ImoResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type MmsiResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type AbsResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type ClassResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type WeightLbsResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type WeightKgResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type YearBuiltResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type HomePortResolver<
-    R = Maybe<string>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type StatusResolver<
-    R = Maybe<string>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type SpeedKnResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type CourseDegResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type PositionResolver<
-    R = Maybe<ShipLocation>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type SuccessfulLandingsResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type AttemptedLandingsResolver<
-    R = Maybe<number>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type MissionsResolver<
-    R = Maybe<(Maybe<ShipMission>)[]>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type UrlResolver<
-    R = Maybe<string>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type ImageResolver<
-    R = Maybe<string>,
-    Parent = Ship,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace ShipLocationResolvers {
-  export interface Resolvers<Context = MyContext, TypeParent = ShipLocation> {
-    latitude?: LatitudeResolver<Maybe<number>, TypeParent, Context>;
-
-    longitude?: LongitudeResolver<Maybe<number>, TypeParent, Context>;
-  }
-
-  export type LatitudeResolver<
-    R = Maybe<number>,
-    Parent = ShipLocation,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type LongitudeResolver<
-    R = Maybe<number>,
-    Parent = ShipLocation,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace ShipMissionResolvers {
-  export interface Resolvers<Context = MyContext, TypeParent = ShipMission> {
-    name?: NameResolver<Maybe<string>, TypeParent, Context>;
-
-    flight?: FlightResolver<Maybe<string>, TypeParent, Context>;
-  }
-
-  export type NameResolver<
-    R = Maybe<string>,
-    Parent = ShipMission,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type FlightResolver<
-    R = Maybe<string>,
-    Parent = ShipMission,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-}
-
 export namespace MutationResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = {}> {
     _empty?: _EmptyResolver<Maybe<string>, TypeParent, Context>;
@@ -4675,14 +4675,14 @@ export interface IResolvers {
   LaunchTelemetry?: LaunchTelemetryResolvers.Resolvers;
   LaunchSite?: LaunchSiteResolvers.Resolvers;
   LaunchLinks?: LaunchLinksResolvers.Resolvers;
+  Ship?: ShipResolvers.Resolvers;
+  ShipLocation?: ShipLocationResolvers.Resolvers;
+  ShipMission?: ShipMissionResolvers.Resolvers;
   Landpad?: LandpadResolvers.Resolvers;
   Location?: LocationResolvers.Resolvers;
   Launchpad?: LaunchpadResolvers.Resolvers;
   Mission?: MissionResolvers.Resolvers;
   Roadster?: RoadsterResolvers.Resolvers;
-  Ship?: ShipResolvers.Resolvers;
-  ShipLocation?: ShipLocationResolvers.Resolvers;
-  ShipMission?: ShipMissionResolvers.Resolvers;
   Mutation?: MutationResolvers.Resolvers;
   Subscription?: SubscriptionResolvers.Resolvers;
   CoreMission?: CoreMissionResolvers.Resolvers;
