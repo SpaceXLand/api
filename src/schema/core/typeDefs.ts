@@ -23,11 +23,11 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [Core]
-    core(core_serial: String!): Core
+    core(id: String!): Core
   }
 
   type Core {
-    core_serial: String
+    id: String
     block: Int
     status: String
     original_launch: Date
@@ -41,7 +41,7 @@ const typeDefs = gql`
   }
 
   input CoresFind {
-    core_serial: String
+    id: String
     block: Int
     status: String
     original_launch: Date

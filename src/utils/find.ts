@@ -287,8 +287,8 @@ export default r => {
     //                       Core Fields
     //------------------------------------------------------------
 
-    if (r.query.core_serial) {
-      query.core_serial = r.query.core_serial;
+    if (r.query.id) {
+      query.core_serial = r.query.id;
     }
     if (r.query.block) {
       query.block = parseInt(r.query.block, 10);

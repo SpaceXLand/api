@@ -17,7 +17,7 @@ export interface CapsulesFind {
 }
 
 export interface CoresFind {
-  core_serial?: Maybe<string>;
+  id?: Maybe<string>;
 
   block?: Maybe<number>;
 
@@ -539,7 +539,7 @@ export interface InfoLinks {
 }
 
 export interface Core {
-  core_serial?: Maybe<string>;
+  id?: Maybe<string>;
 
   block?: Maybe<number>;
 
@@ -1164,7 +1164,7 @@ export interface CoresUpcomingQueryArgs {
   sort?: Maybe<string>;
 }
 export interface CoreQueryArgs {
-  core_serial: string;
+  id: string;
 }
 export interface DragonsQueryArgs {
   limit?: Maybe<number>;
@@ -1569,7 +1569,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, CoreArgs>;
   export interface CoreArgs {
-    core_serial: string;
+    id: string;
   }
 
   export type DragonsResolver<
@@ -2510,7 +2510,7 @@ export namespace InfoLinksResolvers {
 
 export namespace CoreResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Core> {
-    core_serial?: CoreSerialResolver<Maybe<string>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
 
     block?: BlockResolver<Maybe<number>, TypeParent, Context>;
 
@@ -2537,7 +2537,7 @@ export namespace CoreResolvers {
     water_landing?: WaterLandingResolver<Maybe<boolean>, TypeParent, Context>;
   }
 
-  export type CoreSerialResolver<
+  export type IdResolver<
     R = Maybe<string>,
     Parent = Core,
     Context = MyContext

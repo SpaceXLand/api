@@ -448,7 +448,7 @@
         "parameters": [
           {
             "in": "query",
-            "name": "core_serial",
+            "name": "id",
             "required": true,
             "schema": {
               "type": "string"
@@ -1873,7 +1873,7 @@
         "type": "object",
         "required": [],
         "properties": {
-          "core_serial": {
+          "id": {
             "type": "string"
           },
           "block": {
