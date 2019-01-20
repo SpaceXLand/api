@@ -513,10 +513,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "capsule",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -1568,7 +1568,7 @@
         "required": [],
         "properties": {
           "id": {
-            "type": "string"
+            "type": "object"
           },
           "name": {
             "type": "string"

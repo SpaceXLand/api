@@ -1172,7 +1172,7 @@ export interface DragonsQueryArgs {
   offset?: Maybe<number>;
 }
 export interface DragonQueryArgs {
-  capsule: string;
+  id: string;
 }
 export interface HistoriesQueryArgs {
   find?: Maybe<HistoryFind>;
@@ -1589,7 +1589,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, DragonArgs>;
   export interface DragonArgs {
-    capsule: string;
+    id: string;
   }
 
   export type _EmptyResolver<
