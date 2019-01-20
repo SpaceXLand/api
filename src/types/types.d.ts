@@ -41,7 +41,7 @@ export interface CoresFind {
 }
 
 export interface HistoryFind {
-  id?: Maybe<number>;
+  id?: Maybe<string>;
 
   start?: Maybe<Date>;
 
@@ -563,7 +563,7 @@ export interface Core {
 }
 
 export interface History {
-  id?: Maybe<number>;
+  id?: Maybe<string>;
 
   title?: Maybe<string>;
 
@@ -1186,7 +1186,7 @@ export interface HistoriesQueryArgs {
   sort?: Maybe<string>;
 }
 export interface HistoryQueryArgs {
-  history_id: number;
+  id: string;
 }
 export interface LandpadsQueryArgs {
   limit?: Maybe<number>;
@@ -1620,7 +1620,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, HistoryArgs>;
   export interface HistoryArgs {
-    history_id: number;
+    id: string;
   }
 
   export type LandpadsResolver<
@@ -2596,7 +2596,7 @@ export namespace CoreResolvers {
 
 export namespace HistoryResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = History> {
-    id?: IdResolver<Maybe<number>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
 
     title?: TitleResolver<Maybe<string>, TypeParent, Context>;
 
@@ -2612,7 +2612,7 @@ export namespace HistoryResolvers {
   }
 
   export type IdResolver<
-    R = Maybe<number>,
+    R = Maybe<string>,
     Parent = History,
     Context = MyContext
   > = Resolver<R, Parent, Context>;

@@ -13,10 +13,10 @@ const Query: QueryResolvers.Resolvers = {
       .toArray();
     return data;
   },
-  history: async (obj, { history_id }, context) => {
+  history: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ id: history_id })
+      .find({ id: parseInt(id) })
       .limit(1)
       .toArray();
     return data;

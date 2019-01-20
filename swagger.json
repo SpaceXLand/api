@@ -602,11 +602,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "history_id",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -1922,8 +1921,7 @@
         "required": [],
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32"
+            "type": "object"
           },
           "title": {
             "type": "string"
