@@ -7,12 +7,3 @@ export const parseLaunchpad = pad => {
   const { padid, full_name, ...padParsed } = pad;
   return padParsed;
 };
-
-export const parseRocket = rocket => {
-  rocket.rocket_id = rocket.id;
-  rocket.id = rocket.rocketid;
-  rocket.rocket_name = rocket.name;
-  rocket.rocket_type = rocket.type;
-  const { rocketid, name, type, ...rocketParsed } = rocket;
-  return rocketParsed;
-};

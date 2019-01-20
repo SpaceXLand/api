@@ -51,13 +51,11 @@ export interface HistoryFind {
 }
 
 export interface LaunchFind {
-  flight_id?: Maybe<string>;
+  id?: Maybe<string>;
 
   start?: Maybe<Date>;
 
   end?: Maybe<Date>;
-
-  flight_number?: Maybe<number>;
 
   mission_name?: Maybe<string>;
 
@@ -587,7 +585,7 @@ export interface Link {
 }
 
 export interface Launch {
-  flight_number?: Maybe<number>;
+  id?: Maybe<string>;
 
   mission_name?: Maybe<string>;
 
@@ -1228,7 +1226,7 @@ export interface LaunchesUpcomingQueryArgs {
   sort?: Maybe<string>;
 }
 export interface LaunchQueryArgs {
-  flight_number: number;
+  id: string;
 }
 export interface LaunchLatestQueryArgs {
   offset?: Maybe<number>;
@@ -1698,7 +1696,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, LaunchArgs>;
   export interface LaunchArgs {
-    flight_number: number;
+    id: string;
   }
 
   export type LaunchLatestResolver<
@@ -2674,7 +2672,7 @@ export namespace LinkResolvers {
 
 export namespace LaunchResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Launch> {
-    flight_number?: FlightNumberResolver<Maybe<number>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
 
     mission_name?: MissionNameResolver<Maybe<string>, TypeParent, Context>;
 
@@ -2733,8 +2731,8 @@ export namespace LaunchResolvers {
     >;
   }
 
-  export type FlightNumberResolver<
-    R = Maybe<number>,
+  export type IdResolver<
+    R = Maybe<string>,
     Parent = Launch,
     Context = MyContext
   > = Resolver<R, Parent, Context>;

@@ -20,16 +20,11 @@ export default r => {
     //                       Launch Fields
     //------------------------------------------------------------
 
-    if (r.query.flight_id) {
-      // Mongo _id field requires underscore dangle
-      // eslint-disable-next-line no-underscore-dangle
-      query._id = ObjectId(r.query.flight_id);
+    if (r.query.id) {
+      query.flight_number = parseInt(r.query.id, 10);
     }
     if (r.query.start && (r.query.final || r.query.end)) {
       query.launch_date_utc = dateRange(r.query);
-    }
-    if (r.query.flight_number) {
-      query.flight_number = parseInt(r.query.flight_number, 10);
     }
     if (r.query.mission_name) {
       query.mission_name = r.query.mission_name;

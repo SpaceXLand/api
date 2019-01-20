@@ -23,7 +23,7 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [Launch]
-    launch(flight_number: Int!): Launch
+    launch(id: ID!): Launch
     launchLatest(offset: Int): Launch
     launchNext(offset: Int): Launch
   }
@@ -33,7 +33,7 @@ const typeDefs = gql`
   }
 
   type Launch {
-    flight_number: Int
+    id: ID
     mission_name: String
     mission_id: [String]
     upcoming: Boolean
@@ -116,10 +116,9 @@ const typeDefs = gql`
   }
 
   input LaunchFind {
-    flight_id: String
+    id: ID
     start: Date
     end: Date
-    flight_number: Int
     mission_name: String
     mission_id: String
     launch_year: String

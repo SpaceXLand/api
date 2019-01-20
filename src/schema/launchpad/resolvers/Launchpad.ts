@@ -1,5 +1,3 @@
-import { parseRocket } from '../utils';
-
 export const Launchpad = {
   vehicles_launched: async ({ vehicles_launched }, args, context) => {
     return vehicles_launched.map(async name => {
@@ -7,7 +5,6 @@ export const Launchpad = {
         .collection('rocket')
         .find({ name })
         .limit(1)
-        .map(parseRocket)
         .toArray();
       return data;
     });

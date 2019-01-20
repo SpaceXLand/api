@@ -882,11 +882,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "flight_number",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -1962,9 +1961,8 @@
         "type": "object",
         "required": [],
         "properties": {
-          "flight_number": {
-            "type": "integer",
-            "format": "int32"
+          "id": {
+            "type": "object"
           },
           "mission_name": {
             "type": "string"

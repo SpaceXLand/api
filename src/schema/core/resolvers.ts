@@ -1,4 +1,5 @@
 import { QueryResolvers } from '../../types/types';
+import { parseCores } from './utils';
 
 const collection = 'core';
 const url = `/v3/cores`;
@@ -81,7 +82,5 @@ const Query: QueryResolvers.Resolvers = {
     return data;
   }
 };
-
-const parseCores = core => ({ ...core, id: core.core_serial });
 
 export default { Query };
