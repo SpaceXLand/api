@@ -410,11 +410,11 @@ export default r => {
     //                     Mission Fields
     //------------------------------------------------------------
 
-    if (r.query.mission_name) {
-      query.mission_name = r.query.mission_name;
+    if (r.query.id) {
+      query.mission_id = r.query.id;
     }
-    if (r.query.mission_id) {
-      query.mission_id = r.query.mission_id;
+    if (r.query.name) {
+      query.mission_name = r.query.name;
     }
     if (r.query.manufacturer) {
       query.manufacturers = r.query.manufacturer;

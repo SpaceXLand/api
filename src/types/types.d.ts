@@ -175,9 +175,9 @@ export interface LaunchFind {
 }
 
 export interface MissionsFind {
-  mission_name?: Maybe<string>;
+  id?: Maybe<string>;
 
-  mission_id?: Maybe<string>;
+  name?: Maybe<string>;
 
   manufacturer?: Maybe<string>;
 
@@ -949,9 +949,9 @@ export interface Launchpad {
 }
 
 export interface Mission {
-  mission_name?: Maybe<string>;
+  id?: Maybe<string>;
 
-  mission_id?: Maybe<string>;
+  name?: Maybe<string>;
 
   manufacturers?: Maybe<(Maybe<string>)[]>;
 
@@ -1254,7 +1254,7 @@ export interface MissionsQueryArgs {
   offset?: Maybe<number>;
 }
 export interface MissionQueryArgs {
-  mission_id: string;
+  id: string;
 }
 export interface PayloadsQueryArgs {
   find?: Maybe<PayloadsFind>;
@@ -1760,7 +1760,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, MissionArgs>;
   export interface MissionArgs {
-    mission_id: string;
+    id: string;
   }
 
   export type PayloadsResolver<
@@ -4091,9 +4091,9 @@ export namespace LaunchpadResolvers {
 
 export namespace MissionResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Mission> {
-    mission_name?: MissionNameResolver<Maybe<string>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
 
-    mission_id?: MissionIdResolver<Maybe<string>, TypeParent, Context>;
+    name?: NameResolver<Maybe<string>, TypeParent, Context>;
 
     manufacturers?: ManufacturersResolver<
       Maybe<(Maybe<string>)[]>,
@@ -4112,12 +4112,12 @@ export namespace MissionResolvers {
     payloads?: PayloadsResolver<Maybe<(Maybe<Payload>)[]>, TypeParent, Context>;
   }
 
-  export type MissionNameResolver<
+  export type IdResolver<
     R = Maybe<string>,
     Parent = Mission,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
-  export type MissionIdResolver<
+  export type NameResolver<
     R = Maybe<string>,
     Parent = Mission,
     Context = MyContext
