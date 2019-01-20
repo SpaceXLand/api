@@ -23,11 +23,11 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [Core]
-    core(id: String!): Core
+    core(id: ID!): Core
   }
 
   type Core {
-    id: String
+    id: ID
     block: Int
     status: String
     original_launch: Date
