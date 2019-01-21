@@ -1001,10 +1001,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "pad",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -2709,8 +2709,10 @@
         "required": [],
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32"
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
           },
           "status": {
             "type": "string"
@@ -2736,12 +2738,6 @@
             "type": "string"
           },
           "details": {
-            "type": "string"
-          },
-          "site_id": {
-            "type": "string"
-          },
-          "site_name_long": {
             "type": "string"
           }
         }

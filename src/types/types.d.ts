@@ -983,7 +983,9 @@ export interface Location {
 }
 
 export interface Launchpad {
-  id?: Maybe<number>;
+  id?: Maybe<string>;
+
+  name?: Maybe<string>;
 
   status?: Maybe<string>;
 
@@ -998,10 +1000,6 @@ export interface Launchpad {
   wikipedia?: Maybe<string>;
 
   details?: Maybe<string>;
-
-  site_id?: Maybe<string>;
-
-  site_name_long?: Maybe<string>;
 }
 
 export interface Mission {
@@ -1240,7 +1238,7 @@ export interface LaunchpadsQueryArgs {
   offset?: Maybe<number>;
 }
 export interface LaunchpadQueryArgs {
-  pad: string;
+  id: string;
 }
 export interface MissionsQueryArgs {
   find?: Maybe<MissionsFind>;
@@ -1734,7 +1732,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, LaunchpadArgs>;
   export interface LaunchpadArgs {
-    pad: string;
+    id: string;
   }
 
   export type MissionsResolver<
@@ -4209,7 +4207,9 @@ export namespace LocationResolvers {
 
 export namespace LaunchpadResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Launchpad> {
-    id?: IdResolver<Maybe<number>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
+
+    name?: NameResolver<Maybe<string>, TypeParent, Context>;
 
     status?: StatusResolver<Maybe<string>, TypeParent, Context>;
 
@@ -4236,14 +4236,15 @@ export namespace LaunchpadResolvers {
     wikipedia?: WikipediaResolver<Maybe<string>, TypeParent, Context>;
 
     details?: DetailsResolver<Maybe<string>, TypeParent, Context>;
-
-    site_id?: SiteIdResolver<Maybe<string>, TypeParent, Context>;
-
-    site_name_long?: SiteNameLongResolver<Maybe<string>, TypeParent, Context>;
   }
 
   export type IdResolver<
-    R = Maybe<number>,
+    R = Maybe<string>,
+    Parent = Launchpad,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type NameResolver<
+    R = Maybe<string>,
     Parent = Launchpad,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
@@ -4278,16 +4279,6 @@ export namespace LaunchpadResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context>;
   export type DetailsResolver<
-    R = Maybe<string>,
-    Parent = Launchpad,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type SiteIdResolver<
-    R = Maybe<string>,
-    Parent = Launchpad,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type SiteNameLongResolver<
     R = Maybe<string>,
     Parent = Launchpad,
     Context = MyContext

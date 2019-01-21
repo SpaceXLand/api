@@ -3,11 +3,12 @@ import gql from 'graphql-tag';
 const typeDefs = gql`
   extend type Query {
     launchpads(limit: Int, offset: Int): [Launchpad]
-    launchpad(pad: String!): Launchpad
+    launchpad(id: ID!): Launchpad
   }
 
   type Launchpad {
-    id: Int
+    id: ID
+    name: String
     status: String
     location: Location
     vehicles_launched: [Rocket]
@@ -15,8 +16,6 @@ const typeDefs = gql`
     successful_launches: Int
     wikipedia: String
     details: String
-    site_id: String
-    site_name_long: String
   }
 `;
 export default typeDefs;
