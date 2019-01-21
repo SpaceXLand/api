@@ -210,12 +210,12 @@
         }
       }
     },
-    "/rest/capsule/:id": {
+    "/rest/capsule/{id}": {
       "get": {
         "operationId": "capsuleQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -236,7 +236,7 @@
         }
       }
     },
-    "/rest/company/:id": {
+    "/rest/company/{id}": {
       "get": {
         "operationId": "companyQuery",
         "parameters": [],
@@ -442,12 +442,12 @@
         }
       }
     },
-    "/rest/core/:id": {
+    "/rest/core/{id}": {
       "get": {
         "operationId": "coreQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -507,12 +507,12 @@
         }
       }
     },
-    "/rest/dragon/:id": {
+    "/rest/dragon/{id}": {
       "get": {
         "operationId": "dragonQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -596,12 +596,12 @@
         }
       }
     },
-    "/rest/history/:id": {
+    "/rest/history/{id}": {
       "get": {
         "operationId": "historyQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -661,12 +661,12 @@
         }
       }
     },
-    "/rest/landpad/:id": {
+    "/rest/landpad/{id}": {
       "get": {
         "operationId": "landpadQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -876,12 +876,12 @@
         }
       }
     },
-    "/rest/launch/:id": {
+    "/rest/launch/{id}": {
       "get": {
         "operationId": "launchQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -902,7 +902,7 @@
         }
       }
     },
-    "/rest/launch-latest/:id": {
+    "/rest/launch-latest/{id}": {
       "get": {
         "operationId": "launchLatestQuery",
         "parameters": [
@@ -929,7 +929,7 @@
         }
       }
     },
-    "/rest/launch-next/:id": {
+    "/rest/launch-next/{id}": {
       "get": {
         "operationId": "launchNextQuery",
         "parameters": [
@@ -995,12 +995,12 @@
         }
       }
     },
-    "/rest/launchpad/:id": {
+    "/rest/launchpad/{id}": {
       "get": {
         "operationId": "launchpadQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -1068,12 +1068,12 @@
         }
       }
     },
-    "/rest/mission/:id": {
+    "/rest/mission/{id}": {
       "get": {
         "operationId": "missionQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -1157,12 +1157,12 @@
         }
       }
     },
-    "/rest/payload/:id": {
+    "/rest/payload/{id}": {
       "get": {
         "operationId": "payloadQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -1183,7 +1183,7 @@
         }
       }
     },
-    "/rest/roadster/:id": {
+    "/rest/roadster/{id}": {
       "get": {
         "operationId": "roadsterQuery",
         "parameters": [],
@@ -1239,12 +1239,12 @@
         }
       }
     },
-    "/rest/rocket/:id": {
+    "/rest/rocket/{id}": {
       "get": {
         "operationId": "rocketQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
@@ -1328,12 +1328,12 @@
         }
       }
     },
-    "/rest/ship/:id": {
+    "/rest/ship/{id}": {
       "get": {
         "operationId": "shipQuery",
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
             "required": true,
             "schema": {
