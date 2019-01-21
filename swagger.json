@@ -3,9 +3,15 @@
   "info": {
     "title": "SpaceX Rest API"
   },
+  "tags": [
+    {
+      "name": "Endpoints"
+    }
+  ],
   "paths": {
     "/rest/empty": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "emptyQuery",
         "parameters": [],
         "responses": {
@@ -23,6 +29,7 @@
     },
     "/rest/capsules": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "capsulesQuery",
         "parameters": [
           {
@@ -86,6 +93,7 @@
     },
     "/rest/capsules-past": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "capsulesPastQuery",
         "parameters": [
           {
@@ -149,6 +157,7 @@
     },
     "/rest/capsules-upcoming": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "capsulesUpcomingQuery",
         "parameters": [
           {
@@ -212,6 +221,7 @@
     },
     "/rest/capsule/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "capsuleQuery",
         "parameters": [
           {
@@ -238,6 +248,7 @@
     },
     "/rest/company": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "companyQuery",
         "parameters": [],
         "responses": {
@@ -255,6 +266,7 @@
     },
     "/rest/cores": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "coresQuery",
         "parameters": [
           {
@@ -318,6 +330,7 @@
     },
     "/rest/cores-past": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "coresPastQuery",
         "parameters": [
           {
@@ -381,6 +394,7 @@
     },
     "/rest/cores-upcoming": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "coresUpcomingQuery",
         "parameters": [
           {
@@ -444,6 +458,7 @@
     },
     "/rest/core/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "coreQuery",
         "parameters": [
           {
@@ -470,6 +485,7 @@
     },
     "/rest/dragons": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "dragonsQuery",
         "parameters": [
           {
@@ -509,6 +525,7 @@
     },
     "/rest/dragon/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "dragonQuery",
         "parameters": [
           {
@@ -535,6 +552,7 @@
     },
     "/rest/histories": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "historiesQuery",
         "parameters": [
           {
@@ -598,6 +616,7 @@
     },
     "/rest/history/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "historyQuery",
         "parameters": [
           {
@@ -624,6 +643,7 @@
     },
     "/rest/landpads": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "landpadsQuery",
         "parameters": [
           {
@@ -663,6 +683,7 @@
     },
     "/rest/landpad/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "landpadQuery",
         "parameters": [
           {
@@ -689,6 +710,7 @@
     },
     "/rest/launches": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchesQuery",
         "parameters": [
           {
@@ -752,6 +774,7 @@
     },
     "/rest/launches-past": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchesPastQuery",
         "parameters": [
           {
@@ -815,6 +838,7 @@
     },
     "/rest/launches-upcoming": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchesUpcomingQuery",
         "parameters": [
           {
@@ -878,6 +902,7 @@
     },
     "/rest/launch/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchQuery",
         "parameters": [
           {
@@ -904,6 +929,7 @@
     },
     "/rest/launch-latest": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchLatestQuery",
         "parameters": [
           {
@@ -931,6 +957,7 @@
     },
     "/rest/launch-next": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchNextQuery",
         "parameters": [
           {
@@ -958,6 +985,7 @@
     },
     "/rest/launchpads": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchpadsQuery",
         "parameters": [
           {
@@ -997,6 +1025,7 @@
     },
     "/rest/launchpad/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchpadQuery",
         "parameters": [
           {
@@ -1023,6 +1052,7 @@
     },
     "/rest/missions": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "missionsQuery",
         "parameters": [
           {
@@ -1070,6 +1100,7 @@
     },
     "/rest/mission/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "missionQuery",
         "parameters": [
           {
@@ -1096,6 +1127,7 @@
     },
     "/rest/payloads": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "payloadsQuery",
         "parameters": [
           {
@@ -1159,6 +1191,7 @@
     },
     "/rest/payload/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "payloadQuery",
         "parameters": [
           {
@@ -1185,6 +1218,7 @@
     },
     "/rest/roadster": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "roadsterQuery",
         "parameters": [],
         "responses": {
@@ -1202,6 +1236,7 @@
     },
     "/rest/rockets": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "rocketsQuery",
         "parameters": [
           {
@@ -1241,6 +1276,7 @@
     },
     "/rest/rocket/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "rocketQuery",
         "parameters": [
           {
@@ -1267,6 +1303,7 @@
     },
     "/rest/ships": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "shipsQuery",
         "parameters": [
           {
@@ -1330,6 +1367,7 @@
     },
     "/rest/ship/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "shipQuery",
         "parameters": [
           {
