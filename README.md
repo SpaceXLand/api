@@ -28,7 +28,7 @@ Introspect the available data just pressing `Ctrl/Shift + Space`, have the abili
 
 💜GraphQL 🔗https://api.spacex.land/graphql  
 
-If you're indeed an old school API fan, you might wanna check the **auto-generated** REST API based on the **GraphQL schema**!
+If you're indeed an old school API fan, you might wanna check the **auto-generated** REST API based on it respective **GraphQL schema**!
 
 🖤REST 🔗https://api.spacex.land/rest
 
