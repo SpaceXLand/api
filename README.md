@@ -5,7 +5,7 @@
 <a href="https://github.com/spacexland/api/blob/master/CONTRIBUTING.md#feature"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
 <a href="https://spacexland.slack.com"><img src="https://img.shields.io/badge/slack-join-orange.svg"></a>
 </p>
-<p align="center">🚀GraphQL & REST APIs to explore all the rockets, launches & other SpaceX's data!</p>
+<h3 align="center">GraphQL & REST APIs to explore all the 🚀, launches & other SpaceX's data!</h3>
 <p align="center"><img src="https://cdn-images-1.medium.com/max/2600/1*ixnzMP6t4Iot9nZpBmr1Vw.png"></p>
 
 ## Usage
@@ -39,15 +39,16 @@ Pick whichever programming language & the FE library you feel confident with, sc
 
 ## Installation
 
-**Production**
+**Init server**
 ```bash
-yarn && yarn start
+yarn # npm install
+yarn dev # npm run dev
+```
+**Generate types**
+```bash
+yarn generate # npm run generate
 ```
 
-**Development**
-```bash
-yarn && yarn dev
-```
 
 ## Contribute
 
