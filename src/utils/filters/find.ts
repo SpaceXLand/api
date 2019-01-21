@@ -1,7 +1,7 @@
 // Required to correctly output ObjectID's
 import { ObjectId } from 'mongodb';
 import moment from 'moment';
-import { dateRange } from '../utils';
+import { dateRange } from '../';
 
 /**
  * Builds mongo find query object from querystrings

@@ -18,7 +18,10 @@ export const Query: QueryResolvers.Resolvers = {
     const data = await context.db
       .collection(collection)
       .find({ upcoming: false, ...context.find({ query: { ...find }, url }) })
-      .sort(context.sort({ query: { order, sort }, url }))
+      .sort({
+        ...context.sort({ query: { order, sort }, url }),
+        flight_number: -1
+      })
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .map(parseLaunch)
