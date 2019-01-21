@@ -8,25 +8,26 @@
 <h3 align="center">GraphQL & REST APIs to explore all the 🚀, launches & other SpaceX's data!</h3>
 <p align="center">
 <b>APIs for</b>
-</br>👩‍💻Techies&nbsp&nbsp👨‍🏫 
+</br>👩‍💻Techies&nbsp&nbsp&nbsp👨‍🏫 
 </br>👴& no techies&nbsp&nbsp👩‍🌾
 </br>💻from any device&nbsp📱
 </br>also, for those
 </br>👩‍🚀little dreamers&nbsp&nbsp👨‍🚀 
 </p>
-<p align="center"><img src="https://cdn-images-1.medium.com/max/2600/1*ixnzMP6t4Iot9nZpBmr1Vw.png"></p>
+<!-- <p align="center"><img src="https://cdn-images-1.medium.com/max/2600/1*ixnzMP6t4Iot9nZpBmr1Vw.png"></p> -->
 
 ## Usage
 
 Navigate through all the SpaceX data with both,  
-**GraphQL** & **REST** APIs, having a ✨user & developer experience!  
-✋ Logins/Auths   
+the **GraphQL** & **REST** APIs, having a ✨user & developer experience!  
+✋ Setups/Auths   
 🤗 Fully updated docs  
 😍 Interactive web-based  
 
 Introspect the available data just pressing `Ctrl/Shift + Space`,  
 have the ability to **define precisely the data** you want,  
-**replace multiple requests** with a single call with GraphQL!
+**replace multiple requests** with a single call,  
+discover new ways to interact with APIs!
 
 💜GraphQL 🔗https://api.spacex.land/graphql  
 
