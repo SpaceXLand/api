@@ -18,7 +18,7 @@
 
 ## Usage
 
-Navigate through all the SpaceX data with both, the **GraphQL** & **REST** APIs, having a ✨user & developer experience!  
+Navigate through all the SpaceX data having the ✨user & developer experience!  
 ✋ Setups/Auths   
 🤗 Fully updated docs  
 😍 Interactive web-based  
