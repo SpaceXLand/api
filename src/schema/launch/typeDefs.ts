@@ -33,33 +33,33 @@ const typeDefs = gql`
   }
 
   type Launch {
+    details: String
     id: ID
-    mission_name: String
-    mission_id: [String]
-    upcoming: Boolean
-    launch_year: String
+    is_tentative: Boolean
+    launch_date_local: Date
     launch_date_unix: Date
     launch_date_utc: Date
-    launch_date_local: Date
-    is_tentative: Boolean
-    tentative_max_precision: String
-    rocket: LaunchRocket
-    telemetry: LaunchTelemetry
     launch_site: LaunchSite
     launch_success: Boolean
+    launch_year: String
     links: LaunchLinks
-    details: String
-    static_fire_date_utc: Date
+    mission_id: [String]
+    mission_name: String
+    rocket: LaunchRocket
     static_fire_date_unix: Date
+    static_fire_date_utc: Date
+    telemetry: LaunchTelemetry
+    tentative_max_precision: String
+    upcoming: Boolean
   }
 
   type LaunchRocket {
-    rocket: Rocket
+    fairings: LaunchRocketFairings
+    first_stage: LaunchRocketFirstStage
     rocket_name: String
     rocket_type: String
-    first_stage: LaunchRocketFirstStage
+    rocket: Rocket
     second_stage: LaunchRocketSecondStage
-    fairings: LaunchRocketFairings
   }
 
   type LaunchRocketFirstStage {
@@ -67,16 +67,16 @@ const typeDefs = gql`
   }
 
   type LaunchRocketFirstStageCore {
+    block: Int
     core: Core
     flight: Int
-    block: Int
     gridfins: Boolean
-    legs: Boolean
-    reused: Boolean
     land_success: Boolean
     landing_intent: Boolean
     landing_type: String
     landing_vehicle: String
+    legs: Boolean
+    reused: Boolean
   }
   type LaunchRocketSecondStage {
     block: Int
@@ -84,9 +84,9 @@ const typeDefs = gql`
   }
 
   type LaunchRocketFairings {
-    reused: Boolean
-    recovery_attempt: Boolean
     recovered: Boolean
+    recovery_attempt: Boolean
+    reused: Boolean
     ship: String
   }
 
@@ -96,85 +96,85 @@ const typeDefs = gql`
 
   type LaunchSite {
     site_id: String
-    site_name: String
     site_name_long: String
+    site_name: String
   }
 
   type LaunchLinks {
-    mission_patch: String
+    article_link: String
+    flickr_images: [String]
     mission_patch_small: String
+    mission_patch: String
+    presskit: String
     reddit_campaign: String
     reddit_launch: String
-    reddit_recovery: String
     reddit_media: String
-    presskit: String
-    article_link: String
-    wikipedia: String
+    reddit_recovery: String
     video_link: String
-    flickr_images: [String]
+    wikipedia: String
   }
 
   input LaunchFind {
-    id: ID
-    start: Date
-    end: Date
-    mission_name: String
-    mission_id: String
-    launch_year: String
-    launch_date_utc: Date
-    launch_date_local: Date
-    tentative: String
-    tentative_max_precision: String
-    tbd: String
-    rocket_id: String
-    rocket_name: String
-    rocket_type: String
-    core_serial: String
-    cap_serial: String
-    core_flight: Int
-    block: Int
-    gridfins: String
-    legs: String
-    second_stage_block: String
-    fairings_reused: String
-    fairings_recovery_attempt: String
-    fairings_recovered: String
-    fairings_ship: String
-    core_reuse: String
-    side_core1_reuse: String
-    side_core2_reuse: String
-    fairings_reuse: String
-    capsule_reuse: String
-    ship: String
-    site_id: String
-    site_name: String
-    site_name_long: String
-    payload_id: String
-    norad_id: Int
-    customer: String
-    nationality: String
-    manufacturer: String
-    payload_type: String
-    orbit: String
-    reference_system: String
-    regime: String
-    longitude: Float
-    semi_major_axis_km: Float
-    eccentricity: Float
-    periapsis_km: Float
     apoapsis_km: Float
-    inclination_deg: Float
-    period_min: Float
-    lifespan_years: Float
+    block: Int
+    cap_serial: String
+    capsule_reuse: String
+    core_flight: Int
+    core_reuse: String
+    core_serial: String
+    customer: String
+    eccentricity: Float
+    end: Date
     epoch: Date
-    mean_motion: Float
-    raan: Float
-    reused: String
-    launch_success: String
+    fairings_recovered: String
+    fairings_recovery_attempt: String
+    fairings_reuse: String
+    fairings_reused: String
+    fairings_ship: String
+    gridfins: String
+    id: ID
+    inclination_deg: Float
     land_success: String
     landing_intent: String
     landing_type: String
     landing_vehicle: String
+    launch_date_local: Date
+    launch_date_utc: Date
+    launch_success: String
+    launch_year: String
+    legs: String
+    lifespan_years: Float
+    longitude: Float
+    manufacturer: String
+    mean_motion: Float
+    mission_id: String
+    mission_name: String
+    nationality: String
+    norad_id: Int
+    orbit: String
+    payload_id: String
+    payload_type: String
+    periapsis_km: Float
+    period_min: Float
+    raan: Float
+    reference_system: String
+    regime: String
+    reused: String
+    rocket_id: String
+    rocket_name: String
+    rocket_type: String
+    second_stage_block: String
+    semi_major_axis_km: Float
+    ship: String
+    side_core1_reuse: String
+    side_core2_reuse: String
+    site_id: String
+    site_name_long: String
+    site_name: String
+    start: Date
+    tbd: String
+    tentative_max_precision: String
+    tentative: String
   }
 `;
 export default typeDefs;

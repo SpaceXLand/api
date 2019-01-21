@@ -7,15 +7,15 @@ const typeDefs = gql`
   }
 
   type Launchpad {
+    attempted_launches: Int
+    details: String
     id: ID
+    location: Location
     name: String
     status: String
-    location: Location
-    vehicles_launched: [Rocket]
-    attempted_launches: Int
     successful_launches: Int
+    vehicles_launched: [Rocket]
     wikipedia: String
-    details: String
   }
 `;
 export default typeDefs;

@@ -17,59 +17,59 @@ const typeDefs = gql`
   }
 
   type Payload {
-    id: ID
-    norad_id: [Int]
-    reused: Boolean
     customers: [String]
-    nationality: String
+    id: ID
     manufacturer: String
-    payload_type: String
+    nationality: String
+    norad_id: [Int]
+    orbit_params: PayloadOrbitParams
+    orbit: String
     payload_mass_kg: Float
     payload_mass_lbs: Float
-    orbit: String
-    orbit_params: PayloadOrbitParams
+    payload_type: String
+    reused: Boolean
   }
 
   type PayloadOrbitParams {
+    apoapsis_km: Float
+    arg_of_pericenter: Float
+    eccentricity: Float
+    epoch: Date
+    inclination_deg: Float
+    lifespan_years: Float
+    longitude: Float
+    mean_anomaly: Float
+    mean_motion: Float
+    periapsis_km: Float
+    period_min: Float
+    raan: Float
     reference_system: String
     regime: String
-    longitude: Float
-    lifespan_years: Float
-    epoch: Date
-    mean_motion: Float
-    raan: Float
     semi_major_axis_km: Float
-    eccentricity: Float
-    periapsis_km: Float
-    apoapsis_km: Float
-    inclination_deg: Float
-    period_min: Float
-    arg_of_pericenter: Float
-    mean_anomaly: Float
   }
 
   input PayloadsFind {
-    payload_id: ID
-    norad_id: Int
+    apoapsis_km: Float
     customer: String
-    nationality: String
+    eccentricity: Float
+    epoch: Date
+    inclination_deg: Float
+    lifespan_years: Float
+    longitude: Float
     manufacturer: String
-    payload_type: String
+    mean_motion: Float
+    nationality: String
+    norad_id: Int
     orbit: String
+    payload_id: ID
+    payload_type: String
+    periapsis_km: Float
+    period_min: Float
+    raan: Float
     reference_system: String
     regime: String
-    longitude: Float
-    semi_major_axis_km: Float
-    eccentricity: Float
-    periapsis_km: Float
-    apoapsis_km: Float
-    inclination_deg: Float
-    period_min: Float
-    lifespan_years: Float
-    epoch: Date
-    mean_motion: Float
-    raan: Float
     reused: Boolean
+    semi_major_axis_km: Float
   }
 `;
 export default typeDefs;

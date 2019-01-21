@@ -7,15 +7,15 @@ const typeDefs = gql`
   }
 
   type Landpad {
-    id: ID
-    full_name: String
-    status: String
-    location: Location
-    landing_type: String
     attempted_landings: String
+    details: String
+    full_name: String
+    id: ID
+    landing_type: String
+    location: Location
+    status: String
     successful_landings: String
     wikipedia: String
-    details: String
   }
 `;
 

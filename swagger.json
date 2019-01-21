@@ -3,26 +3,15 @@
   "info": {
     "title": "SpaceX Rest API"
   },
+  "tags": [
+    {
+      "name": "Endpoints"
+    }
+  ],
   "paths": {
-    "/rest/empty": {
-      "get": {
-        "operationId": "emptyQuery",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/rest/capsules": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "capsulesQuery",
         "parameters": [
           {
@@ -86,6 +75,7 @@
     },
     "/rest/capsules-past": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "capsulesPastQuery",
         "parameters": [
           {
@@ -149,6 +139,7 @@
     },
     "/rest/capsules-upcoming": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "capsulesUpcomingQuery",
         "parameters": [
           {
@@ -212,6 +203,7 @@
     },
     "/rest/capsule/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "capsuleQuery",
         "parameters": [
           {
@@ -238,6 +230,7 @@
     },
     "/rest/company": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "companyQuery",
         "parameters": [],
         "responses": {
@@ -255,6 +248,7 @@
     },
     "/rest/cores": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "coresQuery",
         "parameters": [
           {
@@ -318,6 +312,7 @@
     },
     "/rest/cores-past": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "coresPastQuery",
         "parameters": [
           {
@@ -381,6 +376,7 @@
     },
     "/rest/cores-upcoming": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "coresUpcomingQuery",
         "parameters": [
           {
@@ -444,6 +440,7 @@
     },
     "/rest/core/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "coreQuery",
         "parameters": [
           {
@@ -470,6 +467,7 @@
     },
     "/rest/dragons": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "dragonsQuery",
         "parameters": [
           {
@@ -509,6 +507,7 @@
     },
     "/rest/dragon/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "dragonQuery",
         "parameters": [
           {
@@ -535,6 +534,7 @@
     },
     "/rest/histories": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "historiesQuery",
         "parameters": [
           {
@@ -598,6 +598,7 @@
     },
     "/rest/history/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "historyQuery",
         "parameters": [
           {
@@ -624,6 +625,7 @@
     },
     "/rest/landpads": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "landpadsQuery",
         "parameters": [
           {
@@ -663,6 +665,7 @@
     },
     "/rest/landpad/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "landpadQuery",
         "parameters": [
           {
@@ -689,6 +692,7 @@
     },
     "/rest/launches": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchesQuery",
         "parameters": [
           {
@@ -752,6 +756,7 @@
     },
     "/rest/launches-past": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchesPastQuery",
         "parameters": [
           {
@@ -815,6 +820,7 @@
     },
     "/rest/launches-upcoming": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchesUpcomingQuery",
         "parameters": [
           {
@@ -878,6 +884,7 @@
     },
     "/rest/launch/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchQuery",
         "parameters": [
           {
@@ -904,6 +911,7 @@
     },
     "/rest/launch-latest": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchLatestQuery",
         "parameters": [
           {
@@ -931,6 +939,7 @@
     },
     "/rest/launch-next": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchNextQuery",
         "parameters": [
           {
@@ -958,6 +967,7 @@
     },
     "/rest/launchpads": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchpadsQuery",
         "parameters": [
           {
@@ -997,6 +1007,7 @@
     },
     "/rest/launchpad/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "launchpadQuery",
         "parameters": [
           {
@@ -1023,6 +1034,7 @@
     },
     "/rest/missions": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "missionsQuery",
         "parameters": [
           {
@@ -1070,6 +1082,7 @@
     },
     "/rest/mission/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "missionQuery",
         "parameters": [
           {
@@ -1096,6 +1109,7 @@
     },
     "/rest/payloads": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "payloadsQuery",
         "parameters": [
           {
@@ -1159,6 +1173,7 @@
     },
     "/rest/payload/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "payloadQuery",
         "parameters": [
           {
@@ -1185,6 +1200,7 @@
     },
     "/rest/roadster": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "roadsterQuery",
         "parameters": [],
         "responses": {
@@ -1202,6 +1218,7 @@
     },
     "/rest/rockets": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "rocketsQuery",
         "parameters": [
           {
@@ -1241,6 +1258,7 @@
     },
     "/rest/rocket/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "rocketQuery",
         "parameters": [
           {
@@ -1267,6 +1285,7 @@
     },
     "/rest/ships": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "shipsQuery",
         "parameters": [
           {
@@ -1330,6 +1349,7 @@
     },
     "/rest/ship/{id}": {
       "get": {
+        "tags": ["Endpoints"],
         "operationId": "shipQuery",
         "parameters": [
           {
@@ -1361,9 +1381,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "_empty": {
-            "type": "string"
-          },
           "capsules": {
             "type": "array",
             "items": {
@@ -1520,11 +1537,9 @@
           "id": {
             "type": "object"
           },
-          "status": {
-            "type": "string"
-          },
-          "original_launch": {
-            "type": "object"
+          "landings": {
+            "type": "integer",
+            "format": "int32"
           },
           "missions": {
             "type": "array",
@@ -1532,16 +1547,18 @@
               "$ref": "#/components/schemas/CapsuleMission"
             }
           },
-          "landings": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "type": {
-            "type": "string"
+          "original_launch": {
+            "type": "object"
           },
           "reuse_count": {
             "type": "integer",
             "format": "int32"
+          },
+          "status": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
           },
           "capsule": {
             "$ref": "#/components/schemas/Dragon"
@@ -1552,12 +1569,12 @@
         "type": "object",
         "required": [],
         "properties": {
-          "name": {
-            "type": "string"
-          },
           "flight": {
             "type": "integer",
             "format": "int32"
+          },
+          "name": {
+            "type": "string"
           }
         }
       },
@@ -1565,15 +1582,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "id": {
-            "type": "object"
-          },
-          "name": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
           "active": {
             "type": "boolean"
           },
@@ -1581,13 +1589,11 @@
             "type": "integer",
             "format": "int32"
           },
-          "sidewall_angle_deg": {
-            "type": "number",
-            "format": "float"
+          "description": {
+            "type": "string"
           },
-          "orbit_duration_yr": {
-            "type": "integer",
-            "format": "int32"
+          "diameter": {
+            "$ref": "#/components/schemas/Distance"
           },
           "dry_mass_kg": {
             "type": "integer",
@@ -1603,11 +1609,11 @@
           "heat_shield": {
             "$ref": "#/components/schemas/DragonHeatShield"
           },
-          "thrusters": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DragonThrust"
-            }
+          "height_w_trunk": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "id": {
+            "type": "object"
           },
           "launch_payload_mass": {
             "$ref": "#/components/schemas/Mass"
@@ -1615,29 +1621,54 @@
           "launch_payload_vol": {
             "$ref": "#/components/schemas/Volume"
           },
+          "name": {
+            "type": "string"
+          },
+          "orbit_duration_yr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pressurized_capsule": {
+            "$ref": "#/components/schemas/DragonPressurizedCapsule"
+          },
           "return_payload_mass": {
             "$ref": "#/components/schemas/Mass"
           },
           "return_payload_vol": {
             "$ref": "#/components/schemas/Volume"
           },
-          "pressurized_capsule": {
-            "$ref": "#/components/schemas/DragonPressurizedCapsule"
+          "sidewall_angle_deg": {
+            "type": "number",
+            "format": "float"
+          },
+          "thrusters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DragonThrust"
+            }
           },
           "trunk": {
             "$ref": "#/components/schemas/DragonTrunk"
           },
-          "height_w_trunk": {
-            "$ref": "#/components/schemas/Distance"
-          },
-          "diameter": {
-            "$ref": "#/components/schemas/Distance"
+          "type": {
+            "type": "string"
           },
           "wikipedia": {
             "type": "string"
+          }
+        }
+      },
+      "Distance": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "feet": {
+            "type": "number",
+            "format": "float"
           },
-          "description": {
-            "type": "string"
+          "meters": {
+            "type": "number",
+            "format": "float"
           }
         }
       },
@@ -1645,6 +1676,9 @@
         "type": "object",
         "required": [],
         "properties": {
+          "dev_partner": {
+            "type": "string"
+          },
           "material": {
             "type": "string"
           },
@@ -1655,49 +1689,6 @@
           "temp_degrees": {
             "type": "integer",
             "format": "int32"
-          },
-          "dev_partner": {
-            "type": "string"
-          }
-        }
-      },
-      "DragonThrust": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "type": {
-            "type": "string"
-          },
-          "amount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pods": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fuel_1": {
-            "type": "string"
-          },
-          "fuel_2": {
-            "type": "string"
-          },
-          "thrust": {
-            "$ref": "#/components/schemas/Force"
-          }
-        }
-      },
-      "Force": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "kN": {
-            "type": "number",
-            "format": "float"
-          },
-          "lbf": {
-            "type": "number",
-            "format": "float"
           }
         }
       },
@@ -1719,11 +1710,11 @@
         "type": "object",
         "required": [],
         "properties": {
-          "cubic_meters": {
+          "cubic_feet": {
             "type": "integer",
             "format": "int32"
           },
-          "cubic_feet": {
+          "cubic_meters": {
             "type": "integer",
             "format": "int32"
           }
@@ -1738,15 +1729,55 @@
           }
         }
       },
+      "DragonThrust": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "amount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fuel_1": {
+            "type": "string"
+          },
+          "fuel_2": {
+            "type": "string"
+          },
+          "pods": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "thrust": {
+            "$ref": "#/components/schemas/Force"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "Force": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "kN": {
+            "type": "number",
+            "format": "float"
+          },
+          "lbf": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
       "DragonTrunk": {
         "type": "object",
         "required": [],
         "properties": {
-          "trunk_volume": {
-            "$ref": "#/components/schemas/Volume"
-          },
           "cargo": {
             "$ref": "#/components/schemas/DragonTrunkCargo"
+          },
+          "trunk_volume": {
+            "$ref": "#/components/schemas/Volume"
           }
         }
       },
@@ -1763,54 +1794,11 @@
           }
         }
       },
-      "Distance": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "meters": {
-            "type": "number",
-            "format": "float"
-          },
-          "feet": {
-            "type": "number",
-            "format": "float"
-          }
-        }
-      },
       "Info": {
         "type": "object",
         "required": [],
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "founder": {
-            "type": "string"
-          },
-          "founded": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "employees": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "vehicles": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "launch_sites": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "test_sites": {
-            "type": "integer",
-            "format": "int32"
-          },
           "ceo": {
-            "type": "string"
-          },
-          "cto": {
             "type": "string"
           },
           "coo": {
@@ -1819,18 +1807,47 @@
           "cto_propulsion": {
             "type": "string"
           },
-          "valuation": {
-            "type": "number",
-            "format": "float"
+          "cto": {
+            "type": "string"
+          },
+          "employees": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "founded": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "founder": {
+            "type": "string"
           },
           "headquarters": {
             "$ref": "#/components/schemas/Address"
           },
+          "launch_sites": {
+            "type": "integer",
+            "format": "int32"
+          },
           "links": {
             "$ref": "#/components/schemas/InfoLinks"
           },
+          "name": {
+            "type": "string"
+          },
           "summary": {
             "type": "string"
+          },
+          "test_sites": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valuation": {
+            "type": "number",
+            "format": "float"
+          },
+          "vehicles": {
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
@@ -1853,7 +1870,7 @@
         "type": "object",
         "required": [],
         "properties": {
-          "website": {
+          "elon_twitter": {
             "type": "string"
           },
           "flickr": {
@@ -1862,7 +1879,7 @@
           "twitter": {
             "type": "string"
           },
-          "elon_twitter": {
+          "website": {
             "type": "string"
           }
         }
@@ -1871,17 +1888,19 @@
         "type": "object",
         "required": [],
         "properties": {
-          "id": {
-            "type": "object"
+          "asds_attempts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asds_landings": {
+            "type": "integer",
+            "format": "int32"
           },
           "block": {
             "type": "integer",
             "format": "int32"
           },
-          "status": {
-            "type": "string"
-          },
-          "original_launch": {
+          "id": {
             "type": "object"
           },
           "missions": {
@@ -1889,6 +1908,9 @@
             "items": {
               "$ref": "#/components/schemas/CapsuleMission"
             }
+          },
+          "original_launch": {
+            "type": "object"
           },
           "reuse_count": {
             "type": "integer",
@@ -1902,13 +1924,8 @@
             "type": "integer",
             "format": "int32"
           },
-          "asds_attempts": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "asds_landings": {
-            "type": "integer",
-            "format": "int32"
+          "status": {
+            "type": "string"
           },
           "water_landing": {
             "type": "boolean"
@@ -1919,23 +1936,23 @@
         "type": "object",
         "required": [],
         "properties": {
-          "id": {
-            "type": "object"
-          },
-          "title": {
+          "details": {
             "type": "string"
-          },
-          "event_date_utc": {
-            "type": "object"
           },
           "event_date_unix": {
             "type": "object"
           },
-          "details": {
-            "type": "string"
+          "event_date_utc": {
+            "type": "object"
+          },
+          "id": {
+            "type": "object"
           },
           "links": {
             "$ref": "#/components/schemas/Link"
+          },
+          "title": {
+            "type": "string"
           },
           "flight": {
             "$ref": "#/components/schemas/Launch"
@@ -1946,10 +1963,10 @@
         "type": "object",
         "required": [],
         "properties": {
-          "reddit": {
+          "article": {
             "type": "string"
           },
-          "article": {
+          "reddit": {
             "type": "string"
           },
           "wikipedia": {
@@ -1961,23 +1978,17 @@
         "type": "object",
         "required": [],
         "properties": {
+          "details": {
+            "type": "string"
+          },
           "id": {
             "type": "object"
           },
-          "mission_name": {
-            "type": "string"
-          },
-          "mission_id": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "upcoming": {
+          "is_tentative": {
             "type": "boolean"
           },
-          "launch_year": {
-            "type": "string"
+          "launch_date_local": {
+            "type": "object"
           },
           "launch_date_unix": {
             "type": "object"
@@ -1985,38 +1996,44 @@
           "launch_date_utc": {
             "type": "object"
           },
-          "launch_date_local": {
-            "type": "object"
-          },
-          "is_tentative": {
-            "type": "boolean"
-          },
-          "tentative_max_precision": {
-            "type": "string"
-          },
-          "rocket": {
-            "$ref": "#/components/schemas/LaunchRocket"
-          },
-          "telemetry": {
-            "$ref": "#/components/schemas/LaunchTelemetry"
-          },
           "launch_site": {
             "$ref": "#/components/schemas/LaunchSite"
           },
           "launch_success": {
             "type": "boolean"
           },
+          "launch_year": {
+            "type": "string"
+          },
           "links": {
             "$ref": "#/components/schemas/LaunchLinks"
           },
-          "details": {
+          "mission_id": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mission_name": {
             "type": "string"
+          },
+          "rocket": {
+            "$ref": "#/components/schemas/LaunchRocket"
+          },
+          "static_fire_date_unix": {
+            "type": "object"
           },
           "static_fire_date_utc": {
             "type": "object"
           },
-          "static_fire_date_unix": {
-            "type": "object"
+          "telemetry": {
+            "$ref": "#/components/schemas/LaunchTelemetry"
+          },
+          "tentative_max_precision": {
+            "type": "string"
+          },
+          "upcoming": {
+            "type": "boolean"
           },
           "ships": {
             "type": "array",
@@ -2026,12 +2043,72 @@
           }
         }
       },
+      "LaunchSite": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "site_id": {
+            "type": "string"
+          },
+          "site_name_long": {
+            "type": "string"
+          },
+          "site_name": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchLinks": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "article_link": {
+            "type": "string"
+          },
+          "flickr_images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mission_patch_small": {
+            "type": "string"
+          },
+          "mission_patch": {
+            "type": "string"
+          },
+          "presskit": {
+            "type": "string"
+          },
+          "reddit_campaign": {
+            "type": "string"
+          },
+          "reddit_launch": {
+            "type": "string"
+          },
+          "reddit_media": {
+            "type": "string"
+          },
+          "reddit_recovery": {
+            "type": "string"
+          },
+          "video_link": {
+            "type": "string"
+          },
+          "wikipedia": {
+            "type": "string"
+          }
+        }
+      },
       "LaunchRocket": {
         "type": "object",
         "required": [],
         "properties": {
-          "rocket": {
-            "$ref": "#/components/schemas/Rocket"
+          "fairings": {
+            "$ref": "#/components/schemas/LaunchRocketFairings"
+          },
+          "first_stage": {
+            "$ref": "#/components/schemas/LaunchRocketFirstStage"
           },
           "rocket_name": {
             "type": "string"
@@ -2039,14 +2116,79 @@
           "rocket_type": {
             "type": "string"
           },
-          "first_stage": {
-            "$ref": "#/components/schemas/LaunchRocketFirstStage"
+          "rocket": {
+            "$ref": "#/components/schemas/Rocket"
           },
           "second_stage": {
             "$ref": "#/components/schemas/LaunchRocketSecondStage"
+          }
+        }
+      },
+      "LaunchRocketFairings": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "recovered": {
+            "type": "boolean"
           },
-          "fairings": {
-            "$ref": "#/components/schemas/LaunchRocketFairings"
+          "recovery_attempt": {
+            "type": "boolean"
+          },
+          "reused": {
+            "type": "boolean"
+          },
+          "ship": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchRocketFirstStage": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "cores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LaunchRocketFirstStageCore"
+            }
+          }
+        }
+      },
+      "LaunchRocketFirstStageCore": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "block": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "core": {
+            "$ref": "#/components/schemas/Core"
+          },
+          "flight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gridfins": {
+            "type": "boolean"
+          },
+          "land_success": {
+            "type": "boolean"
+          },
+          "landing_intent": {
+            "type": "boolean"
+          },
+          "landing_type": {
+            "type": "string"
+          },
+          "landing_vehicle": {
+            "type": "string"
+          },
+          "legs": {
+            "type": "boolean"
+          },
+          "reused": {
+            "type": "boolean"
           }
         }
       },
@@ -2054,51 +2196,52 @@
         "type": "object",
         "required": [],
         "properties": {
-          "id": {
-            "type": "object"
-          },
-          "name": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
           "active": {
             "type": "boolean"
-          },
-          "stages": {
-            "type": "integer",
-            "format": "int32"
           },
           "boosters": {
             "type": "integer",
             "format": "int32"
           },
+          "company": {
+            "type": "string"
+          },
           "cost_per_launch": {
             "type": "integer",
             "format": "int32"
           },
-          "success_rate_pct": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "first_flight": {
-            "type": "object"
-          },
           "country": {
             "type": "string"
           },
-          "company": {
+          "description": {
             "type": "string"
-          },
-          "height": {
-            "$ref": "#/components/schemas/Distance"
           },
           "diameter": {
             "$ref": "#/components/schemas/Distance"
           },
+          "engines": {
+            "$ref": "#/components/schemas/RocketEngines"
+          },
+          "first_flight": {
+            "type": "object"
+          },
+          "first_stage": {
+            "$ref": "#/components/schemas/RocketFirstStage"
+          },
+          "height": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "id": {
+            "type": "object"
+          },
+          "landing_legs": {
+            "$ref": "#/components/schemas/RocketLandingLegs"
+          },
           "mass": {
             "$ref": "#/components/schemas/Mass"
+          },
+          "name": {
+            "type": "string"
           },
           "payload_weights": {
             "type": "array",
@@ -2106,118 +2249,22 @@
               "$ref": "#/components/schemas/RocketPayloadWeight"
             }
           },
-          "first_stage": {
-            "$ref": "#/components/schemas/RocketFirstStage"
-          },
           "second_stage": {
             "$ref": "#/components/schemas/RocketSecondStage"
           },
-          "engines": {
-            "$ref": "#/components/schemas/RocketEngines"
+          "stages": {
+            "type": "integer",
+            "format": "int32"
           },
-          "landing_legs": {
-            "$ref": "#/components/schemas/RocketLandingLegs"
+          "success_rate_pct": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string"
           },
           "wikipedia": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          }
-        }
-      },
-      "RocketPayloadWeight": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "kg": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lb": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      },
-      "RocketFirstStage": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "reusable": {
-            "type": "boolean"
-          },
-          "engines": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fuel_amount_tons": {
-            "type": "number",
-            "format": "float"
-          },
-          "burn_time_sec": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "thrust_sea_level": {
-            "$ref": "#/components/schemas/Force"
-          },
-          "thrust_vacuum": {
-            "$ref": "#/components/schemas/Force"
-          }
-        }
-      },
-      "RocketSecondStage": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "engines": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fuel_amount_tons": {
-            "type": "number",
-            "format": "float"
-          },
-          "burn_time_sec": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "thrust": {
-            "$ref": "#/components/schemas/Force"
-          },
-          "payloads": {
-            "$ref": "#/components/schemas/RocketSecondStagePayloads"
-          }
-        }
-      },
-      "RocketSecondStagePayloads": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "option_1": {
-            "type": "string"
-          },
-          "composite_fairing": {
-            "$ref": "#/components/schemas/RocketSecondStagePayloadCompositeFairing"
-          }
-        }
-      },
-      "RocketSecondStagePayloadCompositeFairing": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "height": {
-            "$ref": "#/components/schemas/Distance"
-          },
-          "diameter": {
-            "$ref": "#/components/schemas/Distance"
           }
         }
       },
@@ -2259,6 +2306,33 @@
           }
         }
       },
+      "RocketFirstStage": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "burn_time_sec": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "engines": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fuel_amount_tons": {
+            "type": "number",
+            "format": "float"
+          },
+          "reusable": {
+            "type": "boolean"
+          },
+          "thrust_sea_level": {
+            "$ref": "#/components/schemas/Force"
+          },
+          "thrust_vacuum": {
+            "$ref": "#/components/schemas/Force"
+          }
+        }
+      },
       "RocketLandingLegs": {
         "type": "object",
         "required": [],
@@ -2272,53 +2346,71 @@
           }
         }
       },
-      "LaunchRocketFirstStage": {
+      "RocketPayloadWeight": {
         "type": "object",
         "required": [],
         "properties": {
-          "cores": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LaunchRocketFirstStageCore"
-            }
+          "id": {
+            "type": "string"
+          },
+          "kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lb": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
           }
         }
       },
-      "LaunchRocketFirstStageCore": {
+      "RocketSecondStage": {
         "type": "object",
         "required": [],
         "properties": {
-          "core": {
-            "$ref": "#/components/schemas/Core"
-          },
-          "flight": {
+          "burn_time_sec": {
             "type": "integer",
             "format": "int32"
           },
-          "block": {
+          "engines": {
             "type": "integer",
             "format": "int32"
           },
-          "gridfins": {
-            "type": "boolean"
+          "fuel_amount_tons": {
+            "type": "number",
+            "format": "float"
           },
-          "legs": {
-            "type": "boolean"
+          "payloads": {
+            "$ref": "#/components/schemas/RocketSecondStagePayloads"
           },
-          "reused": {
-            "type": "boolean"
-          },
-          "land_success": {
-            "type": "boolean"
-          },
-          "landing_intent": {
-            "type": "boolean"
-          },
-          "landing_type": {
+          "thrust": {
+            "$ref": "#/components/schemas/Force"
+          }
+        }
+      },
+      "RocketSecondStagePayloads": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "option_1": {
             "type": "string"
           },
-          "landing_vehicle": {
-            "type": "string"
+          "composite_fairing": {
+            "$ref": "#/components/schemas/RocketSecondStagePayloadCompositeFairing"
+          }
+        }
+      },
+      "RocketSecondStagePayloadCompositeFairing": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "height": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "diameter": {
+            "$ref": "#/components/schemas/Distance"
           }
         }
       },
@@ -2342,8 +2434,20 @@
         "type": "object",
         "required": [],
         "properties": {
+          "customers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "id": {
             "type": "object"
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "nationality": {
+            "type": "string"
           },
           "norad_id": {
             "type": "array",
@@ -2352,22 +2456,10 @@
               "format": "int32"
             }
           },
-          "reused": {
-            "type": "boolean"
+          "orbit_params": {
+            "$ref": "#/components/schemas/PayloadOrbitParams"
           },
-          "customers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "nationality": {
-            "type": "string"
-          },
-          "manufacturer": {
-            "type": "string"
-          },
-          "payload_type": {
+          "orbit": {
             "type": "string"
           },
           "payload_mass_kg": {
@@ -2378,11 +2470,11 @@
             "type": "number",
             "format": "float"
           },
-          "orbit": {
+          "payload_type": {
             "type": "string"
           },
-          "orbit_params": {
-            "$ref": "#/components/schemas/PayloadOrbitParams"
+          "reused": {
+            "type": "boolean"
           }
         }
       },
@@ -2390,52 +2482,7 @@
         "type": "object",
         "required": [],
         "properties": {
-          "reference_system": {
-            "type": "string"
-          },
-          "regime": {
-            "type": "string"
-          },
-          "longitude": {
-            "type": "number",
-            "format": "float"
-          },
-          "lifespan_years": {
-            "type": "number",
-            "format": "float"
-          },
-          "epoch": {
-            "type": "object"
-          },
-          "mean_motion": {
-            "type": "number",
-            "format": "float"
-          },
-          "raan": {
-            "type": "number",
-            "format": "float"
-          },
-          "semi_major_axis_km": {
-            "type": "number",
-            "format": "float"
-          },
-          "eccentricity": {
-            "type": "number",
-            "format": "float"
-          },
-          "periapsis_km": {
-            "type": "number",
-            "format": "float"
-          },
           "apoapsis_km": {
-            "type": "number",
-            "format": "float"
-          },
-          "inclination_deg": {
-            "type": "number",
-            "format": "float"
-          },
-          "period_min": {
             "type": "number",
             "format": "float"
           },
@@ -2443,27 +2490,54 @@
             "type": "number",
             "format": "float"
           },
+          "eccentricity": {
+            "type": "number",
+            "format": "float"
+          },
+          "epoch": {
+            "type": "object"
+          },
+          "inclination_deg": {
+            "type": "number",
+            "format": "float"
+          },
+          "lifespan_years": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          },
           "mean_anomaly": {
             "type": "number",
             "format": "float"
-          }
-        }
-      },
-      "LaunchRocketFairings": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "reused": {
-            "type": "boolean"
           },
-          "recovery_attempt": {
-            "type": "boolean"
+          "mean_motion": {
+            "type": "number",
+            "format": "float"
           },
-          "recovered": {
-            "type": "boolean"
+          "periapsis_km": {
+            "type": "number",
+            "format": "float"
           },
-          "ship": {
+          "period_min": {
+            "type": "number",
+            "format": "float"
+          },
+          "raan": {
+            "type": "number",
+            "format": "float"
+          },
+          "reference_system": {
             "type": "string"
+          },
+          "regime": {
+            "type": "string"
+          },
+          "semi_major_axis_km": {
+            "type": "number",
+            "format": "float"
           }
         }
       },
@@ -2476,97 +2550,18 @@
           }
         }
       },
-      "LaunchSite": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "site_id": {
-            "type": "string"
-          },
-          "site_name": {
-            "type": "string"
-          },
-          "site_name_long": {
-            "type": "string"
-          }
-        }
-      },
-      "LaunchLinks": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "mission_patch": {
-            "type": "string"
-          },
-          "mission_patch_small": {
-            "type": "string"
-          },
-          "reddit_campaign": {
-            "type": "string"
-          },
-          "reddit_launch": {
-            "type": "string"
-          },
-          "reddit_recovery": {
-            "type": "string"
-          },
-          "reddit_media": {
-            "type": "string"
-          },
-          "presskit": {
-            "type": "string"
-          },
-          "article_link": {
-            "type": "string"
-          },
-          "wikipedia": {
-            "type": "string"
-          },
-          "video_link": {
-            "type": "string"
-          },
-          "flickr_images": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      },
       "Ship": {
         "type": "object",
         "required": [],
         "properties": {
-          "id": {
-            "type": "object"
-          },
-          "name": {
-            "type": "string"
-          },
-          "model": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "roles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "abs": {
+            "type": "integer",
+            "format": "int32"
           },
           "active": {
             "type": "boolean"
           },
-          "imo": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "mmsi": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "abs": {
+          "attempted_landings": {
             "type": "integer",
             "format": "int32"
           },
@@ -2574,40 +2569,20 @@
             "type": "integer",
             "format": "int32"
           },
-          "weight_lbs": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "weight_kg": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "year_built": {
+          "course_deg": {
             "type": "integer",
             "format": "int32"
           },
           "home_port": {
             "type": "string"
           },
-          "status": {
+          "id": {
+            "type": "object"
+          },
+          "image": {
             "type": "string"
           },
-          "speed_kn": {
-            "type": "number",
-            "format": "float"
-          },
-          "course_deg": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "position": {
-            "$ref": "#/components/schemas/ShipLocation"
-          },
-          "successful_landings": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "attempted_landings": {
+          "imo": {
             "type": "integer",
             "format": "int32"
           },
@@ -2617,10 +2592,64 @@
               "$ref": "#/components/schemas/ShipMission"
             }
           },
+          "mmsi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "model": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "position": {
+            "$ref": "#/components/schemas/ShipLocation"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "speed_kn": {
+            "type": "number",
+            "format": "float"
+          },
+          "status": {
+            "type": "string"
+          },
+          "successful_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string"
+          },
           "url": {
             "type": "string"
           },
-          "image": {
+          "weight_kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight_lbs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year_built": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ShipMission": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "flight": {
+            "type": "string"
+          },
+          "name": {
             "type": "string"
           }
         }
@@ -2639,47 +2668,35 @@
           }
         }
       },
-      "ShipMission": {
-        "type": "object",
-        "required": [],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "flight": {
-            "type": "string"
-          }
-        }
-      },
       "Landpad": {
         "type": "object",
         "required": [],
         "properties": {
-          "id": {
-            "type": "object"
+          "attempted_landings": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
           },
           "full_name": {
             "type": "string"
           },
-          "status": {
+          "id": {
+            "type": "object"
+          },
+          "landing_type": {
             "type": "string"
           },
           "location": {
             "$ref": "#/components/schemas/Location"
           },
-          "landing_type": {
-            "type": "string"
-          },
-          "attempted_landings": {
+          "status": {
             "type": "string"
           },
           "successful_landings": {
             "type": "string"
           },
           "wikipedia": {
-            "type": "string"
-          },
-          "details": {
             "type": "string"
           }
         }
@@ -2688,12 +2705,6 @@
         "type": "object",
         "required": [],
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "region": {
-            "type": "string"
-          },
           "latitude": {
             "type": "number",
             "format": "float"
@@ -2701,6 +2712,12 @@
           "longitude": {
             "type": "number",
             "format": "float"
+          },
+          "name": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
           }
         }
       },
@@ -2708,8 +2725,18 @@
         "type": "object",
         "required": [],
         "properties": {
+          "attempted_launches": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "details": {
+            "type": "string"
+          },
           "id": {
             "type": "object"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
           },
           "name": {
             "type": "string"
@@ -2717,8 +2744,9 @@
           "status": {
             "type": "string"
           },
-          "location": {
-            "$ref": "#/components/schemas/Location"
+          "successful_launches": {
+            "type": "integer",
+            "format": "int32"
           },
           "vehicles_launched": {
             "type": "array",
@@ -2726,18 +2754,7 @@
               "$ref": "#/components/schemas/Rocket"
             }
           },
-          "attempted_launches": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "successful_launches": {
-            "type": "integer",
-            "format": "int32"
-          },
           "wikipedia": {
-            "type": "string"
-          },
-          "details": {
             "type": "string"
           }
         }
@@ -2746,11 +2763,11 @@
         "type": "object",
         "required": [],
         "properties": {
+          "description": {
+            "type": "string"
+          },
           "id": {
             "type": "object"
-          },
-          "name": {
-            "type": "string"
           },
           "manufacturers": {
             "type": "array",
@@ -2758,16 +2775,16 @@
               "type": "string"
             }
           },
-          "wikipedia": {
-            "type": "string"
-          },
-          "website": {
+          "name": {
             "type": "string"
           },
           "twitter": {
             "type": "string"
           },
-          "description": {
+          "website": {
+            "type": "string"
+          },
+          "wikipedia": {
             "type": "string"
           },
           "payloads": {
@@ -2782,13 +2799,37 @@
         "type": "object",
         "required": [],
         "properties": {
-          "name": {
+          "apoapsis_au": {
+            "type": "number",
+            "format": "float"
+          },
+          "details": {
             "type": "string"
           },
-          "launch_date_utc": {
-            "type": "object"
+          "earth_distance_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "earth_distance_mi": {
+            "type": "number",
+            "format": "float"
+          },
+          "eccentricity": {
+            "type": "number",
+            "format": "float"
+          },
+          "epoch_jd": {
+            "type": "number",
+            "format": "float"
+          },
+          "inclination": {
+            "type": "number",
+            "format": "float"
           },
           "launch_date_unix": {
+            "type": "object"
+          },
+          "launch_date_utc": {
             "type": "object"
           },
           "launch_mass_kg": {
@@ -2799,63 +2840,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "norad_id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "epoch_jd": {
-            "type": "number",
-            "format": "float"
-          },
-          "orbit_type": {
-            "type": "number",
-            "format": "float"
-          },
-          "apoapsis_au": {
-            "type": "number",
-            "format": "float"
-          },
-          "periapsis_au": {
-            "type": "number",
-            "format": "float"
-          },
-          "semi_major_axis_au": {
-            "type": "number",
-            "format": "float"
-          },
-          "eccentricity": {
-            "type": "number",
-            "format": "float"
-          },
-          "inclination": {
-            "type": "number",
-            "format": "float"
-          },
           "longitude": {
-            "type": "number",
-            "format": "float"
-          },
-          "periapsis_arg": {
-            "type": "number",
-            "format": "float"
-          },
-          "period_days": {
-            "type": "number",
-            "format": "float"
-          },
-          "speed_kph": {
-            "type": "number",
-            "format": "float"
-          },
-          "speed_mph": {
-            "type": "number",
-            "format": "float"
-          },
-          "earth_distance_km": {
-            "type": "number",
-            "format": "float"
-          },
-          "earth_distance_mi": {
             "type": "number",
             "format": "float"
           },
@@ -2867,10 +2852,42 @@
             "type": "number",
             "format": "float"
           },
-          "wikipedia": {
+          "name": {
             "type": "string"
           },
-          "details": {
+          "norad_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orbit_type": {
+            "type": "number",
+            "format": "float"
+          },
+          "periapsis_arg": {
+            "type": "number",
+            "format": "float"
+          },
+          "periapsis_au": {
+            "type": "number",
+            "format": "float"
+          },
+          "period_days": {
+            "type": "number",
+            "format": "float"
+          },
+          "semi_major_axis_au": {
+            "type": "number",
+            "format": "float"
+          },
+          "speed_kph": {
+            "type": "number",
+            "format": "float"
+          },
+          "speed_mph": {
+            "type": "number",
+            "format": "float"
+          },
+          "wikipedia": {
             "type": "string"
           }
         }

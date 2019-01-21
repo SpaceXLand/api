@@ -28,27 +28,27 @@ const typeDefs = gql`
 
   type Capsule {
     id: ID
-    status: String
-    original_launch: Date
-    missions: [CapsuleMission]
     landings: Int
-    type: String
+    missions: [CapsuleMission]
+    original_launch: Date
     reuse_count: Int
+    status: String
+    type: String
   }
 
   input CapsulesFind {
     id: ID
-    status: String
-    original_launch: Date
-    mission: String
     landings: Int
-    type: String
+    mission: String
+    original_launch: Date
     reuse_count: Int
+    status: String
+    type: String
   }
 
   type CapsuleMission {
-    name: String
     flight: Int
+    name: String
   }
 `;
 

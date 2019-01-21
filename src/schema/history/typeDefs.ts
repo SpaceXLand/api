@@ -13,19 +13,19 @@ const typeDefs = gql`
   }
 
   type History {
-    id: ID
-    title: String
-    event_date_utc: Date
-    event_date_unix: Date
     details: String
+    event_date_unix: Date
+    event_date_utc: Date
+    id: ID
     links: Link
+    title: String
   }
 
   input HistoryFind {
-    id: ID
-    start: Date
     end: Date
     flight_number: Int
+    id: ID
+    start: Date
   }
 `;
 export default typeDefs;

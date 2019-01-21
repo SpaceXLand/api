@@ -5,28 +5,28 @@ const typeDefs = gql`
     company: Info
   }
   type Info {
-    name: String
-    founder: String
-    founded: Int
-    employees: Int
-    vehicles: Int
-    launch_sites: Int
-    test_sites: Int
     ceo: String
-    cto: String
     coo: String
     cto_propulsion: String
-    valuation: Float
+    cto: String
+    employees: Int
+    founded: Int
+    founder: String
     headquarters: Address
+    launch_sites: Int
     links: InfoLinks
+    name: String
     summary: String
+    test_sites: Int
+    valuation: Float
+    vehicles: Int
   }
 
   type InfoLinks {
-    website: String
+    elon_twitter: String
     flickr: String
     twitter: String
-    elon_twitter: String
+    website: String
   }
 `;
 export default typeDefs;

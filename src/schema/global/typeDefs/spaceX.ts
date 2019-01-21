@@ -1,9 +1,33 @@
 import gql from 'graphql-tag';
 
 const spaceX = gql`
+  type Address {
+    address: String
+    city: String
+    state: String
+  }
+
+  type Distance {
+    feet: Float
+    meters: Float
+  }
+
   type Force {
     kN: Float
     lbf: Float
+  }
+
+  type Link {
+    article: String
+    reddit: String
+    wikipedia: String
+  }
+
+  type Location {
+    latitude: Float
+    longitude: Float
+    name: String
+    region: String
   }
 
   type Mass {
@@ -12,32 +36,8 @@ const spaceX = gql`
   }
 
   type Volume {
-    cubic_meters: Int
     cubic_feet: Int
-  }
-
-  type Distance {
-    meters: Float
-    feet: Float
-  }
-
-  type Link {
-    reddit: String
-    article: String
-    wikipedia: String
-  }
-
-  type Address {
-    address: String
-    city: String
-    state: String
-  }
-
-  type Location {
-    name: String
-    region: String
-    latitude: Float
-    longitude: Float
+    cubic_meters: Int
   }
 `;
 

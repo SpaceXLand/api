@@ -7,51 +7,51 @@ const typeDefs = gql`
   }
 
   type Rocket {
-    id: ID
-    name: String
-    type: String
     active: Boolean
-    stages: Int
     boosters: Int
-    cost_per_launch: Int
-    success_rate_pct: Int
-    first_flight: Date
-    country: String
     company: String
-    height: Distance
-    diameter: Distance
-    mass: Mass
-    payload_weights: [RocketPayloadWeight]
-    first_stage: RocketFirstStage
-    second_stage: RocketSecondStage
-    engines: RocketEngines
-    landing_legs: RocketLandingLegs
-    wikipedia: String
+    cost_per_launch: Int
+    country: String
     description: String
+    diameter: Distance
+    engines: RocketEngines
+    first_flight: Date
+    first_stage: RocketFirstStage
+    height: Distance
+    id: ID
+    landing_legs: RocketLandingLegs
+    mass: Mass
+    name: String
+    payload_weights: [RocketPayloadWeight]
+    second_stage: RocketSecondStage
+    stages: Int
+    success_rate_pct: Int
+    type: String
+    wikipedia: String
   }
 
   type RocketPayloadWeight {
     id: String
-    name: String
     kg: Int
     lb: Int
+    name: String
   }
 
   type RocketFirstStage {
-    reusable: Boolean
+    burn_time_sec: Int
     engines: Int
     fuel_amount_tons: Float
-    burn_time_sec: Int
+    reusable: Boolean
     thrust_sea_level: Force
     thrust_vacuum: Force
   }
 
   type RocketSecondStage {
+    burn_time_sec: Int
     engines: Int
     fuel_amount_tons: Float
-    burn_time_sec: Int
-    thrust: Force
     payloads: RocketSecondStagePayloads
+    thrust: Force
   }
 
   type RocketSecondStagePayloads {

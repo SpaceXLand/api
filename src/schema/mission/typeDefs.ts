@@ -7,19 +7,19 @@ const typeDefs = gql`
   }
 
   type Mission {
-    id: ID
-    name: String
-    manufacturers: [String]
-    wikipedia: String
-    website: String
-    twitter: String
     description: String
+    id: ID
+    manufacturers: [String]
+    name: String
+    twitter: String
+    website: String
+    wikipedia: String
   }
 
   input MissionsFind {
     id: ID
-    name: String
     manufacturer: String
+    name: String
     payload_id: String
   }
 `;
