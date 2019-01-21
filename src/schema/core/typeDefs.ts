@@ -27,30 +27,30 @@ const typeDefs = gql`
   }
 
   type Core {
-    id: ID
+    asds_attempts: Int
+    asds_landings: Int
     block: Int
-    status: String
-    original_launch: Date
+    id: ID
     missions: [CapsuleMission]
+    original_launch: Date
     reuse_count: Int
     rtls_attempts: Int
     rtls_landings: Int
-    asds_attempts: Int
-    asds_landings: Int
+    status: String
     water_landing: Boolean
   }
 
   input CoresFind {
-    id: String
+    asds_attempts: Int
+    asds_landings: Int
     block: Int
-    status: String
-    original_launch: Date
+    id: String
     missions: String
+    original_launch: Date
     reuse_count: Int
     rtls_attempts: Int
     rtls_landings: Int
-    asds_attempts: Int
-    asds_landings: Int
+    status: String
     water_landing: Boolean
   }
 

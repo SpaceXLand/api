@@ -17,29 +17,29 @@ const typeDefs = gql`
   }
 
   type Ship {
-    id: ID
-    name: String
-    model: String
-    type: String
-    roles: [String]
-    active: Boolean
-    imo: Int
-    mmsi: Int
     abs: Int
-    class: Int
-    weight_lbs: Int
-    weight_kg: Int
-    year_built: Int
-    home_port: String
-    status: String
-    speed_kn: Float
-    course_deg: Int
-    position: ShipLocation
-    successful_landings: Int
+    active: Boolean
     attempted_landings: Int
-    missions: [ShipMission]
-    url: String
+    class: Int
+    course_deg: Int
+    home_port: String
+    id: ID
     image: String
+    imo: Int
+    missions: [ShipMission]
+    mmsi: Int
+    model: String
+    name: String
+    position: ShipLocation
+    roles: [String]
+    speed_kn: Float
+    status: String
+    successful_landings: Int
+    type: String
+    url: String
+    weight_kg: Int
+    weight_lbs: Int
+    year_built: Int
   }
 
   type ShipLocation {
@@ -48,8 +48,8 @@ const typeDefs = gql`
   }
 
   type ShipMission {
-    name: String
     flight: String
+    name: String
   }
 
   input ShipsFind {
