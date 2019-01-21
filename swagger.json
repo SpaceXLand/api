@@ -236,7 +236,7 @@
         }
       }
     },
-    "/rest/company/{id}": {
+    "/rest/company": {
       "get": {
         "operationId": "companyQuery",
         "parameters": [],
@@ -902,7 +902,7 @@
         }
       }
     },
-    "/rest/launch-latest/{id}": {
+    "/rest/launch-latest": {
       "get": {
         "operationId": "launchLatestQuery",
         "parameters": [
@@ -929,7 +929,7 @@
         }
       }
     },
-    "/rest/launch-next/{id}": {
+    "/rest/launch-next": {
       "get": {
         "operationId": "launchNextQuery",
         "parameters": [
@@ -1183,7 +1183,7 @@
         }
       }
     },
-    "/rest/roadster/{id}": {
+    "/rest/roadster": {
       "get": {
         "operationId": "roadsterQuery",
         "parameters": [],
