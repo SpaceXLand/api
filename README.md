@@ -18,7 +18,7 @@
 
 ## Usage
 
-Navigate through all the **SpaceX data** having the ✨user & developer experience!  
+Navigate through all the **SpaceX data** having the most ✨user & developer experience!  
 ✋ Setups/Auths   
 🤗 Fully updated docs  
 😍 Interactive web-based  
