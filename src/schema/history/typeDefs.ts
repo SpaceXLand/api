@@ -9,11 +9,11 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [History]
-    history(history_id: Int!): History
+    history(id: ID!): History
   }
 
   type History {
-    id: Int
+    id: ID
     title: String
     event_date_utc: Date
     event_date_unix: Date
@@ -22,7 +22,7 @@ const typeDefs = gql`
   }
 
   input HistoryFind {
-    id: Int
+    id: ID
     start: Date
     end: Date
     flight_number: Int

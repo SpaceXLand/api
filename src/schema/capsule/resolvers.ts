@@ -9,41 +9,51 @@ const Query: QueryResolvers.Resolvers = {
       null_dates = await context.db
         .collection(collection)
         .find({
-          ...context.find({ query: { ...find }, url }),
-          original_launch: null
+          original_launch: null,
+          ...context.find({ query: { ...find }, url })
         })
         .sort(context.sort({ query: { order, sort }, url }))
         .skip(context.offset({ offset }))
         .limit(context.limit({ limit }))
+        .map(parseCapsules)
         .toArray();
     }
     const not_null_dates = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: { $ne: null }
+        original_launch: { $ne: null },
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCapsules)
       .toArray();
 
-    if (context.order({ query: { order } }) === -1) {
-      return null_dates.concat(not_null_dates);
+    let data = null;
+    if (context.order({ order }) === -1) {
+      data = null_dates.concat(not_null_dates);
     } else {
-      return not_null_dates.concat(null_dates);
+      data = not_null_dates.concat(null_dates);
+    }
+
+    if (limit) {
+      return data.slice(0, limit);
+    } else {
+      return data;
     }
   },
   capsulesPast: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: { $ne: null }
+        original_launch: { $ne: null },
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCapsules)
       .toArray();
     return data;
   },
@@ -55,23 +65,25 @@ const Query: QueryResolvers.Resolvers = {
     const data = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: null
+        original_launch: null,
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCapsules)
       .toArray();
     return data;
   },
-  capsule: async (obj, { capsule_serial }, context) => {
+  capsule: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ capsule_serial })
+      .find({ capsule_serial: id })
       .limit(1)
+      .map(parseCapsules)
       .toArray();
     return data;
   }
 };
-
+const parseCapsules = capsule => ({ ...capsule, id: capsule.capsule_serial });
 export default { Query };

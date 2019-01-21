@@ -7,12 +7,12 @@ import lowerCase from 'lower-case';
  * @return {number} Positive or negative number to indicate sort direction
  */
 
-export default q => {
+export default query => {
   let order;
 
-  if (lowerCase(q.order) === 'asc') {
+  if (lowerCase(query.order) === 'asc') {
     order = 1;
-  } else if (lowerCase(q.order) === 'desc') {
+  } else if (lowerCase(query.order) === 'desc') {
     order = -1;
   } else {
     order = 1;

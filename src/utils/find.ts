@@ -20,16 +20,11 @@ export default r => {
     //                       Launch Fields
     //------------------------------------------------------------
 
-    if (r.query.flight_id) {
-      // Mongo _id field requires underscore dangle
-      // eslint-disable-next-line no-underscore-dangle
-      query._id = ObjectId(r.query.flight_id);
+    if (r.query.id) {
+      query.flight_number = parseInt(r.query.id, 10);
     }
     if (r.query.start && (r.query.final || r.query.end)) {
       query.launch_date_utc = dateRange(r.query);
-    }
-    if (r.query.flight_number) {
-      query.flight_number = parseInt(r.query.flight_number, 10);
     }
     if (r.query.mission_name) {
       query.mission_name = r.query.mission_name;
@@ -261,11 +256,8 @@ export default r => {
     //                       Capsule Fields
     //------------------------------------------------------------
 
-    if (r.query.capsule_serial) {
-      query.capsule_serial = r.query.capsule_serial;
-    }
-    if (r.query.capsule_id) {
-      query.capsule_id = r.query.capsule_id;
+    if (r.query.id) {
+      query.capsule_serial = r.query.id;
     }
     if (r.query.status) {
       query.status = r.query.status;
@@ -290,8 +282,8 @@ export default r => {
     //                       Core Fields
     //------------------------------------------------------------
 
-    if (r.query.core_serial) {
-      query.core_serial = r.query.core_serial;
+    if (r.query.id) {
+      query.core_serial = r.query.id;
     }
     if (r.query.block) {
       query.block = parseInt(r.query.block, 10);
@@ -342,17 +334,17 @@ export default r => {
     //                     Ships Fields
     //------------------------------------------------------------
 
-    if (r.query.ship_id) {
-      query.ship_id = r.query.ship_id;
+    if (r.query.id) {
+      query.ship_id = r.query.id;
     }
-    if (r.query.ship_name) {
-      query.ship_name = r.query.ship_name;
+    if (r.query.name) {
+      query.ship_name = r.query.name;
     }
-    if (r.query.ship_model) {
-      query.ship_model = r.query.ship_model;
+    if (r.query.model) {
+      query.ship_model = r.query.model;
     }
-    if (r.query.ship_type) {
-      query.ship_type = r.query.ship_type;
+    if (r.query.type) {
+      query.ship_type = r.query.type;
     }
     if (r.query.role) {
       query.roles = r.query.role;
@@ -413,11 +405,11 @@ export default r => {
     //                     Mission Fields
     //------------------------------------------------------------
 
-    if (r.query.mission_name) {
-      query.mission_name = r.query.mission_name;
+    if (r.query.id) {
+      query.mission_id = r.query.id;
     }
-    if (r.query.mission_id) {
-      query.mission_id = r.query.mission_id;
+    if (r.query.name) {
+      query.mission_name = r.query.name;
     }
     if (r.query.manufacturer) {
       query.manufacturers = r.query.manufacturer;

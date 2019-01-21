@@ -4,11 +4,11 @@
  * @return {number} Number of documents to skip
  */
 
-export default q => {
+export default query => {
   let offset = null;
 
-  if (q.offset) {
-    offset = parseInt(q.offset, 10);
+  if (query.offset) {
+    offset = parseInt(query.offset, 10);
   } else {
     offset = 0;
   }

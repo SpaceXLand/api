@@ -3,9 +3,6 @@ import schema from '../schema';
 import ctx from '../context';
 import depthLimit from 'graphql-depth-limit';
 import { createComplexityLimitRule } from 'graphql-validation-complexity';
-import { createRateLimitDirective } from 'graphql-rate-limit';
-
-
 
 export default (app, db) => {
   const context = { ...ctx, db };

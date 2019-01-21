@@ -9,14 +9,18 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [Ship]
-    ship(ship_id: String!): Ship
+    ship(id: ID!): Ship
+  }
+
+  extend type Launch {
+    ships: [Ship]
   }
 
   type Ship {
-    ship_id: String
-    ship_name: String
-    ship_model: String
-    ship_type: String
+    id: ID
+    name: String
+    model: String
+    type: String
     roles: [String]
     active: Boolean
     imo: Int
@@ -49,10 +53,10 @@ const typeDefs = gql`
   }
 
   input ShipsFind {
-    ship_id: String
-    ship_name: String
-    ship_model: String
-    ship_type: String
+    id: ID
+    name: String
+    model: String
+    type: String
     role: String
     active: Boolean
     imo: Int

@@ -18,10 +18,10 @@ export const Query: QueryResolvers.Resolvers = {
 
     return parsePayloads(data, { ...find });
   },
-  payload: async (obj, { payload_id }, context) => {
+  payload: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ 'rocket.second_stage.payloads.payload_id': payload_id })
+      .find({ 'rocket.second_stage.payloads.payload_id': id })
       .project({
         _id: 0,
         'rocket.second_stage.payloads': 1,

@@ -1,12 +1,13 @@
 export const collection = 'launch';
 export const url = `/v3/payloads`;
+const parsePayloadObj = payload => ({ ...payload, id: payload.payload_id });
 
-// TOCHECK
 export const parsePayloads = (data, query) => {
   const payloads = [];
   let match;
   data.forEach(launch => {
-    launch.rocket.second_stage.payloads.forEach(payload => {
+    launch.rocket.second_stage.payloads.forEach(payloadObj => {
+      let payload = parsePayloadObj(payloadObj);
       match = 0;
       if (Object.keys(query).length !== 0) {
         Object.entries(query).forEach(([key, value]) => {
@@ -25,15 +26,16 @@ export const parsePayloads = (data, query) => {
   return payloads;
 };
 
-// TOCHECK
 export const parsePayload = (payload, payload_id) => {
   if (!payload) return null;
   const { payloads } = payload.rocket.second_stage;
   let index = 0;
-  payloads.forEach((payload, i) => {
-    if (payload.payload_id === payload_id) {
+  const parsedPayloads = payloads.map((payloadObj, i) => {
+    let payload = parsePayloadObj(payloadObj);
+    if (payload.id === payload_id) {
       index = i;
     }
+    return payload;
   });
-  return payloads[index];
+  return parsedPayloads[index];
 };

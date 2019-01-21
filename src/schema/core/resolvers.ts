@@ -1,4 +1,5 @@
 import { QueryResolvers } from '../../types/types';
+import { parseCores } from './utils';
 
 const collection = 'core';
 const url = `/v3/cores`;
@@ -9,41 +10,51 @@ const Query: QueryResolvers.Resolvers = {
       null_dates = await context.db
         .collection(collection)
         .find({
-          ...context.find({ query: { ...find }, url }),
-          original_launch: null
+          original_launch: null,
+          ...context.find({ query: { ...find }, url })
         })
         .sort(context.sort({ query: { order, sort }, url }))
         .skip(context.offset({ offset }))
         .limit(context.limit({ limit }))
+        .map(parseCores)
         .toArray();
     }
     const not_null_dates = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: { $ne: null }
+        original_launch: { $ne: null },
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCores)
       .toArray();
 
-    if (context.order({ query: { order } }) === -1) {
-      return null_dates.concat(not_null_dates);
+    let data = null;
+    if (context.order({ order }) === -1) {
+      data = null_dates.concat(not_null_dates);
     } else {
-      return not_null_dates.concat(null_dates);
+      data = not_null_dates.concat(null_dates);
+    }
+
+    if (limit) {
+      return data.slice(0, limit);
+    } else {
+      return data;
     }
   },
   coresPast: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: { $ne: null }
+        original_launch: { $ne: null },
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCores)
       .toArray();
     return data;
   },
@@ -51,20 +62,22 @@ const Query: QueryResolvers.Resolvers = {
     const data = await context.db
       .collection(collection)
       .find({
-        ...context.find({ query: { ...find }, url }),
-        original_launch: null
+        original_launch: null,
+        ...context.find({ query: { ...find }, url })
       })
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCores)
       .toArray();
     return data;
   },
-  core: async (obj, { core_serial }, context) => {
+  core: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ core_serial })
+      .find({ core_serial: id })
       .limit(1)
+      .map(parseCores)
       .toArray();
     return data;
   }

@@ -2,12 +2,14 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    rockets(limit: Int, offset: Int): [Rocket] @rateLimit(max: 1, window: "60s")
-    rocket(rocket: String!): Rocket
+    rockets(limit: Int, offset: Int): [Rocket]
+    rocket(id: ID!): Rocket
   }
 
   type Rocket {
-    id: Int
+    id: ID
+    name: String
+    type: String
     active: Boolean
     stages: Int
     boosters: Int
@@ -26,9 +28,6 @@ const typeDefs = gql`
     landing_legs: RocketLandingLegs
     wikipedia: String
     description: String
-    rocket_id: String
-    rocket_name: String
-    rocket_type: String
   }
 
   type RocketPayloadWeight {

@@ -4,11 +4,11 @@
  * @return {number} Number of documents to limit
  */
 
-export default q => {
+export default query => {
   let limit = null;
 
-  if (q.limit) {
-    limit = parseInt(q.limit, 10);
+  if (query.limit) {
+    limit = parseInt(query.limit, 10);
   } else {
     limit = 0;
   }

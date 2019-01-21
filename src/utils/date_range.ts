@@ -6,16 +6,16 @@ import moment from 'moment';
  * @return {Object} Mongo compatible date range query object
  */
 
-export default q => {
+export default query => {
   let start;
   let end;
   // If the number is more than 5 digits long, it's likely unix
-  if (/\d{5,}/.test(q.start && (q.final || q.end))) {
-    start = moment.utc(q.start * 1000);
-    end = moment.utc(q.final * 1000 || q.end * 1000);
+  if (/\d{5,}/.test(query.start && (query.final || query.end))) {
+    start = moment.utc(query.start * 1000);
+    end = moment.utc(query.final * 1000 || query.end * 1000);
   } else {
-    start = moment.utc(q.start);
-    end = moment.utc(q.final || q.end);
+    start = moment.utc(query.start);
+    end = moment.utc(query.final || query.end);
   }
 
   return { $gte: start.toISOString(), $lte: end.toISOString() };
