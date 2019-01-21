@@ -18,22 +18,17 @@
 
 ## Usage
 
-Navigate through all the SpaceX data with both,  
-the **GraphQL** & **REST** APIs, having a ✨user & developer experience!  
+Navigate through all the SpaceX data with both, the **GraphQL** & **REST** APIs, having a ✨user & developer experience!  
 ✋ Setups/Auths   
 🤗 Fully updated docs  
 😍 Interactive web-based  
 
-Introspect the available data just pressing `Ctrl/Shift + Space`,  
-have the ability to **define precisely the data** you want,  
-**replace multiple requests** with a single call,  
-discover new ways to interact with APIs!
+Introspect the available data just pressing `Ctrl/Shift + Space`, have the ability to **define precisely the data** you want,
+**replace multiple requests** with a single call, discover new ways to interact with APIs!
 
 💜GraphQL 🔗https://api.spacex.land/graphql  
 
-If you're indeed an old school API fan,  
-you might wanna check the **auto-generated** REST API  
-based on the **GraphQL schema**!
+If you're indeed an old school API fan, you might wanna check the **auto-generated** REST API based on the **GraphQL schema**!
 
 🖤REST 🔗https://api.spacex.land/rest
 
