@@ -5,14 +5,7 @@ import depthLimit from 'graphql-depth-limit';
 import { createComplexityLimitRule } from 'graphql-validation-complexity';
 import { createRateLimitDirective } from 'graphql-rate-limit';
 
-const GraphQLRateLimit = createRateLimitDirective({
-  identifyContext: ctx => {
-    return ctx.user.id;
-  },
-  formatError: ({ fieldName }) => {
-    return `Woah there ✋, you are doing way too much ${fieldName}`;
-  }
-});
+
 
 export default (app, db) => {
   const context = { ...ctx, db };
@@ -22,9 +15,6 @@ export default (app, db) => {
     context,
     engine: {
       apiKey: process.env.ENGINE_API_KEY
-    },
-    schemaDirectives: {
-      rateLimit: GraphQLRateLimit
     },
     validationRules: [depthLimit(10), createComplexityLimitRule(1000)],
     playground: true,
