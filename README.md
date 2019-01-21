@@ -8,7 +8,7 @@
 <h3 align="center">GraphQL & REST APIs to explore all the 🚀, launches & other SpaceX's data!</h3>
 <p align="center">
 <b>APIs for</b>
-</br>👩‍💻Techies&nbsp&nbsp&nbsp👨‍🏫 
+</br>👩‍💻Techies&nbsp&nbsp👨‍🏫 
 </br>👴& no techies&nbsp&nbsp👩‍🌾
 </br>💻from any device&nbsp📱
 </br>also, for those
