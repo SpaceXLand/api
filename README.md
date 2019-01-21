@@ -18,17 +18,21 @@
 
 ## Usage
 
-Navigate through all the SpaceX data with both, GraphQL & REST APIs, having a ✨user & developer experience!
+Navigate through all the SpaceX data with both, **GraphQL** & **REST** APIs, having a ✨user & developer experience!
 <p>
 ✋ Logins/Auths 
 </br>🤗 Fully updated docs
 </br>😍 Interactive web-based
 </p>
 
-💜GraphQL 🔗https://api.spacex.land/graphql
-
-🖤REST 🔗https://api.spacex.land/rest
-
+<p>
+Introspect all the data collections, as for whatever you want
+</br>💜GraphQL 🔗https://api.spacex.land/graphql
+</p>
+<p>
+If you're an old school API lover, you'll wanna check this out!
+</br>🖤REST 🔗https://api.spacex.land/rest
+</p>
 
 ## Buil cool 🚀 stuff
 
