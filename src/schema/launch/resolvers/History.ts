@@ -1,4 +1,4 @@
-import { collection } from '../utils';
+import { collection, parseLaunch } from '../utils';
 
 export const History = {
   flight: async ({ flight_number }, args, context) => {
@@ -6,6 +6,7 @@ export const History = {
       .collection(collection)
       .find({ flight_number })
       .limit(1)
+      .map(parseLaunch)
       .toArray();
     return data;
   }

@@ -3,11 +3,13 @@ import gql from 'graphql-tag';
 const typeDefs = gql`
   extend type Query {
     rockets(limit: Int, offset: Int): [Rocket]
-    rocket(rocket: String!): Rocket
+    rocket(id: ID!): Rocket
   }
 
   type Rocket {
-    id: Int
+    id: ID
+    name: String
+    type: String
     active: Boolean
     stages: Int
     boosters: Int
@@ -26,9 +28,6 @@ const typeDefs = gql`
     landing_legs: RocketLandingLegs
     wikipedia: String
     description: String
-    rocket_id: String
-    rocket_name: String
-    rocket_type: String
   }
 
   type RocketPayloadWeight {

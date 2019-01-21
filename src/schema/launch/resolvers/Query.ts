@@ -42,10 +42,10 @@ export const Query: QueryResolvers.Resolvers = {
 
     return data;
   },
-  launch: async (obj, { flight_number }, context) => {
+  launch: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ flight_number })
+      .find({ flight_number: parseInt(id) })
       .map(parseLaunch)
       .toArray();
 

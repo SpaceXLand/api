@@ -12,10 +12,10 @@ const Query: QueryResolvers.Resolvers = {
       .toArray();
     return data;
   },
-  landpad: async (obj, { landpad_id }, context) => {
+  landpad: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ id: landpad_id })
+      .find({ id })
       .limit(1)
       .toArray();
     return data;

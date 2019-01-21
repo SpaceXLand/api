@@ -9,7 +9,7 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [Payload]
-    payload(payload_id: String!): Payload
+    payload(id: ID!): Payload
   }
 
   extend type Mission {
@@ -17,7 +17,7 @@ const typeDefs = gql`
   }
 
   type Payload {
-    payload_id: String
+    id: ID
     norad_id: [Int]
     reused: Boolean
     customers: [String]
@@ -49,7 +49,7 @@ const typeDefs = gql`
   }
 
   input PayloadsFind {
-    payload_id: String
+    payload_id: ID
     norad_id: Int
     customer: String
     nationality: String

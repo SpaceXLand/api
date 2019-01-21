@@ -11,10 +11,10 @@ export const Query: QueryResolvers.Resolvers = {
       .toArray();
     return data;
   },
-  dragon: async (obj, { capsule }, context) => {
+  dragon: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ id: capsule })
+      .find({ id })
       .limit(1)
       .toArray();
     return data;

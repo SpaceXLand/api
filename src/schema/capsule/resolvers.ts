@@ -15,6 +15,7 @@ const Query: QueryResolvers.Resolvers = {
         .sort(context.sort({ query: { order, sort }, url }))
         .skip(context.offset({ offset }))
         .limit(context.limit({ limit }))
+        .map(parseCapsules)
         .toArray();
     }
     const not_null_dates = await context.db
@@ -26,6 +27,7 @@ const Query: QueryResolvers.Resolvers = {
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCapsules)
       .toArray();
 
     let data = null;
@@ -51,6 +53,7 @@ const Query: QueryResolvers.Resolvers = {
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCapsules)
       .toArray();
     return data;
   },
@@ -68,17 +71,19 @@ const Query: QueryResolvers.Resolvers = {
       .sort(context.sort({ query: { order, sort }, url }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
+      .map(parseCapsules)
       .toArray();
     return data;
   },
-  capsule: async (obj, { capsule_serial }, context) => {
+  capsule: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ capsule_serial })
+      .find({ capsule_serial: id })
       .limit(1)
+      .map(parseCapsules)
       .toArray();
     return data;
   }
 };
-
+const parseCapsules = capsule => ({ ...capsule, id: capsule.capsule_serial });
 export default { Query };
