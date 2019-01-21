@@ -791,7 +791,7 @@ export interface LaunchRocketSecondStage {
 }
 
 export interface Payload {
-  payload_id?: Maybe<string>;
+  id?: Maybe<string>;
 
   norad_id?: Maybe<(Maybe<number>)[]>;
 
@@ -1262,7 +1262,7 @@ export interface PayloadsQueryArgs {
   sort?: Maybe<string>;
 }
 export interface PayloadQueryArgs {
-  payload_id: string;
+  id: string;
 }
 export interface RocketsQueryArgs {
   limit?: Maybe<number>;
@@ -1780,7 +1780,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, PayloadArgs>;
   export interface PayloadArgs {
-    payload_id: string;
+    id: string;
   }
 
   export type RoadsterResolver<
@@ -3480,7 +3480,7 @@ export namespace LaunchRocketSecondStageResolvers {
 
 export namespace PayloadResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Payload> {
-    payload_id?: PayloadIdResolver<Maybe<string>, TypeParent, Context>;
+    id?: IdResolver<Maybe<string>, TypeParent, Context>;
 
     norad_id?: NoradIdResolver<Maybe<(Maybe<number>)[]>, TypeParent, Context>;
 
@@ -3515,7 +3515,7 @@ export namespace PayloadResolvers {
     >;
   }
 
-  export type PayloadIdResolver<
+  export type IdResolver<
     R = Maybe<string>,
     Parent = Payload,
     Context = MyContext

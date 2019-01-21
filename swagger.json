@@ -1163,10 +1163,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "payload_id",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/ID"
             }
           }
         ],
@@ -2342,8 +2342,8 @@
         "type": "object",
         "required": [],
         "properties": {
-          "payload_id": {
-            "type": "string"
+          "id": {
+            "type": "object"
           },
           "norad_id": {
             "type": "array",
