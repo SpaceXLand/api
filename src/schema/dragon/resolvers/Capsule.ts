@@ -1,10 +1,10 @@
 import { collection } from '../utils';
 
 export const Capsule = {
-  capsule: async ({ capsule_id }, args, context) => {
+  dragon: async ({ capsule_id: id }, args, context) => {
     const [data] = await context.db
       .collection(collection)
-      .find({ id: capsule_id })
+      .find({ id })
       .limit(1)
       .toArray();
     return data;

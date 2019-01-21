@@ -367,7 +367,7 @@ export interface Capsule {
 
   reuse_count?: Maybe<number>;
 
-  capsule?: Maybe<Dragon>;
+  dragon?: Maybe<Dragon>;
 }
 
 export interface CapsuleMission {
@@ -1855,7 +1855,7 @@ export namespace CapsuleResolvers {
 
     reuse_count?: ReuseCountResolver<Maybe<number>, TypeParent, Context>;
 
-    capsule?: CapsuleResolver<Maybe<Dragon>, TypeParent, Context>;
+    dragon?: DragonResolver<Maybe<Dragon>, TypeParent, Context>;
   }
 
   export type IdResolver<
@@ -1893,7 +1893,7 @@ export namespace CapsuleResolvers {
     Parent = Capsule,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
-  export type CapsuleResolver<
+  export type DragonResolver<
     R = Maybe<Dragon>,
     Parent = Capsule,
     Context = MyContext

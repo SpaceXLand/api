@@ -7,7 +7,7 @@ const typeDefs = gql`
   }
 
   extend type Capsule {
-    capsule: Dragon
+    dragon: Dragon
   }
 
   type Dragon {

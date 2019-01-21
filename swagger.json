@@ -1543,7 +1543,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "capsule": {
+          "dragon": {
             "$ref": "#/components/schemas/Dragon"
           }
         }
