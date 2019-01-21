@@ -14,32 +14,28 @@
 </br>also, for those
 </br>👩‍🚀little dreamers&nbsp&nbsp👨‍🚀 
 </p>
-<p align="center"><img src="https://cdn-images-1.medium.com/max/2600/1*ixnzMP6t4Iot9nZpBmr1Vw.png"></p>
+<!-- <p align="center"><img src="https://cdn-images-1.medium.com/max/2600/1*ixnzMP6t4Iot9nZpBmr1Vw.png"></p> -->
 
 ## Usage
 
-Navigate through all the SpaceX data with both,  
-**GraphQL** & **REST** APIs, having a ✨user & developer experience!  
-✋ Logins/Auths   
+Navigate through all the SpaceX data having the ✨user & developer experience!  
+✋ Setups/Auths   
 🤗 Fully updated docs  
 😍 Interactive web-based  
 
-Introspect the available data just pressing `Ctrl/Shift + Space`,  
-have the ability to **define precisely the data** you want,  
-**replace multiple requests** with a single call with GraphQL!
+Introspect the available data just pressing `Ctrl/Shift + Space`, have the ability to **define precisely the data** you want,
+**replace multiple requests** with a single call, discover new ways to interact with APIs!
 
 💜GraphQL 🔗https://api.spacex.land/graphql  
 
-If you're indeed an old school API fan,  
-you might wanna check the **auto-generated** REST API  
-based on the **GraphQL schema**!
+If you're indeed an old school API fan, don't miss the **auto-generated** REST API based on it respective **GraphQL schema**!
 
 🖤REST 🔗https://api.spacex.land/rest
 
 
 ## Buil cool 🚀 stuff
 
-It was never easier to create & share 💯web application projects using your favs FE libraries. Whether you're starting with GraphQL or not, give a 👀at the differents live examples, you could discover interesting things!
+It was never easier to create & share 💯web application projects using your favs FE libraries. Whether you're starting with GraphQL or not, give a 👀at the differents **live examples**, you could discover interesting things!
 
 ❤️Angular 🔗https://codesandbox.io/s/o9nmplk96y
 
