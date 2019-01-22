@@ -19,9 +19,9 @@
 ## Usage
 
 Navigate through all the **SpaceX data** having the most ✨user & developer experience!  
-✋ Setups/Auths   
+✋ Setups/Auths  
 🤗 Fully updated docs  
-😍 Interactive web-based  
+😍 Interactive web-based
 
 Introspect the available data just pressing `Ctrl/Shift + Space`, have the ability to **define precisely the data** you want,
 **replace multiple requests** with a single call, discover new ways to interact with APIs!
@@ -72,14 +72,14 @@ There are many ways to [contribute](https://github.com/spacexland/api/blob/maste
 
 - [Submit bugs](https://github.com/spacexland/api/issues) and help us verify fixes as they are checked in.
 - Review the [source code changes](https://github.com/spacexland/api/pulls).
-- Engage with other TypeScript users and developers on [Slack](https://spacexland.slack.com).
+- Engage with other TypeScript users and developers on [Spectrum](https://spectrum.chat/spacexland).
 - [Contribute bug fixes](https://github.com/spacexland/api/blob/master/CONTRIBUTING.md).
 
 This project has adopted the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct.md).
 
 ## Help & Community
 
-Join our [Slack community](http://spacexland.slack.com) if you run into issues or have questions. We love talking to you!
+Join our [Spectrum community](https://spectrum.chat/spacexland) if you run into issues or have questions. We love talking to you!
 
 ## License
 
