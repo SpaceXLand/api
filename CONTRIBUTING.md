@@ -20,7 +20,7 @@ Help us keep this project open and inclusive. Please read and follow our [Code o
 
 Please, do not open issues for the general support questions as we want to keep GitHub issues for
 bug reports and feature requests. You've got much better chances of getting your question answered in real-time
-on [Slack][slack] where the questions should be asked on the `general` channel.
+on [Spectrum][spectrum] where the questions should be asked on the `general` channel.
 
 ## <a name="issue"></a> Found an Issue?
 
@@ -205,5 +205,5 @@ reference GitHub issues that this commit **Closes**.
 **Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
 
 [coc]: https://github.com/spacexland/api/blob/master/CODE_OF_CONDUCT.md
-[slack]: https://spacexland.slack.com
+[spectrum]: https://spectrum.chat/spacexland
 [github]: https://github.com/spacexland/api
