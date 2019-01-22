@@ -2,8 +2,8 @@
 
 <p align="center">
 <a href="https://github.com/spacexland/api/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-<a href="https://github.com/spacexland/api/blob/master/CONTRIBUTING.md#feature"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
-<a href="https://spacexland.slack.com"><img src="https://img.shields.io/badge/slack-join-orange.svg"></a>
+<a href="https://github.com/spacexland/api/blob/master/CONTRIBUTING.md#feature"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>  
+<a href="https://spectrum.chat/spacexland"><img src="https://withspectrum.github.io/badge/badge.svg"></a>
 </p>
 <h3 align="center">GraphQL & REST APIs to explore all the 🚀, launches & other SpaceX's data!</h3>
 <p align="center">
