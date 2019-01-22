@@ -3,7 +3,8 @@ import gql from 'graphql-tag';
 const typeDefs = gql`
   extend type Query {
     launchpads(limit: Int, offset: Int): [Launchpad]
-    launchpad(id: ID!): Launchpad
+      @rateLimit(window: "10s", max: 10)
+    launchpad(id: ID!): Launchpad @rateLimit(window: "10s", max: 10)
   }
 
   type Launchpad {

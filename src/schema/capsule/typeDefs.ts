@@ -8,22 +8,22 @@ const typeDefs = gql`
       offset: Int
       order: String
       sort: String
-    ): [Capsule]
+    ): [Capsule] @rateLimit(window: "10s", max: 10)
     capsulesPast(
       find: CapsulesFind
       limit: Int
       offset: Int
       order: String
       sort: String
-    ): [Capsule]
+    ): [Capsule] @rateLimit(window: "10s", max: 10)
     capsulesUpcoming(
       find: CapsulesFind
       limit: Int
       offset: Int
       order: String
       sort: String
-    ): [Capsule]
-    capsule(id: ID!): Capsule
+    ): [Capsule] @rateLimit(window: "10s", max: 10)
+    capsule(id: ID!): Capsule @rateLimit(window: "10s", max: 10)
   }
 
   type Capsule {

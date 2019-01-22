@@ -3,7 +3,8 @@ import gql from 'graphql-tag';
 const typeDefs = gql`
   extend type Query {
     landpads(limit: Int, offset: Int): [Landpad]
-    landpad(id: ID!): Landpad
+      @rateLimit(window: "10s", max: 10)
+    landpad(id: ID!): Landpad @rateLimit(window: "10s", max: 10)
   }
 
   type Landpad {

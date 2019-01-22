@@ -8,24 +8,24 @@ const typeDefs = gql`
       offset: Int
       order: String
       sort: String
-    ): [Launch]
+    ): [Launch] @rateLimit(window: "10s", max: 10)
     launchesPast(
       find: LaunchFind
       limit: Int
       offset: Int
       order: String
       sort: String
-    ): [Launch]
+    ): [Launch] @rateLimit(window: "10s", max: 10)
     launchesUpcoming(
       find: LaunchFind
       limit: Int
       offset: Int
       order: String
       sort: String
-    ): [Launch]
-    launch(id: ID!): Launch
-    launchLatest(offset: Int): Launch
-    launchNext(offset: Int): Launch
+    ): [Launch] @rateLimit(window: "10s", max: 10)
+    launch(id: ID!): Launch @rateLimit(window: "10s", max: 10)
+    launchLatest(offset: Int): Launch @rateLimit(window: "10s", max: 10)
+    launchNext(offset: Int): Launch @rateLimit(window: "10s", max: 10)
   }
 
   extend type History {

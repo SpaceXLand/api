@@ -3,7 +3,8 @@ import gql from 'graphql-tag';
 const typeDefs = gql`
   extend type Query {
     dragons(limit: Int, offset: Int): [Dragon]
-    dragon(id: ID!): Dragon
+      @rateLimit(window: "10s", max: 10)
+    dragon(id: ID!): Dragon @rateLimit(window: "10s", max: 10)
   }
 
   extend type Capsule {

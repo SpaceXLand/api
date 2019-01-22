@@ -8,8 +8,8 @@ const typeDefs = gql`
       offset: Int
       order: String
       sort: String
-    ): [Payload]
-    payload(id: ID!): Payload
+    ): [Payload] @rateLimit(window: "10s", max: 10)
+    payload(id: ID!): Payload @rateLimit(window: "10s", max: 10)
   }
 
   extend type Mission {

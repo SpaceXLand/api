@@ -8,8 +8,8 @@ const typeDefs = gql`
       offset: Int
       order: String
       sort: String
-    ): [Ship]
-    ship(id: ID!): Ship
+    ): [Ship] @rateLimit(window: "10s", max: 10)
+    ship(id: ID!): Ship @rateLimit(window: "10s", max: 10)
   }
 
   extend type Launch {

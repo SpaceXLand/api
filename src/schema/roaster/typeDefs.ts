@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    roadster: Roadster
+    roadster: Roadster @rateLimit(window: "10s", max: 10)
   }
 
   type Roadster {

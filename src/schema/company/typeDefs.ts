@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    company: Info
+    company: Info @rateLimit(window: "10s", max: 10)
   }
   type Info {
     ceo: String

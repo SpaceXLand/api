@@ -8,8 +8,8 @@ const typeDefs = gql`
       offset: Int
       order: String
       sort: String
-    ): [History]
-    history(id: ID!): History
+    ): [History] @rateLimit(window: "10s", max: 10)
+    history(id: ID!): History @rateLimit(window: "10s", max: 10)
   }
 
   type History {

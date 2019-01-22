@@ -3,7 +3,8 @@ import gql from 'graphql-tag';
 const typeDefs = gql`
   extend type Query {
     rockets(limit: Int, offset: Int): [Rocket]
-    rocket(id: ID!): Rocket
+      @rateLimit(window: "10s", max: 10)
+    rocket(id: ID!): Rocket @rateLimit(window: "10s", max: 10)
   }
 
   type Rocket {
