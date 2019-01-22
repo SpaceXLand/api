@@ -8,22 +8,22 @@ const typeDefs = gql`
       offset: Int
       order: String
       sort: String
-    ): [Core]
+    ): [Core] @rateLimit(window: "10s", max: 10)
     coresPast(
       find: CoresFind
       limit: Int
       offset: Int
       order: String
       sort: String
-    ): [Core]
+    ): [Core] @rateLimit(window: "10s", max: 10)
     coresUpcoming(
       find: CoresFind
       limit: Int
       offset: Int
       order: String
       sort: String
-    ): [Core]
-    core(id: ID!): Core
+    ): [Core] @rateLimit(window: "10s", max: 10)
+    core(id: ID!): Core @rateLimit(window: "10s", max: 10)
   }
 
   type Core {

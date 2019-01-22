@@ -3,7 +3,8 @@ import gql from 'graphql-tag';
 const typeDefs = gql`
   extend type Query {
     missions(find: MissionsFind, limit: Int, offset: Int): [Mission]
-    mission(id: ID!): Mission
+      @rateLimit(window: "10s", max: 10)
+    mission(id: ID!): Mission @rateLimit(window: "10s", max: 10)
   }
 
   type Mission {
