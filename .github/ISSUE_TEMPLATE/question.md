@@ -8,7 +8,7 @@ GitHub Issues in the repository is not used exclusively for tracking bugs. You m
 
 ### Talk about best practices or propose changes
 
-For longer-form conversations, we’ve set up a slack channel:
-https://spacexland.slack.com
+For longer-form conversations, we’ve set up a Spectrum channel:
+https://spectrum.chat/spacexland
 
 This channel is a great place for discussion about best practices and application architecture.
