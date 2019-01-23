@@ -365,7 +365,7 @@ export interface Capsule {
 
   type?: Maybe<string>;
 
-  capsule?: Maybe<Dragon>;
+  dragon?: Maybe<Dragon>;
 }
 
 export interface CapsuleMission {
@@ -1842,7 +1842,7 @@ export namespace CapsuleResolvers {
 
     type?: TypeResolver<Maybe<string>, TypeParent, Context>;
 
-    capsule?: CapsuleResolver<Maybe<Dragon>, TypeParent, Context>;
+    dragon?: DragonResolver<Maybe<Dragon>, TypeParent, Context>;
   }
 
   export type IdResolver<
@@ -1880,7 +1880,7 @@ export namespace CapsuleResolvers {
     Parent = Capsule,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
-  export type CapsuleResolver<
+  export type DragonResolver<
     R = Maybe<Dragon>,
     Parent = Capsule,
     Context = MyContext
@@ -4613,56 +4613,64 @@ export interface ObjectIDScalarConfig
   name: "ObjectID";
 }
 
-export interface IResolvers {
-  Query?: QueryResolvers.Resolvers;
-  Capsule?: CapsuleResolvers.Resolvers;
-  CapsuleMission?: CapsuleMissionResolvers.Resolvers;
-  Dragon?: DragonResolvers.Resolvers;
-  Distance?: DistanceResolvers.Resolvers;
-  DragonHeatShield?: DragonHeatShieldResolvers.Resolvers;
-  Mass?: MassResolvers.Resolvers;
-  Volume?: VolumeResolvers.Resolvers;
-  DragonPressurizedCapsule?: DragonPressurizedCapsuleResolvers.Resolvers;
-  DragonThrust?: DragonThrustResolvers.Resolvers;
-  Force?: ForceResolvers.Resolvers;
-  DragonTrunk?: DragonTrunkResolvers.Resolvers;
-  DragonTrunkCargo?: DragonTrunkCargoResolvers.Resolvers;
-  Info?: InfoResolvers.Resolvers;
-  Address?: AddressResolvers.Resolvers;
-  InfoLinks?: InfoLinksResolvers.Resolvers;
-  Core?: CoreResolvers.Resolvers;
-  History?: HistoryResolvers.Resolvers;
-  Link?: LinkResolvers.Resolvers;
-  Launch?: LaunchResolvers.Resolvers;
-  LaunchSite?: LaunchSiteResolvers.Resolvers;
-  LaunchLinks?: LaunchLinksResolvers.Resolvers;
-  LaunchRocket?: LaunchRocketResolvers.Resolvers;
-  LaunchRocketFairings?: LaunchRocketFairingsResolvers.Resolvers;
-  LaunchRocketFirstStage?: LaunchRocketFirstStageResolvers.Resolvers;
-  LaunchRocketFirstStageCore?: LaunchRocketFirstStageCoreResolvers.Resolvers;
-  Rocket?: RocketResolvers.Resolvers;
-  RocketEngines?: RocketEnginesResolvers.Resolvers;
-  RocketFirstStage?: RocketFirstStageResolvers.Resolvers;
-  RocketLandingLegs?: RocketLandingLegsResolvers.Resolvers;
-  RocketPayloadWeight?: RocketPayloadWeightResolvers.Resolvers;
-  RocketSecondStage?: RocketSecondStageResolvers.Resolvers;
-  RocketSecondStagePayloads?: RocketSecondStagePayloadsResolvers.Resolvers;
-  RocketSecondStagePayloadCompositeFairing?: RocketSecondStagePayloadCompositeFairingResolvers.Resolvers;
-  LaunchRocketSecondStage?: LaunchRocketSecondStageResolvers.Resolvers;
-  Payload?: PayloadResolvers.Resolvers;
-  PayloadOrbitParams?: PayloadOrbitParamsResolvers.Resolvers;
-  LaunchTelemetry?: LaunchTelemetryResolvers.Resolvers;
-  Ship?: ShipResolvers.Resolvers;
-  ShipMission?: ShipMissionResolvers.Resolvers;
-  ShipLocation?: ShipLocationResolvers.Resolvers;
-  Landpad?: LandpadResolvers.Resolvers;
-  Location?: LocationResolvers.Resolvers;
-  Launchpad?: LaunchpadResolvers.Resolvers;
-  Mission?: MissionResolvers.Resolvers;
-  Roadster?: RoadsterResolvers.Resolvers;
-  Mutation?: MutationResolvers.Resolvers;
-  Subscription?: SubscriptionResolvers.Resolvers;
-  CoreMission?: CoreMissionResolvers.Resolvers;
+export interface IResolvers<Context = MyContext> {
+  Query?: QueryResolvers.Resolvers<Context>;
+  Capsule?: CapsuleResolvers.Resolvers<Context>;
+  CapsuleMission?: CapsuleMissionResolvers.Resolvers<Context>;
+  Dragon?: DragonResolvers.Resolvers<Context>;
+  Distance?: DistanceResolvers.Resolvers<Context>;
+  DragonHeatShield?: DragonHeatShieldResolvers.Resolvers<Context>;
+  Mass?: MassResolvers.Resolvers<Context>;
+  Volume?: VolumeResolvers.Resolvers<Context>;
+  DragonPressurizedCapsule?: DragonPressurizedCapsuleResolvers.Resolvers<
+    Context
+  >;
+  DragonThrust?: DragonThrustResolvers.Resolvers<Context>;
+  Force?: ForceResolvers.Resolvers<Context>;
+  DragonTrunk?: DragonTrunkResolvers.Resolvers<Context>;
+  DragonTrunkCargo?: DragonTrunkCargoResolvers.Resolvers<Context>;
+  Info?: InfoResolvers.Resolvers<Context>;
+  Address?: AddressResolvers.Resolvers<Context>;
+  InfoLinks?: InfoLinksResolvers.Resolvers<Context>;
+  Core?: CoreResolvers.Resolvers<Context>;
+  History?: HistoryResolvers.Resolvers<Context>;
+  Link?: LinkResolvers.Resolvers<Context>;
+  Launch?: LaunchResolvers.Resolvers<Context>;
+  LaunchSite?: LaunchSiteResolvers.Resolvers<Context>;
+  LaunchLinks?: LaunchLinksResolvers.Resolvers<Context>;
+  LaunchRocket?: LaunchRocketResolvers.Resolvers<Context>;
+  LaunchRocketFairings?: LaunchRocketFairingsResolvers.Resolvers<Context>;
+  LaunchRocketFirstStage?: LaunchRocketFirstStageResolvers.Resolvers<Context>;
+  LaunchRocketFirstStageCore?: LaunchRocketFirstStageCoreResolvers.Resolvers<
+    Context
+  >;
+  Rocket?: RocketResolvers.Resolvers<Context>;
+  RocketEngines?: RocketEnginesResolvers.Resolvers<Context>;
+  RocketFirstStage?: RocketFirstStageResolvers.Resolvers<Context>;
+  RocketLandingLegs?: RocketLandingLegsResolvers.Resolvers<Context>;
+  RocketPayloadWeight?: RocketPayloadWeightResolvers.Resolvers<Context>;
+  RocketSecondStage?: RocketSecondStageResolvers.Resolvers<Context>;
+  RocketSecondStagePayloads?: RocketSecondStagePayloadsResolvers.Resolvers<
+    Context
+  >;
+  RocketSecondStagePayloadCompositeFairing?: RocketSecondStagePayloadCompositeFairingResolvers.Resolvers<
+    Context
+  >;
+  LaunchRocketSecondStage?: LaunchRocketSecondStageResolvers.Resolvers<Context>;
+  Payload?: PayloadResolvers.Resolvers<Context>;
+  PayloadOrbitParams?: PayloadOrbitParamsResolvers.Resolvers<Context>;
+  LaunchTelemetry?: LaunchTelemetryResolvers.Resolvers<Context>;
+  Ship?: ShipResolvers.Resolvers<Context>;
+  ShipMission?: ShipMissionResolvers.Resolvers<Context>;
+  ShipLocation?: ShipLocationResolvers.Resolvers<Context>;
+  Landpad?: LandpadResolvers.Resolvers<Context>;
+  Location?: LocationResolvers.Resolvers<Context>;
+  Launchpad?: LaunchpadResolvers.Resolvers<Context>;
+  Mission?: MissionResolvers.Resolvers<Context>;
+  Roadster?: RoadsterResolvers.Resolvers<Context>;
+  Mutation?: MutationResolvers.Resolvers<Context>;
+  Subscription?: SubscriptionResolvers.Resolvers<Context>;
+  CoreMission?: CoreMissionResolvers.Resolvers<Context>;
   Date?: GraphQLScalarType;
   ObjectId?: GraphQLScalarType;
 }
