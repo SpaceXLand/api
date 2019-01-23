@@ -16,14 +16,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CapsulesFind"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -80,14 +72,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CapsulesFind"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -142,14 +126,6 @@
         "tags": ["Endpoints"],
         "operationId": "capsulesUpcomingQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CapsulesFind"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
@@ -253,14 +229,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CoresFind"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -317,14 +285,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CoresFind"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -379,14 +339,6 @@
         "tags": ["Endpoints"],
         "operationId": "coresUpcomingQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CoresFind"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
@@ -539,14 +491,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/HistoryFind"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -697,14 +641,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/LaunchFind"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -761,14 +697,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/LaunchFind"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -823,14 +751,6 @@
         "tags": ["Endpoints"],
         "operationId": "launchesUpcomingQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/LaunchFind"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
@@ -1039,14 +959,6 @@
         "parameters": [
           {
             "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/MissionsFind"
-            }
-          },
-          {
-            "in": "query",
             "name": "limit",
             "required": false,
             "schema": {
@@ -1112,14 +1024,6 @@
         "tags": ["Endpoints"],
         "operationId": "payloadsQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/PayloadsFind"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
@@ -1288,14 +1192,6 @@
         "tags": ["Endpoints"],
         "operationId": "shipsQuery",
         "parameters": [
-          {
-            "in": "query",
-            "name": "find",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/ShipsFind"
-            }
-          },
           {
             "in": "query",
             "name": "limit",
