@@ -1,13 +1,12 @@
 import { QueryResolvers } from '../../types/types';
 
 const collection = 'history';
-const url = `/v3/history`;
 const Query: QueryResolvers.Resolvers = {
   histories: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)
-      .find(context.find({ query: { ...find }, url }))
-      .sort(context.sort({ query: { order, sort }, url }))
+      .find(context.find({ query: { ...find }, collection }))
+      .sort(context.sort({ query: { order, sort }, collection }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .toArray();

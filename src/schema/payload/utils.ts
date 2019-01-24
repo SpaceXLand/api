@@ -1,5 +1,5 @@
 export const collection = 'launch';
-export const url = `/v3/payloads`;
+
 const parsePayloadObj = payload => ({ ...payload, id: payload.payload_id });
 
 export const parsePayloads = (data, query) => {
