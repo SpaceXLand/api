@@ -4,7 +4,7 @@ import ctx from '../context';
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from '../../swagger.json';
 
-export default async (app, db) => {
+export default (app, db) => {
   const context = { ...ctx, db };
   const openApi = OpenAPI({
     schema,
