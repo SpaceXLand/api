@@ -10,7 +10,7 @@
 </br><b>APIs for</b>
 </br>👩‍💻Techies&nbsp&nbsp👨‍🏫 
 </br>👴& no techies&nbsp&nbsp👩‍🌾
-</br>🌏from anywhere&nbsp🌖
+</br>🌏from everywhere&nbsp🌖
 </br>💻with any device&nbsp📱
 </br>also, for those
 </br>👩‍🚀little dreamers&nbsp&nbsp👨‍🚀 
