@@ -1,7 +1,6 @@
 import { QueryResolvers } from '../../types/types';
 
 const collection = 'capsule';
-const url = `/v3/capsules`;
 const Query: QueryResolvers.Resolvers = {
   capsules: async (obj, { find, offset, order, sort, limit }, context) => {
     let null_dates = [];
@@ -10,9 +9,9 @@ const Query: QueryResolvers.Resolvers = {
         .collection(collection)
         .find({
           original_launch: null,
-          ...context.find({ query: { ...find }, url })
+          ...context.find({ query: { ...find }, collection })
         })
-        .sort(context.sort({ query: { order, sort }, url }))
+        .sort(context.sort({ query: { order, sort }, collection }))
         .skip(context.offset({ offset }))
         .limit(context.limit({ limit }))
         .map(parseCapsules)
@@ -22,9 +21,9 @@ const Query: QueryResolvers.Resolvers = {
       .collection(collection)
       .find({
         original_launch: { $ne: null },
-        ...context.find({ query: { ...find }, url })
+        ...context.find({ query: { ...find }, collection })
       })
-      .sort(context.sort({ query: { order, sort }, url }))
+      .sort(context.sort({ query: { order, sort }, collection }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .map(parseCapsules)
@@ -48,9 +47,9 @@ const Query: QueryResolvers.Resolvers = {
       .collection(collection)
       .find({
         original_launch: { $ne: null },
-        ...context.find({ query: { ...find }, url })
+        ...context.find({ query: { ...find }, collection })
       })
-      .sort(context.sort({ query: { order, sort }, url }))
+      .sort(context.sort({ query: { order, sort }, collection }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .map(parseCapsules)
@@ -66,9 +65,9 @@ const Query: QueryResolvers.Resolvers = {
       .collection(collection)
       .find({
         original_launch: null,
-        ...context.find({ query: { ...find }, url })
+        ...context.find({ query: { ...find }, collection })
       })
-      .sort(context.sort({ query: { order, sort }, url }))
+      .sort(context.sort({ query: { order, sort }, collection }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .map(parseCapsules)

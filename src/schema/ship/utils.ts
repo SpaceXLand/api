@@ -1,5 +1,4 @@
 export const collection = 'ship';
-export const url = `/v3/ships`;
 
 export const parseShips = ship => ({
   ...ship,

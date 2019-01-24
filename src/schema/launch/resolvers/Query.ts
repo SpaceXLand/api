@@ -1,12 +1,12 @@
-import { collection, url, parseLaunch } from '../utils';
+import { collection, parseLaunch } from '../utils';
 import { QueryResolvers } from '../../../types/types';
 
 export const Query: QueryResolvers.Resolvers = {
   launches: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)
-      .find(context.find({ query: { ...find }, url }))
-      .sort(context.sort({ query: { order, sort }, url }))
+      .find(context.find({ query: { ...find }, collection }))
+      .sort(context.sort({ query: { order, sort }, collection }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .map(parseLaunch)
@@ -17,9 +17,12 @@ export const Query: QueryResolvers.Resolvers = {
   launchesPast: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)
-      .find({ upcoming: false, ...context.find({ query: { ...find }, url }) })
+      .find({
+        upcoming: false,
+        ...context.find({ query: { ...find }, collection })
+      })
       .sort({
-        ...context.sort({ query: { order, sort }, url }),
+        ...context.sort({ query: { order, sort }, collection }),
         flight_number: -1
       })
       .skip(context.offset({ offset }))
@@ -36,8 +39,11 @@ export const Query: QueryResolvers.Resolvers = {
   ) => {
     const data = await context.db
       .collection(collection)
-      .find({ upcoming: true, ...context.find({ query: { ...find }, url }) })
-      .sort(context.sort({ query: { order, sort }, url }))
+      .find({
+        upcoming: true,
+        ...context.find({ query: { ...find }, collection })
+      })
+      .sort(context.sort({ query: { order, sort }, collection }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .map(parseLaunch)
