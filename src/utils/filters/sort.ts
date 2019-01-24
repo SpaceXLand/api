@@ -14,10 +14,7 @@ export default r => {
   const direction = order(r.query);
 
   if ('sort' in r.query) {
-    if (
-      /^\/v3\/launches(.*)(?:\/)?$/i.test(r.url) ||
-      /^\/v3\/payloads(.*)(?:\/)?$/i.test(r.url)
-    ) {
+    if (r.collection === 'launch') {
       //------------------------------------------------------------
       //                       Launch Fields
       //------------------------------------------------------------
@@ -220,7 +217,7 @@ export default r => {
       if (r.query.sort === 'ship') {
         query.ships = direction;
       }
-    } else if (/^\/v3\/capsules(.*)(?:\/)?$/i.test(r.url)) {
+    } else if (r.collection === 'capsule') {
       //------------------------------------------------------------
       //                       Capsule Fields
       //------------------------------------------------------------
@@ -246,7 +243,7 @@ export default r => {
       if (r.query.sort === 'reuse_count') {
         query.reuse_count = direction;
       }
-    } else if (/^\/v3\/cores(.*)(?:\/)?$/i.test(r.url)) {
+    } else if (r.collection === 'core') {
       //------------------------------------------------------------
       //                       Core Fields
       //------------------------------------------------------------
@@ -281,7 +278,7 @@ export default r => {
       if (r.query.sort === 'water_landing') {
         query.water_landing = direction;
       }
-    } else if (/^\/v3\/history(.*)(?:\/)?$/i.test(r.url)) {
+    } else if (r.collection === 'history') {
       //------------------------------------------------------------
       //                     History Fields
       //------------------------------------------------------------
@@ -292,7 +289,7 @@ export default r => {
       if (r.query.sort === 'flight_number') {
         query.flight_number = direction;
       }
-    } else if (/^\/v3\/ships(.*)(?:\/)?$/i.test(r.url)) {
+    } else if (r.collection === 'ship') {
       //------------------------------------------------------------
       //                     Ships Fields
       //------------------------------------------------------------
@@ -362,20 +359,17 @@ export default r => {
       }
     }
     // Set sensible defaults for endpoint to sort on if no sort or order param is passed in the url
-  } else if (
-    /^\/v3\/launches(.*)(?:\/)?$/i.test(r.url) ||
-    /^\/v3\/payloads(.*)(?:\/)?$/i.test(r.url)
-  ) {
+  } else if (r.collection === 'launch') {
     query.flight_number = direction;
-  } else if (/^\/v3\/history(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'history') {
     query.event_date_utc = direction;
-  } else if (/^\/v3\/capsules(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'capsule') {
     query.original_launch = direction;
     query.capsule_serial = direction;
-  } else if (/^\/v3\/cores(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'core') {
     query.original_launch = direction;
     query.core_serial = direction;
-  } else if (/^\/v3\/ships(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'ship') {
     query.ship_id = direction;
   }
 

@@ -1,17 +1,17 @@
-import { collection, url, parsePayloads, parsePayload } from '../utils';
+import { collection, parsePayloads, parsePayload } from '../utils';
 import { QueryResolvers } from '../../../types/types';
 
 export const Query: QueryResolvers.Resolvers = {
   payloads: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)
-      .find(context.find({ query: { ...find }, url }))
+      .find(context.find({ query: { ...find }, collection }))
       .project({
         _id: 0,
         'rocket.second_stage.payloads': 1,
         flight_number: 1
       })
-      .sort(context.sort({ query: { order, sort }, url }))
+      .sort(context.sort({ query: { order, sort }, collection }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .toArray();

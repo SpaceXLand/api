@@ -1,7 +1,6 @@
 import { QueryResolvers } from '../../types/types';
 
 const collection = 'landpad';
-const url = `/v3/landpads`;
 const Query: QueryResolvers.Resolvers = {
   landpads: async (obj, { limit, offset }, context) => {
     const data = await context.db

@@ -1,5 +1,3 @@
-// Required to correctly output ObjectID's
-import { ObjectId } from 'mongodb';
 import moment from 'moment';
 import { dateRange } from '../';
 
@@ -11,11 +9,7 @@ import { dateRange } from '../';
 
 export default r => {
   const query: any = {};
-
-  if (
-    /^\/v3\/launches(.*)(?:\/)?$/i.test(r.url) ||
-    /^\/v3\/payloads(.*)(?:\/)?$/i.test(r.url)
-  ) {
+  if (r.collection === 'launch') {
     //------------------------------------------------------------
     //                       Launch Fields
     //------------------------------------------------------------
@@ -251,7 +245,7 @@ export default r => {
       query['rocket.first_stage.cores.landing_vehicle'] =
         r.query.landing_vehicle;
     }
-  } else if (/^\/v3\/capsules(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'capsule') {
     //------------------------------------------------------------
     //                       Capsule Fields
     //------------------------------------------------------------
@@ -277,7 +271,7 @@ export default r => {
     if (r.query.reuse_count) {
       query.reuse_count = parseInt(r.query.reuse_count, 10);
     }
-  } else if (/^\/v3\/cores(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'core') {
     //------------------------------------------------------------
     //                       Core Fields
     //------------------------------------------------------------
@@ -315,7 +309,7 @@ export default r => {
     if (r.query.water_landing) {
       query.water_landing = r.query.water_landing === 'true';
     }
-  } else if (/^\/v3\/history(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'history') {
     //------------------------------------------------------------
     //                     History Fields
     //------------------------------------------------------------
@@ -329,7 +323,7 @@ export default r => {
     if (r.query.flight_number) {
       query.flight_number = parseInt(r.query.flight_number, 10);
     }
-  } else if (/^\/v3\/ships(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'ship') {
     //------------------------------------------------------------
     //                     Ships Fields
     //------------------------------------------------------------
@@ -400,7 +394,7 @@ export default r => {
     if (r.query.mission) {
       query['missions.name'] = r.query.mission;
     }
-  } else if (/^\/v3\/missions(.*)(?:\/)?$/i.test(r.url)) {
+  } else if (r.collection === 'mission') {
     //------------------------------------------------------------
     //                     Mission Fields
     //------------------------------------------------------------

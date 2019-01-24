@@ -1,12 +1,11 @@
 import { QueryResolvers } from '../../types/types';
 
 const collection = 'mission';
-const url = `/v3/missions`;
 const Query: QueryResolvers.Resolvers = {
   missions: async (obj, { find, limit, offset }, context) => {
     const data = await context.db
       .collection(collection)
-      .find(context.find({ query: { ...find }, url }))
+      .find(context.find({ query: { ...find }, collection }))
       .skip(context.offset({ offset }))
       .limit(context.limit({ limit }))
       .map(parseMissions)
