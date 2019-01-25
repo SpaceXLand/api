@@ -9,7 +9,7 @@ export default (app, db) => {
   const openApi = OpenAPI({
     schema,
     info: {
-      title: 'SpaceX Rest API'
+      title: 'SpaceX REST API'
     }
   });
 
