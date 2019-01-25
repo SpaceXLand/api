@@ -17,7 +17,7 @@ export default (app, { schema, context }) => {
   });
 
   app.get(
-    '/graphql?*',
+    '/graphql',
     graphqlHTTP({
       schema,
       graphiql: true
