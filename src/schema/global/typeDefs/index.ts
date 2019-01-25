@@ -1,8 +1,8 @@
 import { Query } from './entryPoints';
 import directives from './directives';
 import scalars from './scalars';
-import spaceX from './spaceX';
+import common from './common';
 
-const global = [Query, directives, scalars, spaceX];
+const global = [Query, directives, scalars, common];
 
 export default global;

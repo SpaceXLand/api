@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-const spaceX = gql`
+const common = gql`
   type Address {
     address: String
     city: String
@@ -41,4 +41,4 @@ const spaceX = gql`
   }
 `;
 
-export default spaceX;
+export default common;
