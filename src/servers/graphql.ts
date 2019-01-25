@@ -12,7 +12,8 @@ export default (app, { schema, context }) => {
     engine: {
       apiKey: process.env.ENGINE_API_KEY
     },
-    validationRules: [depthLimit(10), createComplexityLimitRule(1000)]
+    validationRules: [depthLimit(10), createComplexityLimitRule(1000)],
+    introspection: true
   });
 
   app.get(
