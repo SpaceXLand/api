@@ -1,11 +1,8 @@
 import sofa, { OpenAPI } from 'sofa-api';
-import schema from '../schema';
-import ctx from '../context';
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from '../../swagger.json';
 
-export default (app, db) => {
-  const context = { ...ctx, db };
+export default (app, { schema, context }) => {
   const openApi = OpenAPI({
     schema,
     info: {

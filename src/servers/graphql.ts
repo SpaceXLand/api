@@ -1,12 +1,8 @@
 import { ApolloServer } from 'apollo-server-express';
-import schema from '../schema';
-import ctx from '../context';
 import depthLimit from 'graphql-depth-limit';
 import { createComplexityLimitRule } from 'graphql-validation-complexity';
 
-export default (app, db) => {
-  const context = { ...ctx, db };
-
+export default (app, { schema, context }) => {
   const graphql = new ApolloServer({
     schema,
     context,
