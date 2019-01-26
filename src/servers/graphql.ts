@@ -16,20 +16,17 @@ export default (app, { schema, context }) => {
     introspection: true
   });
 
-  app.get(
-    '/graphql',
-    graphqlHTTP({
-      schema,
-      graphiql: true
-    })
-  );
-
   const buildPath = path.join(process.cwd(), 'build');
 
   //expose graphqli-explorer
-  app.use('/', express.static(buildPath));
-  app.get('/', (req, res) => {
+  app.use('/graphql', express.static(buildPath));
+  app.get('/graphql', (req, res) => {
     res.sendFile(path.join(buildPath + '/index.html'));
+  });
+
+  // graphql api by default
+  app.get('/', (_, res) => {
+    res.redirect(graphql.graphqlPath);
   });
 
   graphql.applyMiddleware({
