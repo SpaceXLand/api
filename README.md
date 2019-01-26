@@ -73,7 +73,7 @@ There are many ways to [contribute](https://github.com/spacexland/api/blob/maste
 
 - [Submit bugs](https://github.com/spacexland/api/issues) and help us verify fixes as they are checked in.
 - Review the [source code changes](https://github.com/spacexland/api/pulls).
-- Engage with other TypeScript users and developers on [Spectrum](https://spectrum.chat/spacexland).
+- Engage with other users and developers on [Spectrum](https://spectrum.chat/spacexland).
 - [Contribute bug fixes](https://github.com/spacexland/api/blob/master/CONTRIBUTING.md).
 
 This project has adopted the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct.md).
