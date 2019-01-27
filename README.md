@@ -24,13 +24,13 @@ Navigate through all the **SpaceX data** having the most ✨user & developer exp
 🤗 Fully updated docs  
 😍 Interactive web-based
 
-Introspect the available data just pressing `Ctrl/Shift + Space`, have the ability to **define precisely the data** you want,
+Introspect the available data just clicking checkboxes, have the ability to **define precisely the data** you want,
 **replace multiple requests** with a single call, discover new ways to interact with APIs!
 
 <p align="center">💜GraphQL 🔗https://api.spacex.land/graphql</p>
 
 <p align="center">
-  <img width="600px" src="https://media.giphy.com/media/xjLnWz3g5t57GM59qp/giphy.gif" />
+  <img width="600px" src="https://media.giphy.com/media/2sYD2FMOZc78h9jFf7/giphy.gif" />
 </p>
 
 If you're indeed an old school API fan, don't miss the **auto-generated** REST API based on it respective **GraphQL schema**!
