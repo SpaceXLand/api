@@ -24,7 +24,7 @@ Navigate through all the **SpaceX data** having the most ✨user & developer exp
 🤗 Fully updated docs  
 😍 Interactive web-based
 
-Introspect the available data just clicking checkboxes, have the ability to **define precisely the data** you want,
+Introspect the available data **just clicking checkboxes**, have the ability to **define precisely the data** you want,
 **replace multiple requests** with a single call, discover new ways to interact with APIs!
 
 <p align="center">💜GraphQL 🔗https://api.spacex.land/graphql</p>
