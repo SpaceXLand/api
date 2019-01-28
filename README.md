@@ -39,9 +39,9 @@ If you're indeed an old school API fan, don't miss the **auto-generated** REST A
   <img width="600px" src="https://media.giphy.com/media/pqHqvaK0POSF0H62ZH/giphy.gif" />
 </p>
 
-## Buil cool 🚀 stuff
+## Build Cool 🚀 Stuff
 
-It was never easier to create & share 💯web application projects using your favs FE libraries. Whether you're starting with GraphQL or not, give a 👀at the differents **live examples**, you could discover interesting things!
+It has never been easier to create & share 💯web application projects using your favorite FE libraries. Whether you're starting with GraphQL or not, give a 👀at the differents **live examples** -- You may discover interesting things!
 
 ❤️Angular 🔗https://codesandbox.io/s/o9nmplk96y
 
