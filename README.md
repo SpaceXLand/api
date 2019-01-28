@@ -29,7 +29,7 @@ Introspect the available data **just clicking checkboxes**, have the ability to 
 <p align="center">💜GraphQL 🔗https://api.spacex.land/graphql</p>
 
 <p align="center">
-  <img width="600px" src="https://media.giphy.com/media/1Zlo8cWEtK3Pw3W0c2/giphy.gif" />
+  <img width="600px" src="https://media.giphy.com/media/2sYD2FMOZc78h9jFf7/giphy.gif" />
 </p>
 
 If you're indeed an old school API fan, don't miss the **auto-generated** REST API based on it respective **GraphQL schema**!
