@@ -15,7 +15,6 @@
 </br>also, for those
 </br>👩‍🚀little dreamers&nbsp&nbsp👨‍🚀 
 </p>
-<!-- <p align="center"><img src="https://cdn-images-1.medium.com/max/2600/1*ixnzMP6t4Iot9nZpBmr1Vw.png"></p> -->
 
 ## Usage
 
@@ -30,7 +29,6 @@ Introspect the available data **just clicking checkboxes**, have the ability to 
 <p align="center">💜GraphQL 🔗https://api.spacex.land/graphql</p>
 
 <p align="center">
-  <img width="600px" src="https://media.giphy.com/media/1Zlo8cWEtK3Pw3W0c2/giphy.gif" />
 </p>
 
 If you're indeed an old school API fan, don't miss the **auto-generated** REST API based on it respective **GraphQL schema**!
