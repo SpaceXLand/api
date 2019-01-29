@@ -107,50 +107,48 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@graphql-inspector/api@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-0.11.0.tgz#a63c0d57b94069247f8cbbc8c28c6379dd75d593"
-  integrity sha512-TIXtdsOGvlW4QZlVU0tr077le0YhKYIkDTIUDWieZsSrxwIqzcQASGfoAyj1nLRf7MkYa1aTuRctaeB/+IyNgw==
+"@graphql-inspector/api@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-0.12.0.tgz#02280db2ac40f26f4877bfd9602d5d544cca6d1d"
+  integrity sha512-QXh2SsfQxILyv6AzP7XGhf2u+xddeY7PYmq7cy8GVWAGc2sjVUqG2y1Wjo3jxDlBwu9YY8OYRDwNSB/O43JxUQ==
   dependencies:
-    "@graphql-inspector/core" "0.11.0"
-    "@graphql-inspector/load" "0.11.0"
+    "@graphql-inspector/core" "0.12.0"
+    "@graphql-inspector/load" "0.12.0"
     "@graphql-modules/epoxy" "0.2.17"
     apollo-server-express "2.2.6"
-    graphql "14.0.2"
     graphql-tag "2.10.0"
 
-"@graphql-inspector/cli@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-0.11.0.tgz#7f30fa701a77482c14bbbf6ca8af4bb4173e9264"
-  integrity sha512-EPwGXePTEo+BIXI1GQzyMcS0Uk3EhN4CIqT1dLLM8AYctrQOVQQXCbN7IswlfSx0DenDXwTOnT7iPZ0mjEbipg==
+"@graphql-inspector/cli@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-0.12.0.tgz#a4447d248d4b8081d23c6c9db7d63aa7d1939562"
+  integrity sha512-JH8I7HM+fh4kzgdGGAAkBnQFwsbex06eoEYqfHSPKPMdJmC0UMrUdWnFUnsoe3lJwOveEUv/rLCjguJyqZsRlg==
   dependencies:
-    "@graphql-inspector/api" "0.11.0"
-    "@graphql-inspector/core" "0.11.0"
-    "@graphql-inspector/load" "0.11.0"
-    "@graphql-inspector/ui" "0.11.0"
+    "@graphql-inspector/api" "0.12.0"
+    "@graphql-inspector/core" "0.12.0"
+    "@graphql-inspector/load" "0.12.0"
+    "@graphql-inspector/ui" "0.12.0"
     apollo-server "2.2.6"
     apollo-server-express "2.2.6"
     chalk "2.4.1"
     commander "2.19.0"
     express "4.16.4"
     figures "2.0.0"
-    graphql "14.0.2"
     indent-string "3.2.0"
     is-valid-path "0.1.1"
     log-symbols "2.2.0"
     opn "5.4.0"
 
-"@graphql-inspector/core@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-0.11.0.tgz#0967e7dceefdacdb25b04b44c1eb943671ad48b8"
-  integrity sha512-MCuGz72T2v/+eYMoMTWxBVqOqdNJRL5A03ZdtXWoMh2JlAorwZeru2eogqNbDwYr596hpvXI56uBc0I+/tfTxQ==
+"@graphql-inspector/core@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-0.12.0.tgz#0cbc2e2b769482b6e6376be2cecbab778c1c1b38"
+  integrity sha512-dmU3GJgEkL8gkGUY+pQu6IrAWWiMM/vqpkGVIn3AMXgi68Qw10mmJdq7LG6GrqYWQ5EewDJouuUTMfZ82JvWWw==
   dependencies:
     dependency-graph "0.8.0"
 
-"@graphql-inspector/load@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-0.11.0.tgz#5291955d9e6302c45200d610da1f29a029fa5088"
-  integrity sha512-sW7tDqMvJ32zAY3Mfj6WhHDVSuWtjIoYs3F9oYryzPuRCrO8HP+KVjclX3J4RY3yiukpg5Fl80EyB6Zu/e4yHA==
+"@graphql-inspector/load@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-0.12.0.tgz#1aff7b4d487d775e6579a3278ee0d4cf7295ac00"
+  integrity sha512-iEMaBAaEphl3Mbym6GkhEUadxdvcCqNZmSu/Nk4aEa8mEbEM+1ldRN/5wbOa8DddbcZlru/T5nCmo9SAi+1F0Q==
   dependencies:
     glob "7.1.3"
     graphql-tag-pluck "0.4.4"
@@ -158,10 +156,10 @@
     is-valid-path "0.1.1"
     node-fetch "2.3.0"
 
-"@graphql-inspector/ui@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-0.11.0.tgz#3f6a3f07714ac93900e6ce11fff9e268855f7060"
-  integrity sha512-AMtWyELfmTuDrEvcPv17ZwbOIYChpFQXh5DLGZqpuVXV9ppJzNxYmeX8Q+/RD0LS3xZIF3meDAuKGDCT5XiCyA==
+"@graphql-inspector/ui@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-0.12.0.tgz#91e402e0430ea140cd3fba472da780f4918ffab3"
+  integrity sha512-ybPCklb1cgaIoUvfdKhAw31xHy2jpiYPeoyoy0jEP2E9vZhGj/b6GqaVedO5fcDJ9CTafnl1sw+PfkhEjaRd8A==
   dependencies:
     express "4.16.4"
     react "16.7.0-alpha.2"
@@ -3089,7 +3087,7 @@ graphql-validation-complexity@^0.2.4:
   dependencies:
     warning "^3.0.0"
 
-graphql@14.0.2, graphql@^14.0.2:
+graphql@^14.0.2:
   version "14.0.2"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.0.2.tgz#7dded337a4c3fd2d075692323384034b357f5650"
   dependencies:
