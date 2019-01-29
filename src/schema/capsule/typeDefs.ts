@@ -33,6 +33,7 @@ const typeDefs = gql`
     original_launch: Date
     reuse_count: Int
     status: String
+    type: String
   }
 
   input CapsulesFind {

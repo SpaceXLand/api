@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swcarlosrj/SpaceX-Land"
+    "url": "git+https://github.com/spacexland/api"
   },
   "keywords": [
     "graphql",
@@ -22,9 +22,9 @@
   "author": "Carlos Rufo",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/swcarlosrj/SpaceX-Land/issues"
+    "url": "https://github.com/spacexland/api/issues"
   },
-  "homepage": "https://github.com/swcarlosrj/SpaceX-Land",
+  "homepage": "https://github.com/spacexland/api",
   "graphql-inspector": {
     "diff": true,
     "schema": {
