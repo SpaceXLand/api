@@ -107,26 +107,26 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@graphql-inspector/api@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-0.12.0.tgz#02280db2ac40f26f4877bfd9602d5d544cca6d1d"
-  integrity sha512-QXh2SsfQxILyv6AzP7XGhf2u+xddeY7PYmq7cy8GVWAGc2sjVUqG2y1Wjo3jxDlBwu9YY8OYRDwNSB/O43JxUQ==
+"@graphql-inspector/api@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-0.13.0.tgz#7daf21dc59451d9c3833c283c324d119b16a319c"
+  integrity sha512-38KW3oJr19u7LHYk5EmLdT65UfP5KIZKjTQZ2k9lIPIc+s1BJX65tEMMufht2OiiF9zwGfqRqmnyL2j0OW27gQ==
   dependencies:
-    "@graphql-inspector/core" "0.12.0"
-    "@graphql-inspector/load" "0.12.0"
+    "@graphql-inspector/core" "0.13.0"
+    "@graphql-inspector/load" "0.13.0"
     "@graphql-modules/epoxy" "0.2.17"
     apollo-server-express "2.2.6"
     graphql-tag "2.10.0"
 
-"@graphql-inspector/cli@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-0.12.0.tgz#a4447d248d4b8081d23c6c9db7d63aa7d1939562"
-  integrity sha512-JH8I7HM+fh4kzgdGGAAkBnQFwsbex06eoEYqfHSPKPMdJmC0UMrUdWnFUnsoe3lJwOveEUv/rLCjguJyqZsRlg==
+"@graphql-inspector/cli@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-0.13.0.tgz#33dd3e3300747bcd4acbb0ae311a79e742c516ae"
+  integrity sha512-BMdE9FBaUa74afMMIUNZgImQxHv/eMQG+FDOpkrps8poKXzwPase+cfMWrryGaE17VWlNFy9Dog9ywHUlNSkIw==
   dependencies:
-    "@graphql-inspector/api" "0.12.0"
-    "@graphql-inspector/core" "0.12.0"
-    "@graphql-inspector/load" "0.12.0"
-    "@graphql-inspector/ui" "0.12.0"
+    "@graphql-inspector/api" "0.13.0"
+    "@graphql-inspector/core" "0.13.0"
+    "@graphql-inspector/load" "0.13.0"
+    "@graphql-inspector/ui" "0.13.0"
     apollo-server "2.2.6"
     apollo-server-express "2.2.6"
     chalk "2.4.1"
@@ -138,28 +138,25 @@
     log-symbols "2.2.0"
     opn "5.4.0"
 
-"@graphql-inspector/core@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-0.12.0.tgz#0cbc2e2b769482b6e6376be2cecbab778c1c1b38"
-  integrity sha512-dmU3GJgEkL8gkGUY+pQu6IrAWWiMM/vqpkGVIn3AMXgi68Qw10mmJdq7LG6GrqYWQ5EewDJouuUTMfZ82JvWWw==
+"@graphql-inspector/core@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-0.13.0.tgz#34f6fcf2bd924e30c190d87f8ac4962ef26c2cb0"
+  integrity sha512-37UjjGlEiZXRm22hoU0nC4u7LxYxXlB438In4of64ZqXGJzGj4Lstk+NnAarQgntWBhdqR3rOiftcUalP1T5nA==
   dependencies:
     dependency-graph "0.8.0"
 
-"@graphql-inspector/load@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-0.12.0.tgz#1aff7b4d487d775e6579a3278ee0d4cf7295ac00"
-  integrity sha512-iEMaBAaEphl3Mbym6GkhEUadxdvcCqNZmSu/Nk4aEa8mEbEM+1ldRN/5wbOa8DddbcZlru/T5nCmo9SAi+1F0Q==
+"@graphql-inspector/load@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-0.13.0.tgz#6aee8060fd4b480cc97082114b1fc89a8bdfa376"
+  integrity sha512-C/kSrSnZsc/wG3wbLV+wa6kx9KTU+SAeUeh3OYEnp312iXiTJf8/E5CouFv/5eIxEnMftK30jAZRVZI4B3BJRw==
   dependencies:
-    glob "7.1.3"
-    graphql-tag-pluck "0.4.4"
-    is-glob "4.0.0"
-    is-valid-path "0.1.1"
+    graphql-toolkit "0.0.3"
     node-fetch "2.3.0"
 
-"@graphql-inspector/ui@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-0.12.0.tgz#91e402e0430ea140cd3fba472da780f4918ffab3"
-  integrity sha512-ybPCklb1cgaIoUvfdKhAw31xHy2jpiYPeoyoy0jEP2E9vZhGj/b6GqaVedO5fcDJ9CTafnl1sw+PfkhEjaRd8A==
+"@graphql-inspector/ui@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-0.13.0.tgz#fd073363a72ab8178a3b831c2713b9e92585a221"
+  integrity sha512-Spv7Qhvtow/ioAnGoCLEuKWVufU73rkd+XO9DhyO6bS0i/mo2rv0n3CAnq2KYh0YABsPIDSlo0N5aIHLik1p8A==
   dependencies:
     express "4.16.4"
     react "16.7.0-alpha.2"
@@ -1329,6 +1326,11 @@ deepmerge@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.0.0.tgz#ca7903b34bfa1f8c2eab6779280775a411bfc6ba"
 
+deepmerge@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.1.0.tgz#a612626ce4803da410d77554bfd80361599c034d"
+  integrity sha512-/TnecbwXEdycfbsM2++O3eGiatEFHjjNciHEwJclM+T5Kd94qD1AP+2elP/Mq0L5b9VZJao5znR01Mz6eX8Seg==
+
 define-properties@^1.1.2, define-properties@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.3.tgz#cf88da6cbee26fe6db7094f61d870cbd84cee9f1"
@@ -2198,17 +2200,6 @@ graphql-subscriptions@1.0.0, graphql-subscriptions@^1.0.0:
   dependencies:
     iterall "^1.2.1"
 
-graphql-tag-pluck@0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/graphql-tag-pluck/-/graphql-tag-pluck-0.4.4.tgz#4494c0e13d10aa9a36cea2704218940a1af47170"
-  integrity sha512-dvfRQ3aMxUYUYG+L+Z35npQ/OSNyitypYZ6wI908SqNQ6DQOWRX1WYcv590FOf2TrPOAY39dQEtq5u7mWMUGMw==
-  dependencies:
-    "@babel/parser" "^7.2.0"
-    "@babel/traverse" "^7.1.6"
-    "@babel/types" "^7.2.0"
-    source-map-support "^0.5.9"
-    typescript "^3.2.2"
-
 graphql-tag-pluck@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/graphql-tag-pluck/-/graphql-tag-pluck-0.5.0.tgz#81f5dee3a6ca829f205ab032336be7b107398b2e"
@@ -2226,6 +2217,20 @@ graphql-tag@2.10.0, graphql-tag@^2.10.0, graphql-tag@^2.9.2:
 graphql-tag@2.10.1:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.1.tgz#10aa41f1cd8fae5373eaf11f1f67260a3cad5e02"
+
+graphql-toolkit@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/graphql-toolkit/-/graphql-toolkit-0.0.3.tgz#b3039d4184f01f9a50fbe84010310894b9581a56"
+  integrity sha512-RKWWkHI+buxGO2FOhzGFVUjhz4JAtiWBEjryMNJ8BhS+LzbxrlzduDrGr+RdAWOjyj5gANcVHhtij6dUpN4MwA==
+  dependencies:
+    deepmerge "3.1.0"
+    glob "7.1.3"
+    graphql-import "0.7.1"
+    graphql-tag-pluck "0.5.0"
+    is-glob "4.0.0"
+    is-valid-path "0.1.1"
+    request "2.88.0"
+    valid-url "1.0.9"
 
 graphql-tools@4.0.3, graphql-tools@^4.0.0, graphql-tools@^4.0.3:
   version "4.0.3"
