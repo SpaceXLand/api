@@ -208,6 +208,11 @@ type Launch {
   ships: [Ship]
 }
 
+type LaunchesPastResult {
+  result: Result
+  data: [Launch]
+}
+
 input LaunchFind {
   apoapsis_km: Float
   block: Int
@@ -457,6 +462,7 @@ type Query {
   landpad(id: ID!): Landpad
   launches(find: LaunchFind, limit: Int, offset: Int, order: String, sort: String): [Launch]
   launchesPast(find: LaunchFind, limit: Int, offset: Int, order: String, sort: String): [Launch]
+  launchesPastResult(find: LaunchFind, limit: Int, offset: Int, order: String, sort: String): LaunchesPastResult
   launchesUpcoming(find: LaunchFind, limit: Int, offset: Int, order: String, sort: String): [Launch]
   launch(id: ID!): Launch
   launchLatest(offset: Int): Launch
@@ -472,6 +478,11 @@ type Query {
   rocket(id: ID!): Rocket
   ships(find: ShipsFind, limit: Int, offset: Int, order: String, sort: String): [Ship]
   ship(id: ID!): Ship
+}
+
+type Result {
+  totalCount: Int
+  count: Int
 }
 
 type Roadster {

@@ -16,6 +16,13 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [Launch] @rateLimit(window: "10s", max: 10)
+    launchesPastResult(
+      find: LaunchFind
+      limit: Int
+      offset: Int
+      order: String
+      sort: String
+    ): LaunchesPastResult @rateLimit(window: "10s", max: 10)
     launchesUpcoming(
       find: LaunchFind
       limit: Int
@@ -30,6 +37,11 @@ const typeDefs = gql`
 
   extend type History {
     flight: Launch
+  }
+
+  type LaunchesPastResult {
+    result: Result
+    data: [Launch]
   }
 
   type Launch {

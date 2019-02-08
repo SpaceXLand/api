@@ -1,5 +1,9 @@
 import { collection, parseLaunch } from '../utils';
-import { QueryResolvers } from '../../../types/types';
+import {
+  QueryResolvers,
+  Launch,
+  LaunchesPastResult
+} from '../../../types/types';
 
 export const Query: QueryResolvers.Resolvers = {
   launches: async (obj, { find, offset, order, sort, limit }, context) => {
@@ -31,6 +35,35 @@ export const Query: QueryResolvers.Resolvers = {
       .toArray();
 
     return data;
+  },
+  launchesPastResult: async (
+    obj,
+    { find, offset, order, sort, limit },
+    context
+  ): Promise<LaunchesPastResult> => {
+    const data: [Launch] = await context.db
+      .collection(collection)
+      .find({
+        upcoming: false,
+        ...context.find({ query: { ...find }, collection })
+      })
+      .sort({
+        ...context.sort({ query: { order, sort }, collection }),
+        flight_number: -1
+      })
+      .skip(context.offset({ offset }))
+      .limit(context.limit({ limit }))
+      .map(parseLaunch)
+      .toArray();
+
+    const { length: totalCount }: [Launch] = await context.db
+      .collection(collection)
+      .find({
+        upcoming: false
+      })
+      .toArray();
+
+    return { data, result: { totalCount, count: data.length } };
   },
   launchesUpcoming: async (
     obj,
