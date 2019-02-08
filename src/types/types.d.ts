@@ -319,6 +319,8 @@ export interface Query {
 
   launchesPast?: Maybe<(Maybe<Launch>)[]>;
 
+  launchesPastResult?: Maybe<LaunchesPastResult>;
+
   launchesUpcoming?: Maybe<(Maybe<Launch>)[]>;
 
   launch?: Maybe<Launch>;
@@ -980,6 +982,18 @@ export interface Location {
   region?: Maybe<string>;
 }
 
+export interface LaunchesPastResult {
+  result?: Maybe<Result>;
+
+  data?: Maybe<(Maybe<Launch>)[]>;
+}
+
+export interface Result {
+  totalCount?: Maybe<number>;
+
+  count?: Maybe<number>;
+}
+
 export interface Launchpad {
   attempted_launches?: Maybe<number>;
 
@@ -1206,6 +1220,17 @@ export interface LaunchesPastQueryArgs {
 
   sort?: Maybe<string>;
 }
+export interface LaunchesPastResultQueryArgs {
+  find?: Maybe<LaunchFind>;
+
+  limit?: Maybe<number>;
+
+  offset?: Maybe<number>;
+
+  order?: Maybe<string>;
+
+  sort?: Maybe<string>;
+}
 export interface LaunchesUpcomingQueryArgs {
   find?: Maybe<LaunchFind>;
 
@@ -1390,6 +1415,12 @@ export namespace QueryResolvers {
 
     launchesPast?: LaunchesPastResolver<
       Maybe<(Maybe<Launch>)[]>,
+      TypeParent,
+      Context
+    >;
+
+    launchesPastResult?: LaunchesPastResultResolver<
+      Maybe<LaunchesPastResult>,
       TypeParent,
       Context
     >;
@@ -1647,6 +1678,23 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, LaunchesPastArgs>;
   export interface LaunchesPastArgs {
+    find?: Maybe<LaunchFind>;
+
+    limit?: Maybe<number>;
+
+    offset?: Maybe<number>;
+
+    order?: Maybe<string>;
+
+    sort?: Maybe<string>;
+  }
+
+  export type LaunchesPastResultResolver<
+    R = Maybe<LaunchesPastResult>,
+    Parent = {},
+    Context = MyContext
+  > = Resolver<R, Parent, Context, LaunchesPastResultArgs>;
+  export interface LaunchesPastResultArgs {
     find?: Maybe<LaunchFind>;
 
     limit?: Maybe<number>;
@@ -4192,6 +4240,47 @@ export namespace LocationResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
+export namespace LaunchesPastResultResolvers {
+  export interface Resolvers<
+    Context = MyContext,
+    TypeParent = LaunchesPastResult
+  > {
+    result?: ResultResolver<Maybe<Result>, TypeParent, Context>;
+
+    data?: DataResolver<Maybe<(Maybe<Launch>)[]>, TypeParent, Context>;
+  }
+
+  export type ResultResolver<
+    R = Maybe<Result>,
+    Parent = LaunchesPastResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type DataResolver<
+    R = Maybe<(Maybe<Launch>)[]>,
+    Parent = LaunchesPastResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace ResultResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = Result> {
+    totalCount?: TotalCountResolver<Maybe<number>, TypeParent, Context>;
+
+    count?: CountResolver<Maybe<number>, TypeParent, Context>;
+  }
+
+  export type TotalCountResolver<
+    R = Maybe<number>,
+    Parent = Result,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type CountResolver<
+    R = Maybe<number>,
+    Parent = Result,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
 export namespace LaunchpadResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Launchpad> {
     attempted_launches?: AttemptedLaunchesResolver<
@@ -4665,6 +4754,8 @@ export interface IResolvers<Context = MyContext> {
   ShipLocation?: ShipLocationResolvers.Resolvers<Context>;
   Landpad?: LandpadResolvers.Resolvers<Context>;
   Location?: LocationResolvers.Resolvers<Context>;
+  LaunchesPastResult?: LaunchesPastResultResolvers.Resolvers<Context>;
+  Result?: ResultResolvers.Resolvers<Context>;
   Launchpad?: LaunchpadResolvers.Resolvers<Context>;
   Mission?: MissionResolvers.Resolvers<Context>;
   Roadster?: RoadsterResolvers.Resolvers<Context>;
