@@ -59,7 +59,8 @@ export const Query: QueryResolvers.Resolvers = {
     const { length: totalCount }: [Launch] = await context.db
       .collection(collection)
       .find({
-        upcoming: false
+        upcoming: false,
+        ...context.find({ query: { ...find }, collection })
       })
       .toArray();
 

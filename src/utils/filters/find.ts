@@ -413,5 +413,13 @@ export default r => {
     }
   }
 
-  return query;
+  const queryRegex = Object.entries(query).reduce(
+    (acc, [key, value]: [string, string]) => {
+      acc[key] = { $regex: new RegExp(value, 'i') };
+      return acc;
+    },
+    {}
+  );
+
+  return queryRegex;
 };
