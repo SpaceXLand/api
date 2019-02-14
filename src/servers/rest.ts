@@ -1,4 +1,5 @@
 import sofa, { OpenAPI } from 'sofa-api';
+import cors from 'cors';
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from '../../swagger.json';
 
@@ -11,6 +12,8 @@ export default (app, { schema, context }) => {
   });
 
   const basePath = '/rest';
+
+  app.use(cors());
 
   app.use(
     basePath,
