@@ -132,6 +132,11 @@ type Force {
   lbf: Float
 }
 
+type HistoriesResult {
+  result: Result
+  data: [History]
+}
+
 type History {
   details: String
   event_date_unix: Date
@@ -379,6 +384,11 @@ type Mission {
   payloads: [Payload]
 }
 
+type MissionResult {
+  result: Result
+  data: [Mission]
+}
+
 input MissionsFind {
   id: ID
   manufacturer: String
@@ -457,6 +467,7 @@ type Query {
   dragons(limit: Int, offset: Int): [Dragon]
   dragon(id: ID!): Dragon
   histories(find: HistoryFind, limit: Int, offset: Int, order: String, sort: String): [History]
+  historiesResult(find: HistoryFind, limit: Int, offset: Int, order: String, sort: String): HistoriesResult
   history(id: ID!): History
   landpads(limit: Int, offset: Int): [Landpad]
   landpad(id: ID!): Landpad
@@ -470,19 +481,21 @@ type Query {
   launchpads(limit: Int, offset: Int): [Launchpad]
   launchpad(id: ID!): Launchpad
   missions(find: MissionsFind, limit: Int, offset: Int): [Mission]
+  missionsResult(find: MissionsFind, limit: Int, offset: Int): MissionResult
   mission(id: ID!): Mission
   payloads(find: PayloadsFind, limit: Int, offset: Int, order: String, sort: String): [Payload]
   payload(id: ID!): Payload
   roadster: Roadster
   rockets(limit: Int, offset: Int): [Rocket]
+  rocketsResult(limit: Int, offset: Int): RocketsResult
   rocket(id: ID!): Rocket
   ships(find: ShipsFind, limit: Int, offset: Int, order: String, sort: String): [Ship]
+  shipsResult(find: ShipsFind, limit: Int, offset: Int, order: String, sort: String): ShipsResult
   ship(id: ID!): Ship
 }
 
 type Result {
   totalCount: Int
-  count: Int
 }
 
 type Roadster {
@@ -588,6 +601,11 @@ type RocketSecondStagePayloads {
   composite_fairing: RocketSecondStagePayloadCompositeFairing
 }
 
+type RocketsResult {
+  result: Result
+  data: [Rocket]
+}
+
 type Ship {
   abs: Int
   active: Boolean
@@ -647,6 +665,11 @@ input ShipsFind {
   successful_landings: Int
   attempted_landings: Int
   mission: String
+}
+
+type ShipsResult {
+  result: Result
+  data: [Ship]
 }
 
 type Volume {

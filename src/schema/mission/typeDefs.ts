@@ -4,7 +4,14 @@ const typeDefs = gql`
   extend type Query {
     missions(find: MissionsFind, limit: Int, offset: Int): [Mission]
       @rateLimit(window: "10s", max: 10)
+    missionsResult(find: MissionsFind, limit: Int, offset: Int): MissionResult
+      @rateLimit(window: "10s", max: 10)
     mission(id: ID!): Mission @rateLimit(window: "10s", max: 10)
+  }
+
+  type MissionResult {
+    result: Result
+    data: [Mission]
   }
 
   type Mission {

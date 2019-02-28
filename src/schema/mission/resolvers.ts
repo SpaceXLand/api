@@ -12,6 +12,20 @@ const Query: QueryResolvers.Resolvers = {
       .toArray();
     return data;
   },
+  missionsResult: async (obj, { find, limit, offset }, context) => {
+    const data = await context.db
+      .collection(collection)
+      .find(context.find({ query: { ...find }, collection }))
+      .skip(context.offset({ offset }))
+      .limit(context.limit({ limit }))
+      .map(parseMissions)
+      .toArray();
+    const { length: totalCount } = await context.db
+      .collection(collection)
+      .find({})
+      .toArray();
+    return { data, result: { totalCount } };
+  },
   mission: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)

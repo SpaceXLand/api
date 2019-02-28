@@ -9,11 +9,23 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [Ship] @rateLimit(window: "10s", max: 10)
+    shipsResult(
+      find: ShipsFind
+      limit: Int
+      offset: Int
+      order: String
+      sort: String
+    ): ShipsResult @rateLimit(window: "10s", max: 10)
     ship(id: ID!): Ship @rateLimit(window: "10s", max: 10)
   }
 
   extend type Launch {
     ships: [Ship]
+  }
+
+  type ShipsResult {
+    result: Result
+    data: [Ship]
   }
 
   type Ship {

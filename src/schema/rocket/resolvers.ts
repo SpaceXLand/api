@@ -13,6 +13,21 @@ const Query: QueryResolvers.Resolvers = {
       .toArray();
     return data;
   },
+  rocketsResult: async (obj, { limit, offset }, context) => {
+    const data = await context.db
+      .collection(collection)
+      .find({})
+      .sort({ first_flight: 1 })
+      .skip(context.offset({ offset }))
+      .limit(context.limit({ limit }))
+      .toArray();
+    const { length: totalCount } = await context.db
+      .collection(collection)
+      .find({})
+      .toArray();
+
+    return { data, result: { totalCount } };
+  },
   rocket: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)

@@ -64,7 +64,7 @@ export const Query: QueryResolvers.Resolvers = {
       })
       .toArray();
 
-    return { data, result: { totalCount, count: data.length } };
+    return { data, result: { totalCount } };
   },
   launchesUpcoming: async (
     obj,
