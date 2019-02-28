@@ -335,6 +335,8 @@ export interface Query {
 
   missions?: Maybe<(Maybe<Mission>)[]>;
 
+  missionsResult?: Maybe<MissionResult>;
+
   mission?: Maybe<Mission>;
 
   payloads?: Maybe<(Maybe<Payload>)[]>;
@@ -1032,6 +1034,12 @@ export interface Mission {
   payloads?: Maybe<(Maybe<Payload>)[]>;
 }
 
+export interface MissionResult {
+  result?: Maybe<Result>;
+
+  data?: Maybe<(Maybe<Mission>)[]>;
+}
+
 export interface Roadster {
   apoapsis_au?: Maybe<number>;
 
@@ -1272,6 +1280,13 @@ export interface MissionsQueryArgs {
 
   offset?: Maybe<number>;
 }
+export interface MissionsResultQueryArgs {
+  find?: Maybe<MissionsFind>;
+
+  limit?: Maybe<number>;
+
+  offset?: Maybe<number>;
+}
 export interface MissionQueryArgs {
   id: string;
 }
@@ -1457,6 +1472,12 @@ export namespace QueryResolvers {
     launchpad?: LaunchpadResolver<Maybe<Launchpad>, TypeParent, Context>;
 
     missions?: MissionsResolver<Maybe<(Maybe<Mission>)[]>, TypeParent, Context>;
+
+    missionsResult?: MissionsResultResolver<
+      Maybe<MissionResult>,
+      TypeParent,
+      Context
+    >;
 
     mission?: MissionResolver<Maybe<Mission>, TypeParent, Context>;
 
@@ -1793,6 +1814,19 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, MissionsArgs>;
   export interface MissionsArgs {
+    find?: Maybe<MissionsFind>;
+
+    limit?: Maybe<number>;
+
+    offset?: Maybe<number>;
+  }
+
+  export type MissionsResultResolver<
+    R = Maybe<MissionResult>,
+    Parent = {},
+    Context = MyContext
+  > = Resolver<R, Parent, Context, MissionsResultArgs>;
+  export interface MissionsResultArgs {
     find?: Maybe<MissionsFind>;
 
     limit?: Maybe<number>;
@@ -4447,6 +4481,25 @@ export namespace MissionResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
+export namespace MissionResultResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = MissionResult> {
+    result?: ResultResolver<Maybe<Result>, TypeParent, Context>;
+
+    data?: DataResolver<Maybe<(Maybe<Mission>)[]>, TypeParent, Context>;
+  }
+
+  export type ResultResolver<
+    R = Maybe<Result>,
+    Parent = MissionResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type DataResolver<
+    R = Maybe<(Maybe<Mission>)[]>,
+    Parent = MissionResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
 export namespace RoadsterResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Roadster> {
     apoapsis_au?: ApoapsisAuResolver<Maybe<number>, TypeParent, Context>;
@@ -4798,6 +4851,7 @@ export interface IResolvers<Context = MyContext> {
   Result?: ResultResolvers.Resolvers<Context>;
   Launchpad?: LaunchpadResolvers.Resolvers<Context>;
   Mission?: MissionResolvers.Resolvers<Context>;
+  MissionResult?: MissionResultResolvers.Resolvers<Context>;
   Roadster?: RoadsterResolvers.Resolvers<Context>;
   RocketsResult?: RocketsResultResolvers.Resolvers<Context>;
   Mutation?: MutationResolvers.Resolvers<Context>;

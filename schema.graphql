@@ -379,6 +379,11 @@ type Mission {
   payloads: [Payload]
 }
 
+type MissionResult {
+  result: Result
+  data: [Mission]
+}
+
 input MissionsFind {
   id: ID
   manufacturer: String
@@ -470,6 +475,7 @@ type Query {
   launchpads(limit: Int, offset: Int): [Launchpad]
   launchpad(id: ID!): Launchpad
   missions(find: MissionsFind, limit: Int, offset: Int): [Mission]
+  missionsResult(find: MissionsFind, limit: Int, offset: Int): MissionResult
   mission(id: ID!): Mission
   payloads(find: PayloadsFind, limit: Int, offset: Int, order: String, sort: String): [Payload]
   payload(id: ID!): Payload
