@@ -132,6 +132,11 @@ type Force {
   lbf: Float
 }
 
+type HistoriesResult {
+  result: Result
+  data: [History]
+}
+
 type History {
   details: String
   event_date_unix: Date
@@ -462,6 +467,7 @@ type Query {
   dragons(limit: Int, offset: Int): [Dragon]
   dragon(id: ID!): Dragon
   histories(find: HistoryFind, limit: Int, offset: Int, order: String, sort: String): [History]
+  historiesResult(find: HistoryFind, limit: Int, offset: Int, order: String, sort: String): HistoriesResult
   history(id: ID!): History
   landpads(limit: Int, offset: Int): [Landpad]
   landpad(id: ID!): Landpad

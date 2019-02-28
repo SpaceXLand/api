@@ -12,6 +12,24 @@ const Query: QueryResolvers.Resolvers = {
       .toArray();
     return data;
   },
+  historiesResult: async (
+    obj,
+    { find, offset, order, sort, limit },
+    context
+  ) => {
+    const data = await context.db
+      .collection(collection)
+      .find(context.find({ query: { ...find }, collection }))
+      .sort(context.sort({ query: { order, sort }, collection }))
+      .skip(context.offset({ offset }))
+      .limit(context.limit({ limit }))
+      .toArray();
+    const { length: totalCount } = await context.db
+      .collection(collection)
+      .find({})
+      .toArray();
+    return { data, result: { totalCount } };
+  },
   history: async (obj, { id }, context) => {
     const [data] = await context.db
       .collection(collection)

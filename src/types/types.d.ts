@@ -309,6 +309,8 @@ export interface Query {
 
   histories?: Maybe<(Maybe<History>)[]>;
 
+  historiesResult?: Maybe<HistoriesResult>;
+
   history?: Maybe<History>;
 
   landpads?: Maybe<(Maybe<Landpad>)[]>;
@@ -958,6 +960,16 @@ export interface ShipLocation {
   longitude?: Maybe<number>;
 }
 
+export interface HistoriesResult {
+  result?: Maybe<Result>;
+
+  data?: Maybe<(Maybe<History>)[]>;
+}
+
+export interface Result {
+  totalCount?: Maybe<number>;
+}
+
 export interface Landpad {
   attempted_landings?: Maybe<string>;
 
@@ -992,10 +1004,6 @@ export interface LaunchesPastResult {
   result?: Maybe<Result>;
 
   data?: Maybe<(Maybe<Launch>)[]>;
-}
-
-export interface Result {
-  totalCount?: Maybe<number>;
 }
 
 export interface Launchpad {
@@ -1199,6 +1207,17 @@ export interface DragonQueryArgs {
   id: string;
 }
 export interface HistoriesQueryArgs {
+  find?: Maybe<HistoryFind>;
+
+  limit?: Maybe<number>;
+
+  offset?: Maybe<number>;
+
+  order?: Maybe<string>;
+
+  sort?: Maybe<string>;
+}
+export interface HistoriesResultQueryArgs {
   find?: Maybe<HistoryFind>;
 
   limit?: Maybe<number>;
@@ -1450,6 +1469,12 @@ export namespace QueryResolvers {
       Context
     >;
 
+    historiesResult?: HistoriesResultResolver<
+      Maybe<HistoriesResult>,
+      TypeParent,
+      Context
+    >;
+
     history?: HistoryResolver<Maybe<History>, TypeParent, Context>;
 
     landpads?: LandpadsResolver<Maybe<(Maybe<Landpad>)[]>, TypeParent, Context>;
@@ -1674,6 +1699,23 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, HistoriesArgs>;
   export interface HistoriesArgs {
+    find?: Maybe<HistoryFind>;
+
+    limit?: Maybe<number>;
+
+    offset?: Maybe<number>;
+
+    order?: Maybe<string>;
+
+    sort?: Maybe<string>;
+  }
+
+  export type HistoriesResultResolver<
+    R = Maybe<HistoriesResult>,
+    Parent = {},
+    Context = MyContext
+  > = Resolver<R, Parent, Context, HistoriesResultArgs>;
+  export interface HistoriesResultArgs {
     find?: Maybe<HistoryFind>;
 
     limit?: Maybe<number>;
@@ -4231,6 +4273,40 @@ export namespace ShipLocationResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
+export namespace HistoriesResultResolvers {
+  export interface Resolvers<
+    Context = MyContext,
+    TypeParent = HistoriesResult
+  > {
+    result?: ResultResolver<Maybe<Result>, TypeParent, Context>;
+
+    data?: DataResolver<Maybe<(Maybe<History>)[]>, TypeParent, Context>;
+  }
+
+  export type ResultResolver<
+    R = Maybe<Result>,
+    Parent = HistoriesResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type DataResolver<
+    R = Maybe<(Maybe<History>)[]>,
+    Parent = HistoriesResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace ResultResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = Result> {
+    totalCount?: TotalCountResolver<Maybe<number>, TypeParent, Context>;
+  }
+
+  export type TotalCountResolver<
+    R = Maybe<number>,
+    Parent = Result,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
 export namespace LandpadResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Landpad> {
     attempted_landings?: AttemptedLandingsResolver<
@@ -4358,18 +4434,6 @@ export namespace LaunchesPastResultResolvers {
   export type DataResolver<
     R = Maybe<(Maybe<Launch>)[]>,
     Parent = LaunchesPastResult,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace ResultResolvers {
-  export interface Resolvers<Context = MyContext, TypeParent = Result> {
-    totalCount?: TotalCountResolver<Maybe<number>, TypeParent, Context>;
-  }
-
-  export type TotalCountResolver<
-    R = Maybe<number>,
-    Parent = Result,
     Context = MyContext
   > = Resolver<R, Parent, Context>;
 }
@@ -4902,10 +4966,11 @@ export interface IResolvers<Context = MyContext> {
   Ship?: ShipResolvers.Resolvers<Context>;
   ShipMission?: ShipMissionResolvers.Resolvers<Context>;
   ShipLocation?: ShipLocationResolvers.Resolvers<Context>;
+  HistoriesResult?: HistoriesResultResolvers.Resolvers<Context>;
+  Result?: ResultResolvers.Resolvers<Context>;
   Landpad?: LandpadResolvers.Resolvers<Context>;
   Location?: LocationResolvers.Resolvers<Context>;
   LaunchesPastResult?: LaunchesPastResultResolvers.Resolvers<Context>;
-  Result?: ResultResolvers.Resolvers<Context>;
   Launchpad?: LaunchpadResolvers.Resolvers<Context>;
   Mission?: MissionResolvers.Resolvers<Context>;
   MissionResult?: MissionResultResolvers.Resolvers<Context>;

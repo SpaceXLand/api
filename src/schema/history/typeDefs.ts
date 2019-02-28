@@ -9,7 +9,19 @@ const typeDefs = gql`
       order: String
       sort: String
     ): [History] @rateLimit(window: "10s", max: 10)
+    historiesResult(
+      find: HistoryFind
+      limit: Int
+      offset: Int
+      order: String
+      sort: String
+    ): HistoriesResult @rateLimit(window: "10s", max: 10)
     history(id: ID!): History @rateLimit(window: "10s", max: 10)
+  }
+
+  type HistoriesResult {
+    result: Result
+    data: [History]
   }
 
   type History {
