@@ -24,7 +24,7 @@ const Query: QueryResolvers.Resolvers = {
       .toArray();
     const { length: totalCount } = await context.db
       .collection(collection)
-      .find({})
+      .find(context.find({ query: { ...find }, collection }))
       .toArray();
     return { data, result: { totalCount } };
   },
