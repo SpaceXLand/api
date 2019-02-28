@@ -475,6 +475,7 @@ type Query {
   payload(id: ID!): Payload
   roadster: Roadster
   rockets(limit: Int, offset: Int): [Rocket]
+  rocketsResult(limit: Int, offset: Int): RocketsResult
   rocket(id: ID!): Rocket
   ships(find: ShipsFind, limit: Int, offset: Int, order: String, sort: String): [Ship]
   ship(id: ID!): Ship
@@ -482,7 +483,6 @@ type Query {
 
 type Result {
   totalCount: Int
-  count: Int
 }
 
 type Roadster {
@@ -586,6 +586,11 @@ type RocketSecondStagePayloadCompositeFairing {
 type RocketSecondStagePayloads {
   option_1: String
   composite_fairing: RocketSecondStagePayloadCompositeFairing
+}
+
+type RocketsResult {
+  result: Result
+  data: [Rocket]
 }
 
 type Ship {

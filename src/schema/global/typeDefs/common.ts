@@ -3,7 +3,6 @@ import gql from 'graphql-tag';
 const common = gql`
   type Result {
     totalCount: Int
-    count: Int
   }
 
   type Address {
