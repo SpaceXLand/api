@@ -484,6 +484,7 @@ type Query {
   rocketsResult(limit: Int, offset: Int): RocketsResult
   rocket(id: ID!): Rocket
   ships(find: ShipsFind, limit: Int, offset: Int, order: String, sort: String): [Ship]
+  shipsResult(find: ShipsFind, limit: Int, offset: Int, order: String, sort: String): ShipsResult
   ship(id: ID!): Ship
 }
 
@@ -658,6 +659,11 @@ input ShipsFind {
   successful_landings: Int
   attempted_landings: Int
   mission: String
+}
+
+type ShipsResult {
+  result: Result
+  data: [Ship]
 }
 
 type Volume {

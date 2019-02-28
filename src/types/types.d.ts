@@ -353,6 +353,8 @@ export interface Query {
 
   ships?: Maybe<(Maybe<Ship>)[]>;
 
+  shipsResult?: Maybe<ShipsResult>;
+
   ship?: Maybe<Ship>;
 }
 
@@ -1096,6 +1098,12 @@ export interface RocketsResult {
   data?: Maybe<(Maybe<Rocket>)[]>;
 }
 
+export interface ShipsResult {
+  result?: Maybe<Result>;
+
+  data?: Maybe<(Maybe<Ship>)[]>;
+}
+
 export interface Mutation {}
 
 export interface Subscription {}
@@ -1328,6 +1336,17 @@ export interface ShipsQueryArgs {
 
   sort?: Maybe<string>;
 }
+export interface ShipsResultQueryArgs {
+  find?: Maybe<ShipsFind>;
+
+  limit?: Maybe<number>;
+
+  offset?: Maybe<number>;
+
+  order?: Maybe<string>;
+
+  sort?: Maybe<string>;
+}
 export interface ShipQueryArgs {
   id: string;
 }
@@ -1498,6 +1517,8 @@ export namespace QueryResolvers {
     rocket?: RocketResolver<Maybe<Rocket>, TypeParent, Context>;
 
     ships?: ShipsResolver<Maybe<(Maybe<Ship>)[]>, TypeParent, Context>;
+
+    shipsResult?: ShipsResultResolver<Maybe<ShipsResult>, TypeParent, Context>;
 
     ship?: ShipResolver<Maybe<Ship>, TypeParent, Context>;
   }
@@ -1911,6 +1932,23 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, ShipsArgs>;
   export interface ShipsArgs {
+    find?: Maybe<ShipsFind>;
+
+    limit?: Maybe<number>;
+
+    offset?: Maybe<number>;
+
+    order?: Maybe<string>;
+
+    sort?: Maybe<string>;
+  }
+
+  export type ShipsResultResolver<
+    R = Maybe<ShipsResult>,
+    Parent = {},
+    Context = MyContext
+  > = Resolver<R, Parent, Context, ShipsResultArgs>;
+  export interface ShipsResultArgs {
     find?: Maybe<ShipsFind>;
 
     limit?: Maybe<number>;
@@ -4712,6 +4750,25 @@ export namespace RocketsResultResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
+export namespace ShipsResultResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = ShipsResult> {
+    result?: ResultResolver<Maybe<Result>, TypeParent, Context>;
+
+    data?: DataResolver<Maybe<(Maybe<Ship>)[]>, TypeParent, Context>;
+  }
+
+  export type ResultResolver<
+    R = Maybe<Result>,
+    Parent = ShipsResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type DataResolver<
+    R = Maybe<(Maybe<Ship>)[]>,
+    Parent = ShipsResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
 export namespace MutationResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = {}> {}
 }
@@ -4854,6 +4911,7 @@ export interface IResolvers<Context = MyContext> {
   MissionResult?: MissionResultResolvers.Resolvers<Context>;
   Roadster?: RoadsterResolvers.Resolvers<Context>;
   RocketsResult?: RocketsResultResolvers.Resolvers<Context>;
+  ShipsResult?: ShipsResultResolvers.Resolvers<Context>;
   Mutation?: MutationResolvers.Resolvers<Context>;
   Subscription?: SubscriptionResolvers.Resolvers<Context>;
   CoreMission?: CoreMissionResolvers.Resolvers<Context>;
