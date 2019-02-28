@@ -345,6 +345,8 @@ export interface Query {
 
   rockets?: Maybe<(Maybe<Rocket>)[]>;
 
+  rocketsResult?: Maybe<RocketsResult>;
+
   rocket?: Maybe<Rocket>;
 
   ships?: Maybe<(Maybe<Ship>)[]>;
@@ -990,8 +992,6 @@ export interface LaunchesPastResult {
 
 export interface Result {
   totalCount?: Maybe<number>;
-
-  count?: Maybe<number>;
 }
 
 export interface Launchpad {
@@ -1080,6 +1080,12 @@ export interface Roadster {
   speed_mph?: Maybe<number>;
 
   wikipedia?: Maybe<string>;
+}
+
+export interface RocketsResult {
+  result?: Maybe<Result>;
+
+  data?: Maybe<(Maybe<Rocket>)[]>;
 }
 
 export interface Mutation {}
@@ -1288,6 +1294,11 @@ export interface RocketsQueryArgs {
 
   offset?: Maybe<number>;
 }
+export interface RocketsResultQueryArgs {
+  limit?: Maybe<number>;
+
+  offset?: Maybe<number>;
+}
 export interface RocketQueryArgs {
   id: string;
 }
@@ -1456,6 +1467,12 @@ export namespace QueryResolvers {
     roadster?: RoadsterResolver<Maybe<Roadster>, TypeParent, Context>;
 
     rockets?: RocketsResolver<Maybe<(Maybe<Rocket>)[]>, TypeParent, Context>;
+
+    rocketsResult?: RocketsResultResolver<
+      Maybe<RocketsResult>,
+      TypeParent,
+      Context
+    >;
 
     rocket?: RocketResolver<Maybe<Rocket>, TypeParent, Context>;
 
@@ -1829,6 +1846,17 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, RocketsArgs>;
   export interface RocketsArgs {
+    limit?: Maybe<number>;
+
+    offset?: Maybe<number>;
+  }
+
+  export type RocketsResultResolver<
+    R = Maybe<RocketsResult>,
+    Parent = {},
+    Context = MyContext
+  > = Resolver<R, Parent, Context, RocketsResultArgs>;
+  export interface RocketsResultArgs {
     limit?: Maybe<number>;
 
     offset?: Maybe<number>;
@@ -4265,16 +4293,9 @@ export namespace LaunchesPastResultResolvers {
 export namespace ResultResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = Result> {
     totalCount?: TotalCountResolver<Maybe<number>, TypeParent, Context>;
-
-    count?: CountResolver<Maybe<number>, TypeParent, Context>;
   }
 
   export type TotalCountResolver<
-    R = Maybe<number>,
-    Parent = Result,
-    Context = MyContext
-  > = Resolver<R, Parent, Context>;
-  export type CountResolver<
     R = Maybe<number>,
     Parent = Result,
     Context = MyContext
@@ -4619,6 +4640,25 @@ export namespace RoadsterResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
+export namespace RocketsResultResolvers {
+  export interface Resolvers<Context = MyContext, TypeParent = RocketsResult> {
+    result?: ResultResolver<Maybe<Result>, TypeParent, Context>;
+
+    data?: DataResolver<Maybe<(Maybe<Rocket>)[]>, TypeParent, Context>;
+  }
+
+  export type ResultResolver<
+    R = Maybe<Result>,
+    Parent = RocketsResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+  export type DataResolver<
+    R = Maybe<(Maybe<Rocket>)[]>,
+    Parent = RocketsResult,
+    Context = MyContext
+  > = Resolver<R, Parent, Context>;
+}
+
 export namespace MutationResolvers {
   export interface Resolvers<Context = MyContext, TypeParent = {}> {}
 }
@@ -4759,6 +4799,7 @@ export interface IResolvers<Context = MyContext> {
   Launchpad?: LaunchpadResolvers.Resolvers<Context>;
   Mission?: MissionResolvers.Resolvers<Context>;
   Roadster?: RoadsterResolvers.Resolvers<Context>;
+  RocketsResult?: RocketsResultResolvers.Resolvers<Context>;
   Mutation?: MutationResolvers.Resolvers<Context>;
   Subscription?: SubscriptionResolvers.Resolvers<Context>;
   CoreMission?: CoreMissionResolvers.Resolvers<Context>;
