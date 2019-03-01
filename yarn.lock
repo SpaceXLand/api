@@ -2142,6 +2142,13 @@ graphql-codegen-plugin-helpers@0.17.0:
     graphql-codegen-core "0.17.0"
     import-from "2.1.0"
 
+graphql-codegen-plugin-helpers@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-plugin-helpers/-/graphql-codegen-plugin-helpers-0.18.0.tgz#2502c35e6ae790d761be2126e8743fc1a7310f6f"
+  dependencies:
+    graphql-codegen-core "0.18.0"
+    import-from "2.1.0"
+
 graphql-codegen-typescript-common@0.17.0:
   version "0.17.0"
   resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-common/-/graphql-codegen-typescript-common-0.17.0.tgz#76cfeefa92ee8420f2c9a687576fd5ac3d6e14fb"
@@ -2151,12 +2158,21 @@ graphql-codegen-typescript-common@0.17.0:
     graphql-codegen-core "0.17.0"
     graphql-codegen-plugin-helpers "0.17.0"
 
-graphql-codegen-typescript-resolvers@0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-resolvers/-/graphql-codegen-typescript-resolvers-0.17.0.tgz#b08ad97c36f742fe08acafc28f19192021873049"
+graphql-codegen-typescript-common@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-common/-/graphql-codegen-typescript-common-0.18.0.tgz#f0b7121e6d7acdf4568630cefc4ddd413621405e"
   dependencies:
-    graphql-codegen-plugin-helpers "0.17.0"
-    graphql-codegen-typescript-common "0.17.0"
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    graphql-codegen-core "0.18.0"
+    graphql-codegen-plugin-helpers "0.18.0"
+
+graphql-codegen-typescript-resolvers@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-resolvers/-/graphql-codegen-typescript-resolvers-0.18.0.tgz#43162116fb4f6cb0ec8fb050907b70e5aaec7a22"
+  dependencies:
+    graphql-codegen-plugin-helpers "0.18.0"
+    graphql-codegen-typescript-common "0.18.0"
 
 graphql-codegen-typescript-server@0.17.0:
   version "0.17.0"
