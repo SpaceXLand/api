@@ -2174,11 +2174,11 @@ graphql-codegen-typescript-resolvers@0.18.0:
     graphql-codegen-plugin-helpers "0.18.0"
     graphql-codegen-typescript-common "0.18.0"
 
-graphql-codegen-typescript-server@0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-server/-/graphql-codegen-typescript-server-0.17.0.tgz#6c6e70cfe72d73db33662469d83c3a0edcaf3178"
+graphql-codegen-typescript-server@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-server/-/graphql-codegen-typescript-server-0.18.0.tgz#ede34059b416c46c26f353ced26089924ccf8b75"
   dependencies:
-    graphql-codegen-typescript-common "0.17.0"
+    graphql-codegen-typescript-common "0.18.0"
 
 graphql-config@2.2.1:
   version "2.2.1"
