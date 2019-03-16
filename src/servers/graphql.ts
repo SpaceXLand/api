@@ -18,7 +18,7 @@ export default (app, { schema, context }) => {
 
   const buildPath = path.join(process.cwd(), 'build');
 
-  //expose graphqli-explorer
+  // expose graphqli-explorer
   app.use('/graphql', express.static(buildPath));
   app.get('/graphql', (req, res) => {
     res.sendFile(path.join(buildPath + '/index.html'));
