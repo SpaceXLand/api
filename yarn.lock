@@ -8,11 +8,11 @@
   dependencies:
     apollo-env "0.2.5"
 
-"@apollographql/apollo-tools@^0.3.0":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@apollographql/apollo-tools/-/apollo-tools-0.3.3.tgz#7ec7af07021336ab6947e21e290dd06cb705233e"
+"@apollographql/apollo-tools@^0.3.3":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@apollographql/apollo-tools/-/apollo-tools-0.3.5.tgz#d4e860ca2300f90d183084390e2f1516cf775bf6"
   dependencies:
-    apollo-env "0.3.3"
+    apollo-env "0.4.0"
 
 "@apollographql/graphql-playground-html@^1.6.6":
   version "1.6.6"
@@ -96,62 +96,61 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@graphql-inspector/api@0.13.3":
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-0.13.3.tgz#92b0c3e5b7ebf96fbc08e98c53d291ac1e22fd8a"
+"@graphql-inspector/api@1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-1.16.0.tgz#33c3370a7148911c92d97c48e78d161f3231d232"
   dependencies:
-    "@graphql-inspector/core" "0.13.3"
-    "@graphql-inspector/load" "0.13.3"
-    "@graphql-modules/epoxy" "0.2.17"
-    apollo-server-express "2.4.0"
-    graphql-tag "2.10.0"
+    "@graphql-inspector/core" "1.16.0"
+    "@graphql-inspector/load" "1.16.0"
+    "@graphql-modules/epoxy" "0.4.0"
+    apollo-server-express "2.4.8"
+    graphql-tag "2.10.1"
 
-"@graphql-inspector/cli@0.13.3":
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-0.13.3.tgz#c6ea743e2f7b86f7bf3c32f3d53331ffdb2880ff"
+"@graphql-inspector/cli@1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-1.16.0.tgz#42f3a9bb6ecc0dd4f8d418f3b226316e66d9d12e"
   dependencies:
-    "@graphql-inspector/api" "0.13.3"
-    "@graphql-inspector/core" "0.13.3"
-    "@graphql-inspector/load" "0.13.3"
-    "@graphql-inspector/ui" "0.13.3"
-    apollo-server "2.4.0"
-    chalk "2.4.1"
+    "@graphql-inspector/api" "1.16.0"
+    "@graphql-inspector/core" "1.16.0"
+    "@graphql-inspector/load" "1.16.0"
+    "@graphql-inspector/ui" "1.16.0"
+    apollo-server "2.4.8"
+    chalk "2.4.2"
     commander "2.19.0"
     express "4.16.4"
     figures "2.0.0"
     indent-string "3.2.0"
     is-valid-path "0.1.1"
     log-symbols "2.2.0"
-    opn "5.4.0"
+    opn "5.5.0"
 
-"@graphql-inspector/core@0.13.3":
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-0.13.3.tgz#eeaee0d05e04dd8c1d8e9997bf044ecd416200fa"
+"@graphql-inspector/core@1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-1.16.0.tgz#9342bcfeb3f158773e35eabba861836a6b4b2c19"
   dependencies:
     dependency-graph "0.8.0"
 
-"@graphql-inspector/load@0.13.3":
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-0.13.3.tgz#cf1cad8e17c9985ea1dd6d6b71952586e755b90e"
+"@graphql-inspector/load@1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-1.16.0.tgz#33c3dce692265115957837268c2a13336dacbe72"
   dependencies:
-    graphql-toolkit "0.0.3"
+    graphql-toolkit "0.2.8"
     node-fetch "2.3.0"
 
-"@graphql-inspector/ui@0.13.3":
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-0.13.3.tgz#585deebed110bde7655721f761d7fce951bc2148"
+"@graphql-inspector/ui@1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-1.16.0.tgz#2205307315b5b8f36126f4d0173ca09b262d33f0"
   dependencies:
     express "4.16.4"
-    react "16.7.0-alpha.2"
-    react-dom "16.7.0-alpha.2"
+    react "16.8.6"
+    react-dom "16.8.6"
 
-"@graphql-modules/epoxy@0.2.17":
-  version "0.2.17"
-  resolved "https://registry.yarnpkg.com/@graphql-modules/epoxy/-/epoxy-0.2.17.tgz#f93fd64baa7328f0f69da7a2aa226b3c6e296e31"
+"@graphql-modules/epoxy@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@graphql-modules/epoxy/-/epoxy-0.4.0.tgz#de46c09898f15eacad09a292d6d4f26e23c1aa4c"
   dependencies:
-    "@types/deepmerge" "2.1.0"
-    deepmerge "2.2.1"
-    graphql-tools "4.0.3"
+    deepmerge "3.1.0"
+    graphql-tools "4.0.4"
     tslib "1.9.3"
 
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
@@ -237,10 +236,6 @@
   resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.4.tgz#50991a759a29c0b89492751008c6af7a7c8267b0"
   dependencies:
     "@types/express" "*"
-
-"@types/deepmerge@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@types/deepmerge/-/deepmerge-2.1.0.tgz#22f175e5cb55874fe818caa6fd50a1d98fc3d748"
 
 "@types/events@*":
   version "1.2.0"
@@ -350,6 +345,13 @@ aggregate-error@2.1.0:
     clean-stack "^2.0.0"
     indent-string "^3.0.0"
 
+aggregate-error@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-2.2.0.tgz#f54b464db18cc77c907ae084451f39134707134a"
+  dependencies:
+    clean-stack "^2.0.0"
+    indent-string "^3.0.0"
+
 ajv@^6.5.5:
   version "6.6.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.6.2.tgz#caceccf474bf3fc3ce3b147443711a24063cc30d"
@@ -422,12 +424,12 @@ apollo-cache-control@0.4.0:
     apollo-server-env "2.2.0"
     graphql-extensions "0.4.0"
 
-apollo-cache-control@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/apollo-cache-control/-/apollo-cache-control-0.5.0.tgz#78cfefec57c5c0a9648137e3250b91172998061e"
+apollo-cache-control@0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/apollo-cache-control/-/apollo-cache-control-0.5.2.tgz#47931ede0b11c64d45429850c274b30d19322362"
   dependencies:
     apollo-server-env "2.2.0"
-    graphql-extensions "0.5.0"
+    graphql-extensions "0.5.4"
 
 apollo-datasource@0.2.1:
   version "0.2.1"
@@ -436,16 +438,22 @@ apollo-datasource@0.2.1:
     apollo-server-caching "0.2.1"
     apollo-server-env "2.2.0"
 
-apollo-datasource@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/apollo-datasource/-/apollo-datasource-0.3.0.tgz#88c680edd63a2f7ea05fc25da290a430632d39f4"
+apollo-datasource@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/apollo-datasource/-/apollo-datasource-0.3.1.tgz#4b7ec4c2dd7d08eb7edc865b95fd46b83a4679fd"
   dependencies:
-    apollo-server-caching "0.3.0"
+    apollo-server-caching "0.3.1"
     apollo-server-env "2.2.0"
 
 apollo-engine-reporting-protobuf@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/apollo-engine-reporting-protobuf/-/apollo-engine-reporting-protobuf-0.2.0.tgz#2aaf4d2eddefe7924d469cf1135267bc0deadf73"
+  dependencies:
+    protobufjs "^6.8.6"
+
+apollo-engine-reporting-protobuf@0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/apollo-engine-reporting-protobuf/-/apollo-engine-reporting-protobuf-0.2.1.tgz#8547efcb4078a501ddf606cbfe01a2e8c3ba1afd"
   dependencies:
     protobufjs "^6.8.6"
 
@@ -459,16 +467,16 @@ apollo-engine-reporting@0.2.0:
     graphql-extensions "0.4.0"
     lodash "^4.17.10"
 
-apollo-engine-reporting@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/apollo-engine-reporting/-/apollo-engine-reporting-1.0.0.tgz#af93b755482ad5a6c52f9f728f3e24e801aa2385"
+apollo-engine-reporting@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/apollo-engine-reporting/-/apollo-engine-reporting-1.0.7.tgz#d326b51b12b1f71a40885b8189dbcd162171c953"
   dependencies:
-    apollo-engine-reporting-protobuf "0.2.0"
-    apollo-graphql "0.1.0"
-    apollo-server-core "2.4.0"
+    apollo-engine-reporting-protobuf "0.2.1"
+    apollo-graphql "^0.1.0"
+    apollo-server-core "2.4.8"
     apollo-server-env "2.2.0"
     async-retry "^1.2.1"
-    graphql-extensions "0.5.0"
+    graphql-extensions "0.5.7"
 
 apollo-env@0.2.5:
   version "0.2.5"
@@ -477,17 +485,19 @@ apollo-env@0.2.5:
     core-js "^3.0.0-beta.3"
     node-fetch "^2.2.0"
 
-apollo-env@0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/apollo-env/-/apollo-env-0.3.3.tgz#e758ece2fbc4f81abc6f07442680ed9e314ecf6c"
+apollo-env@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/apollo-env/-/apollo-env-0.4.0.tgz#f26c8570cc66edc3606d0cf9b66dbc1770b99353"
   dependencies:
     core-js "3.0.0-beta.13"
     node-fetch "^2.2.0"
+    sha.js "^2.4.11"
 
-apollo-graphql@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/apollo-graphql/-/apollo-graphql-0.1.0.tgz#e453b133daa8b686644da05ec8e556cf31c57037"
+apollo-graphql@^0.1.0:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/apollo-graphql/-/apollo-graphql-0.1.3.tgz#98f9e6bb98ec08ae0dea6f125f640acf6de3f31f"
   dependencies:
+    apollo-env "0.4.0"
     lodash.sortby "^4.7.0"
 
 apollo-link@^1.2.3:
@@ -503,9 +513,9 @@ apollo-server-caching@0.2.1:
   dependencies:
     lru-cache "^5.0.0"
 
-apollo-server-caching@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/apollo-server-caching/-/apollo-server-caching-0.3.0.tgz#96669b5e3bf693e6a54683edfab4b9495deb17d8"
+apollo-server-caching@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/apollo-server-caching/-/apollo-server-caching-0.3.1.tgz#63fcb2aaa176e1e101b36a8450e6b4c593d2767a"
   dependencies:
     lru-cache "^5.0.0"
 
@@ -534,28 +544,28 @@ apollo-server-core@2.3.1:
     subscriptions-transport-ws "^0.9.11"
     ws "^6.0.0"
 
-apollo-server-core@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-2.4.0.tgz#928c563f68d9f69a4288e7a4bf14ca79f8599f2b"
+apollo-server-core@2.4.8:
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-2.4.8.tgz#47e503a345e314222725597c889773e018d8c67a"
   dependencies:
-    "@apollographql/apollo-tools" "^0.3.0"
+    "@apollographql/apollo-tools" "^0.3.3"
     "@apollographql/graphql-playground-html" "^1.6.6"
     "@types/ws" "^6.0.0"
-    apollo-cache-control "0.5.0"
-    apollo-datasource "0.3.0"
-    apollo-engine-reporting "1.0.0"
-    apollo-server-caching "0.3.0"
+    apollo-cache-control "0.5.2"
+    apollo-datasource "0.3.1"
+    apollo-engine-reporting "1.0.7"
+    apollo-server-caching "0.3.1"
     apollo-server-env "2.2.0"
-    apollo-server-errors "2.2.0"
-    apollo-server-plugin-base "0.3.0"
-    apollo-tracing "0.5.0"
+    apollo-server-errors "2.2.1"
+    apollo-server-plugin-base "0.3.7"
+    apollo-tracing "0.5.2"
     fast-json-stable-stringify "^2.0.0"
-    graphql-extensions "0.5.0"
+    graphql-extensions "0.5.7"
     graphql-subscriptions "^1.0.0"
     graphql-tag "^2.9.2"
     graphql-tools "^4.0.0"
     graphql-upload "^8.0.2"
-    lodash "^4.17.10"
+    sha.js "^2.4.11"
     subscriptions-transport-ws "^0.9.11"
     ws "^6.0.0"
 
@@ -570,9 +580,13 @@ apollo-server-errors@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/apollo-server-errors/-/apollo-server-errors-2.2.0.tgz#5b452a1d6ff76440eb0f127511dc58031a8f3cb5"
 
-apollo-server-express@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-2.4.0.tgz#fe8e748f07f01a837d1449e4c28ab27ae7b7d054"
+apollo-server-errors@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/apollo-server-errors/-/apollo-server-errors-2.2.1.tgz#f68a3f845929768057da7e1c6d30517db5872205"
+
+apollo-server-express@2.4.8:
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-2.4.8.tgz#ec9eb61a87324555d49097e9fade3c7d142eb6cb"
   dependencies:
     "@apollographql/graphql-playground-html" "^1.6.6"
     "@types/accepts" "^1.3.5"
@@ -580,7 +594,7 @@ apollo-server-express@2.4.0:
     "@types/cors" "^2.8.4"
     "@types/express" "4.16.1"
     accepts "^1.3.5"
-    apollo-server-core "2.4.0"
+    apollo-server-core "2.4.8"
     body-parser "^1.18.3"
     cors "^2.8.4"
     graphql-subscriptions "^1.0.0"
@@ -608,16 +622,16 @@ apollo-server-plugin-base@0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/apollo-server-plugin-base/-/apollo-server-plugin-base-0.2.1.tgz#d08c9576f7f11ab6e212f352d482faaa4059a31e"
 
-apollo-server-plugin-base@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/apollo-server-plugin-base/-/apollo-server-plugin-base-0.3.0.tgz#26c7f9c020b2d444de5bebd2e3c406bebd9c302e"
+apollo-server-plugin-base@0.3.7:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/apollo-server-plugin-base/-/apollo-server-plugin-base-0.3.7.tgz#bfa4932fc9481bb36221545578d311db464af5a6"
 
-apollo-server@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-2.4.0.tgz#cfcf0431001451d7cda0d89f5ea8f7116aa1a1f4"
+apollo-server@2.4.8:
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-2.4.8.tgz#b18ec24e6356dd2a191a6fa0f1429b07ef7c89e3"
   dependencies:
-    apollo-server-core "2.4.0"
-    apollo-server-express "2.4.0"
+    apollo-server-core "2.4.8"
+    apollo-server-express "2.4.8"
     express "^4.0.0"
     graphql-subscriptions "^1.0.0"
     graphql-tools "^4.0.0"
@@ -629,12 +643,12 @@ apollo-tracing@0.4.0:
     apollo-server-env "2.2.0"
     graphql-extensions "0.4.0"
 
-apollo-tracing@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/apollo-tracing/-/apollo-tracing-0.5.0.tgz#6eebaf1e840ece99299103def689d39fe49780a3"
+apollo-tracing@0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/apollo-tracing/-/apollo-tracing-0.5.2.tgz#cc49936fb435fa98d19c841514cfe05237c85b33"
   dependencies:
     apollo-server-env "2.2.0"
-    graphql-extensions "0.5.0"
+    graphql-extensions "0.5.4"
 
 apollo-utilities@^1.0.0, apollo-utilities@^1.0.1:
   version "1.0.27"
@@ -945,14 +959,6 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-chalk@2.4.1, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
-  dependencies:
-    ansi-styles "^3.2.1"
-    escape-string-regexp "^1.0.5"
-    supports-color "^5.3.0"
-
 chalk@2.4.2, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
@@ -970,6 +976,14 @@ chalk@^1.0.0, chalk@^1.1.3:
     has-ansi "^2.0.0"
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
+
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
+  dependencies:
+    ansi-styles "^3.2.1"
+    escape-string-regexp "^1.0.5"
+    supports-color "^5.3.0"
 
 change-case@3.0.2:
   version "3.0.2"
@@ -1335,10 +1349,6 @@ deep-extend@^0.6.0:
 deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
-
-deepmerge@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
 
 deepmerge@3.1.0:
   version "3.1.0"
@@ -2179,11 +2189,17 @@ graphql-extensions@0.4.1:
   dependencies:
     "@apollographql/apollo-tools" "^0.2.6"
 
-graphql-extensions@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/graphql-extensions/-/graphql-extensions-0.5.0.tgz#117b9872e5cafbebef5254ad795b41fa97037c14"
+graphql-extensions@0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/graphql-extensions/-/graphql-extensions-0.5.4.tgz#18a9674f9adb11aa6c0737485887ea8877914cff"
   dependencies:
-    "@apollographql/apollo-tools" "^0.3.0"
+    "@apollographql/apollo-tools" "^0.3.3"
+
+graphql-extensions@0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/graphql-extensions/-/graphql-extensions-0.5.7.tgz#2b647e4e36997dc85b7f58ebd64324a5250fb2cf"
+  dependencies:
+    "@apollographql/apollo-tools" "^0.3.3"
 
 graphql-import@0.7.1, graphql-import@^0.7.1:
   version "0.7.1"
@@ -2213,16 +2229,6 @@ graphql-subscriptions@1.0.0, graphql-subscriptions@^1.0.0:
   dependencies:
     iterall "^1.2.1"
 
-graphql-tag-pluck@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/graphql-tag-pluck/-/graphql-tag-pluck-0.5.0.tgz#81f5dee3a6ca829f205ab032336be7b107398b2e"
-  dependencies:
-    "@babel/parser" "^7.2.0"
-    "@babel/traverse" "^7.1.6"
-    "@babel/types" "^7.2.0"
-    source-map-support "^0.5.9"
-    typescript "^3.2.2"
-
 graphql-tag-pluck@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/graphql-tag-pluck/-/graphql-tag-pluck-0.6.0.tgz#d03ab981cd8d31e564d37f8b9bac94a523dc29dd"
@@ -2233,26 +2239,23 @@ graphql-tag-pluck@0.6.0:
     source-map-support "^0.5.9"
     typescript "^3.2.2"
 
-graphql-tag@2.10.0, graphql-tag@^2.10.0, graphql-tag@^2.9.2:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.0.tgz#87da024be863e357551b2b8700e496ee2d4353ae"
+graphql-tag-pluck@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/graphql-tag-pluck/-/graphql-tag-pluck-0.7.0.tgz#95481a144d3a6a6923a2851cc3fbe46b39192be3"
+  dependencies:
+    "@babel/parser" "^7.2.0"
+    "@babel/traverse" "^7.1.6"
+    "@babel/types" "^7.2.0"
+    source-map-support "^0.5.9"
+    typescript "^3.2.2"
 
 graphql-tag@2.10.1:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.1.tgz#10aa41f1cd8fae5373eaf11f1f67260a3cad5e02"
 
-graphql-toolkit@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/graphql-toolkit/-/graphql-toolkit-0.0.3.tgz#b3039d4184f01f9a50fbe84010310894b9581a56"
-  dependencies:
-    deepmerge "3.1.0"
-    glob "7.1.3"
-    graphql-import "0.7.1"
-    graphql-tag-pluck "0.5.0"
-    is-glob "4.0.0"
-    is-valid-path "0.1.1"
-    request "2.88.0"
-    valid-url "1.0.9"
+graphql-tag@^2.10.0, graphql-tag@^2.9.2:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.0.tgz#87da024be863e357551b2b8700e496ee2d4353ae"
 
 graphql-toolkit@0.2.0:
   version "0.2.0"
@@ -2270,9 +2273,26 @@ graphql-toolkit@0.2.0:
     tslib "^1.9.3"
     valid-url "1.0.9"
 
-graphql-tools@4.0.3, graphql-tools@^4.0.0, graphql-tools@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-4.0.3.tgz#23b5cb52c519212b1b2e4630a361464396ad264b"
+graphql-toolkit@0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/graphql-toolkit/-/graphql-toolkit-0.2.8.tgz#25408dd9361abbada26cc86a01c7e69e7a7f4b51"
+  dependencies:
+    aggregate-error "2.2.0"
+    deepmerge "3.2.0"
+    glob "7.1.3"
+    graphql-import "0.7.1"
+    graphql-tag-pluck "0.7.0"
+    graphql-tools "4.0.4"
+    is-glob "4.0.0"
+    is-valid-path "0.1.1"
+    lodash "4.17.11"
+    request "2.88.0"
+    tslib "^1.9.3"
+    valid-url "1.0.9"
+
+graphql-tools@4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-4.0.4.tgz#ca08a63454221fdde825fe45fbd315eb2a6d566b"
   dependencies:
     apollo-link "^1.2.3"
     apollo-utilities "^1.0.1"
@@ -2280,9 +2300,9 @@ graphql-tools@4.0.3, graphql-tools@^4.0.0, graphql-tools@^4.0.3:
     iterall "^1.1.3"
     uuid "^3.1.0"
 
-graphql-tools@4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-4.0.4.tgz#ca08a63454221fdde825fe45fbd315eb2a6d566b"
+graphql-tools@^4.0.0, graphql-tools@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-4.0.3.tgz#23b5cb52c519212b1b2e4630a361464396ad264b"
   dependencies:
     apollo-link "^1.2.3"
     apollo-utilities "^1.0.1"
@@ -2491,7 +2511,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@2.0.3, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
+inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
@@ -3451,9 +3471,9 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-opn@5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/opn/-/opn-5.4.0.tgz#cb545e7aab78562beb11aa3bfabc7042e1761035"
+opn@5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/opn/-/opn-5.5.0.tgz#fc7164fab56d235904c51c3b27da6758ca3b9bfc"
   dependencies:
     is-wsl "^1.1.0"
 
@@ -3751,23 +3771,23 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@16.7.0-alpha.2:
-  version "16.7.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.7.0-alpha.2.tgz#16632880ed43676315991d8b412cce6975a30282"
+react-dom@16.8.6:
+  version "16.8.6"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.12.0-alpha.2"
+    scheduler "^0.13.6"
 
-react@16.7.0-alpha.2:
-  version "16.7.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.7.0-alpha.2.tgz#924f2ae843a46ea82d104a8def7a599fbf2c78ce"
+react@16.8.6:
+  version "16.8.6"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.12.0-alpha.2"
+    scheduler "^0.13.6"
 
 read-pkg-up@^2.0.0:
   version "2.0.0"
@@ -4012,9 +4032,9 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-scheduler@^0.12.0-alpha.2:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
+scheduler@^0.13.6:
+  version "0.13.6"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.6.tgz#466a4ec332467b31a91b9bf74e5347072e4cd889"
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -4092,6 +4112,13 @@ set-value@^2.0.0:
 setprototypeof@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
+
+sha.js@^2.4.11:
+  version "2.4.11"
+  resolved "https://registry.yarnpkg.com/sha.js/-/sha.js-2.4.11.tgz#37a5cf0b81ecbc6943de109ba2960d1b26584ae7"
+  dependencies:
+    inherits "^2.0.1"
+    safe-buffer "^5.0.1"
 
 shebang-command@^1.2.0:
   version "1.2.0"
