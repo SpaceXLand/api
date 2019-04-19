@@ -4242,9 +4242,9 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-sofa-api@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/sofa-api/-/sofa-api-0.2.3.tgz#1775bea3c96dbaef63afd3aed670b277fa12d112"
+sofa-api@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/sofa-api/-/sofa-api-0.3.0.tgz#ae8030ab5090c022d0dfcddae9aa57820df9ae3e"
   dependencies:
     change-case "3.0.2"
     graphql-subscriptions "1.0.0"
