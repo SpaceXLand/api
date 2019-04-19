@@ -96,24 +96,24 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@graphql-inspector/api@1.18.0":
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-1.18.0.tgz#d3b1e7bd4914c3341e95b1036764a236c9e5f7d3"
+"@graphql-inspector/api@1.18.1":
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-1.18.1.tgz#76ee90cdb94ac261d17bb66bb3207dfdd887a4df"
   dependencies:
-    "@graphql-inspector/core" "1.18.0"
-    "@graphql-inspector/load" "1.18.0"
+    "@graphql-inspector/core" "1.18.1"
+    "@graphql-inspector/load" "1.18.1"
     "@graphql-modules/epoxy" "0.4.0"
     apollo-server-express "2.4.8"
     graphql-tag "2.10.1"
 
-"@graphql-inspector/cli@1.18.0":
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-1.18.0.tgz#40dd0b0966ba5ecffe4bffd96a43e3a8a0639d85"
+"@graphql-inspector/cli@1.18.1":
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-1.18.1.tgz#218a786361e17e56945611887b3e3b1858d56755"
   dependencies:
-    "@graphql-inspector/api" "1.18.0"
-    "@graphql-inspector/core" "1.18.0"
-    "@graphql-inspector/load" "1.18.0"
-    "@graphql-inspector/ui" "1.18.0"
+    "@graphql-inspector/api" "1.18.1"
+    "@graphql-inspector/core" "1.18.1"
+    "@graphql-inspector/load" "1.18.1"
+    "@graphql-inspector/ui" "1.18.1"
     apollo-server "2.4.8"
     chalk "2.4.2"
     commander "2.20.0"
@@ -124,22 +124,22 @@
     log-symbols "3.0.0"
     opn "5.5.0"
 
-"@graphql-inspector/core@1.18.0":
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-1.18.0.tgz#5e30e4f9ab9081393d811b2443f3447868bfb8da"
+"@graphql-inspector/core@1.18.1":
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-1.18.1.tgz#674023c64b8548621c93c569d8681d9af59f2b93"
   dependencies:
     dependency-graph "0.8.0"
 
-"@graphql-inspector/load@1.18.0":
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-1.18.0.tgz#89713e6b5c4aa07d40d078b222d494a52ca75fd3"
+"@graphql-inspector/load@1.18.1":
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-1.18.1.tgz#2e8e116087fb21ad87423dea91b6fcd47daa18be"
   dependencies:
     graphql-toolkit "0.2.9"
     node-fetch "2.3.0"
 
-"@graphql-inspector/ui@1.18.0":
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-1.18.0.tgz#6cb2d300e78afaa40b0a7b4edb8a0b282b7fc1b4"
+"@graphql-inspector/ui@1.18.1":
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-1.18.1.tgz#7a9def53a4f597042dec09938a260d0cada18631"
   dependencies:
     express "4.16.4"
     react "16.8.6"
