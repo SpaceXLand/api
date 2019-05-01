@@ -68,6 +68,6 @@
     "graphql-codegen-typescript-resolvers": "0.18.1",
     "graphql-codegen-typescript-server": "0.18.1",
     "husky": "2.1.0",
-    "nodemon": "1.18.11"
+    "nodemon": "1.19.0"
   }
 }
