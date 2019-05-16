@@ -63,10 +63,10 @@
     "eslint-plugin-mongodb": "1.0.0",
     "eslint-plugin-react": "7.13.0",
     "eslint-plugin-security": "1.4.0",
-    "graphql-code-generator": "0.18.1",
-    "graphql-codegen-typescript-common": "0.18.1",
-    "graphql-codegen-typescript-resolvers": "0.18.1",
-    "graphql-codegen-typescript-server": "0.18.1",
+    "graphql-code-generator": "0.18.2",
+    "graphql-codegen-typescript-common": "0.18.2",
+    "graphql-codegen-typescript-resolvers": "0.18.2",
+    "graphql-codegen-typescript-server": "0.18.2",
     "husky": "2.2.0",
     "nodemon": "1.19.0"
   }
