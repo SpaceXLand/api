@@ -46,7 +46,7 @@
     "lower-case": "^1.1.4",
     "moment": "^2.23.0",
     "mongodb": "^3.1.10",
-    "sofa-api": "0.4.0",
+    "sofa-api": "0.5.1",
     "swagger-ui-express": "^4.0.2",
     "ts-node": "^8.0.0",
     "typescript": "^3.2.1"
