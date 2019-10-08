@@ -154,27 +154,27 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@graphql-inspector/api@1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-1.25.0.tgz#67beaa63b98c44ce648304f6065352b52324c48c"
-  integrity sha512-k+4wXoO49eFLUeIb22nSyNspEg3/b0QTwnd4cfY6rSvkPhAR3v8t9ZM3djTXQ1NHZOQD5CfkOoHkCZmoe7XNcw==
+"@graphql-inspector/api@1.26.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/api/-/api-1.26.0.tgz#db0a1279f5c76d171d30c2642f574883be4c0d38"
+  integrity sha512-zXq9m78v3WFv+m5wnW2jz2Fodp3Tx9fWyPraLCqd8K78zkC85LR/ZCa8m81eA9h5pIUfnw/rQ42clvNu1RXgGA==
   dependencies:
-    "@graphql-inspector/core" "1.25.0"
-    "@graphql-inspector/load" "1.25.0"
+    "@graphql-inspector/core" "1.26.0"
+    "@graphql-inspector/load" "1.26.0"
     "@graphql-modules/epoxy" "0.4.0"
-    apollo-server-express "2.9.4"
+    apollo-server-express "2.9.5"
     graphql-tag "2.10.1"
 
-"@graphql-inspector/cli@1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-1.25.0.tgz#3c0f6b00898d4fcb1dba3d6c99650781377e928b"
-  integrity sha512-A3DtzVWAj4iFPUs+YHAdXGDF0IHLNi+I9IwxK+1STboPOn+XyRZkMNHP6Zwrs5cRYfoaeM0T5eykW4z6EcCeqQ==
+"@graphql-inspector/cli@1.26.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/cli/-/cli-1.26.0.tgz#5d6484ee92fd7ce1ed2e5d57123d8127aadd46b4"
+  integrity sha512-WuZhN2M5dm/IYDOL+JqeEfx0Ae9H4+FXhebAMD/s+naq8w/gO65B8ixuVu1seoFQtsWvrx3jf09Q2f8BhvvuJw==
   dependencies:
-    "@graphql-inspector/api" "1.25.0"
-    "@graphql-inspector/core" "1.25.0"
-    "@graphql-inspector/load" "1.25.0"
-    "@graphql-inspector/ui" "1.25.0"
-    apollo-server "2.9.4"
+    "@graphql-inspector/api" "1.26.0"
+    "@graphql-inspector/core" "1.26.0"
+    "@graphql-inspector/load" "1.26.0"
+    "@graphql-inspector/ui" "1.26.0"
+    apollo-server "2.9.5"
     chalk "2.4.2"
     commander "3.0.2"
     express "4.17.1"
@@ -184,31 +184,31 @@
     log-symbols "3.0.0"
     open "6.4.0"
 
-"@graphql-inspector/core@1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-1.25.0.tgz#6e48e24fe0a91d984420fcbc1d2f874a06d99497"
-  integrity sha512-kxE2QTHPLizrf1yqdf5sOFfPW0VXoxR5z9l/SDtEFSXvTAe3mV2xkYzxw5f2rR/f7YKygH0lBJLRN2F18UQ8tg==
+"@graphql-inspector/core@1.26.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-1.26.0.tgz#859147519ab777124894a3312fd3c50d90dd9836"
+  integrity sha512-j9jz2+RhJnJjbYNm9TyqoqTDIpuPZJBXmha6kjZSS363gJiRlEyIjoSYp6MbAsrxysdfm3QVEurlWTdfGY6Ssw==
   dependencies:
     dependency-graph "0.8.0"
 
-"@graphql-inspector/load@1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-1.25.0.tgz#d089a1bccaabfe570310c3b27d7b6edc87fabe96"
-  integrity sha512-dpvgHTuF6hMM5V+tjIoUzlJtY5iHQJbL7PDRVOb/hqdS74oTAyOq46q6u1Rns/hpKE26gFnGGAeiKtxmT7XryA==
+"@graphql-inspector/load@1.26.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/load/-/load-1.26.0.tgz#01b5573db931f3d6c2b885a5f6ff7af4b821d973"
+  integrity sha512-T2bo5UDWCnOJ8s5vlYcg2xr5ZA3+apcLddlbMRtsflUUZwmRCt3OHpVAviaurzz7+kcG6yd/4wFv1IW0QrxRBw==
   dependencies:
     graphql-tag-pluck "0.8.5"
-    graphql-toolkit "0.5.15"
+    graphql-toolkit "0.5.16"
     node-fetch "2.6.0"
     simple-git "1.126.0"
 
-"@graphql-inspector/ui@1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-1.25.0.tgz#8cd76d5da199db4d8c089fd83547cb5663ceb3ba"
-  integrity sha512-HtYY/ncfncVmA8pRZmqDDacGblL+D/tMdQrItfbjCr27L7IVMijoP55R2PBhbW+xhWv0Oz8zypoKXZrJNrkYmA==
+"@graphql-inspector/ui@1.26.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/ui/-/ui-1.26.0.tgz#096aac8fe345053d31e012d53fb25852708bdc53"
+  integrity sha512-s5Xun1g1zNAuSdAA+bNshRZNfGVuGdf+aO7cEb+6wEMxtkydw5HcvCA7BjsKKP3UveNt6Nk+5KLz1tYgPIL9aQ==
   dependencies:
     express "4.17.1"
-    react "16.9.0"
-    react-dom "16.9.0"
+    react "16.10.2"
+    react-dom "16.10.2"
 
 "@graphql-modules/epoxy@0.4.0":
   version "0.4.0"
@@ -733,10 +733,10 @@ apollo-server-core@2.3.1:
     subscriptions-transport-ws "^0.9.11"
     ws "^6.0.0"
 
-apollo-server-core@^2.9.4:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-2.9.4.tgz#0404455884951804d23ea64e45514c73afd34e5e"
-  integrity sha512-6mzipnn9woJxgo/JQFWTlY13svS7HCr0ZsN035eRmKOsXzROfB9ugXcTuc6MP94ICM7TlB/DtJOP+bLX53mijw==
+apollo-server-core@^2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-2.9.5.tgz#b2d9188d7acce5fe92a5460d276794988ffa6737"
+  integrity sha512-SlM/vhjhWb0ayXV3d4gnpq9gh2BsQj+UPfQXfq2X2KG9EH5I1JUH6EtlsctgMCZozirOZmEmUzlqZWSSUOUPgQ==
   dependencies:
     "@apollographql/apollo-tools" "^0.4.0"
     "@apollographql/graphql-playground-html" "1.6.24"
@@ -782,10 +782,10 @@ apollo-server-errors@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/apollo-server-errors/-/apollo-server-errors-2.3.3.tgz#83763b00352c10dc68fbb0d41744ade66de549ff"
 
-apollo-server-express@2.9.4, apollo-server-express@^2.9.4:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-2.9.4.tgz#ae7ca0b70a644ba9fa5e3ac395d1e2d9a4b23522"
-  integrity sha512-diX9n81E0tIJ0Sy2bHvDGPM9QsFBsZ76Nx/dszinY00ViyWG0yIAYEYWeRbsoKTeNDWWTvlMrh/3Eu2oaCIEhQ==
+apollo-server-express@2.9.5, apollo-server-express@^2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-2.9.5.tgz#383e0a5cb80cf1172b0bc1e565797edd629d750a"
+  integrity sha512-6gonP7g5u2Kr+9cvKE+NuGPe+As7wRbz2yWoyLOym/TdXBmTRU4AKW2Qs+wpNanurzm2xbTa7sEfzrHGmembrQ==
   dependencies:
     "@apollographql/graphql-playground-html" "1.6.24"
     "@types/accepts" "^1.3.5"
@@ -793,7 +793,7 @@ apollo-server-express@2.9.4, apollo-server-express@^2.9.4:
     "@types/cors" "^2.8.4"
     "@types/express" "4.17.1"
     accepts "^1.3.5"
-    apollo-server-core "^2.9.4"
+    apollo-server-core "^2.9.5"
     apollo-server-types "^0.2.4"
     body-parser "^1.18.3"
     cors "^2.8.4"
@@ -839,13 +839,13 @@ apollo-server-types@^0.2.4:
     apollo-server-caching "^0.5.0"
     apollo-server-env "^2.4.3"
 
-apollo-server@2.9.4:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-2.9.4.tgz#564a0d0ec6dbefc86dbabe15bd23a83e48f58314"
-  integrity sha512-huAgQizkmzUkREixsSJHNM4ZnJ08plkwK70dm36mX9j+yYbc0h9J5b5o4E2Fb9U5PMR8kEVto1dz2rOJ0XPApA==
+apollo-server@2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-2.9.5.tgz#4f616337d04f2f0886d4bbe46b047a32a649b1fd"
+  integrity sha512-hbWZAZ3g186NG9U9bVmMpPcbUJ+/f/CSL+/tJsK6iQPp5L3hcVYoe+/qDw3zpfDMA5R2Jq/yHZtF2LcI5ylVnQ==
   dependencies:
-    apollo-server-core "^2.9.4"
-    apollo-server-express "^2.9.4"
+    apollo-server-core "^2.9.5"
+    apollo-server-express "^2.9.5"
     express "^4.0.0"
     graphql-subscriptions "^1.0.0"
     graphql-tools "^4.0.0"
@@ -2659,10 +2659,10 @@ graphql-toolkit@0.2.0:
     tslib "^1.9.3"
     valid-url "1.0.9"
 
-graphql-toolkit@0.5.15:
-  version "0.5.15"
-  resolved "https://registry.yarnpkg.com/graphql-toolkit/-/graphql-toolkit-0.5.15.tgz#71730c9345a77069494e29285826d2d2f5c89de8"
-  integrity sha512-6+onKCKE9dleg57Eh+uP+ZlPNYXh5FgMLu7qr/MPiTS4ZuCvBh16nFJ6GlOKCWqTFD/chY8zapOqnPCMe4cASg==
+graphql-toolkit@0.5.16:
+  version "0.5.16"
+  resolved "https://registry.yarnpkg.com/graphql-toolkit/-/graphql-toolkit-0.5.16.tgz#7673364e4458a6e6bc561eb3b87b2bb0e8360059"
+  integrity sha512-J3rAlsO7A/TJTZ7kLcFYy4/sIvB2AxiosxXFQICdsXf8R9b//fy7jmXnNo38ml1mm//915V0U5HMuAvo/hYiWQ==
   dependencies:
     "@kamilkisiela/graphql-tools" "4.0.6"
     "@types/glob" "7.1.1"
@@ -4334,22 +4334,24 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@16.9.0:
-  version "16.9.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
+react-dom@16.10.2:
+  version "16.10.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.10.2.tgz#4840bce5409176bc3a1f2bd8cb10b92db452fda6"
+  integrity sha512-kWGDcH3ItJK4+6Pl9DZB16BXYAZyrYQItU4OMy0jAkv5aNqc+mAKb4TpFtAteI6TJZu+9ZlNhaeNQSVQDHJzkw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.15.0"
+    scheduler "^0.16.2"
 
 react-is@^16.8.1:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
 
-react@16.9.0:
-  version "16.9.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
+react@16.10.2:
+  version "16.10.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.10.2.tgz#a5ede5cdd5c536f745173c8da47bda64797a4cf0"
+  integrity sha512-MFVIq0DpIhrHFyqLU0S3+4dIcBhhOvBE8bJ/5kHPVOVaGdo0KuiQzpcjCPsf585WvhypqtrMILyoE2th6dT+Lw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -4632,9 +4634,10 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-scheduler@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.15.0.tgz#6bfcf80ff850b280fed4aeecc6513bc0b4f17f8e"
+scheduler@^0.16.2:
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.16.2.tgz#f74cd9d33eff6fc554edfb79864868e4819132c1"
+  integrity sha512-BqYVWqwz6s1wZMhjFvLfVR5WXP7ZY32M/wYPo04CcuPM7XZEbV2TBNW7Z0UkguPTl0dWMA59VbNXxK6q+pHItg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
