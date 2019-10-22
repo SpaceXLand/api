@@ -1603,7 +1603,7 @@
         "parameters": [
           {
             "in": "query",
-            "name": "distinct_on",
+            "name": "distinctOn",
             "required": false,
             "schema": {
               "type": "array",
@@ -1672,7 +1672,7 @@
         "parameters": [
           {
             "in": "query",
-            "name": "distinct_on",
+            "name": "distinctOn",
             "required": false,
             "schema": {
               "type": "array",
@@ -1786,9 +1786,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "where"
-                ],
+                "required": ["where"],
                 "properties": {
                   "where": {
                     "$ref": "#/components/schemas/users_bool_exp"
@@ -1820,9 +1818,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "objects"
-                ],
+                "required": ["objects"],
                 "properties": {
                   "objects": {
                     "type": "array",
@@ -1860,9 +1856,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "where"
-                ],
+                "required": ["where"],
                 "properties": {
                   "_set": {
                     "$ref": "#/components/schemas/users_set_input"
@@ -1893,10 +1887,7 @@
     "schemas": {
       "Query": {
         "type": "object",
-        "required": [
-          "users",
-          "users_aggregate"
-        ],
+        "required": ["users", "users_aggregate"],
         "properties": {
           "capsule": {
             "$ref": "#/components/schemas/Capsule"
@@ -3996,6 +3987,27 @@
           }
         }
       },
+      "users_select_column": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "object"
+          },
+          "rocket": {
+            "type": "object"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "object"
+          }
+        }
+      },
       "users_order_by": {
         "type": "object",
         "required": [],
@@ -4190,10 +4202,7 @@
       },
       "users": {
         "type": "object",
-        "required": [
-          "id",
-          "timestamp"
-        ],
+        "required": ["id", "timestamp"],
         "properties": {
           "id": {
             "type": "object"
@@ -4214,9 +4223,7 @@
       },
       "users_aggregate": {
         "type": "object",
-        "required": [
-          "nodes"
-        ],
+        "required": ["nodes"],
         "properties": {
           "aggregate": {
             "$ref": "#/components/schemas/users_aggregate_fields"
@@ -4298,10 +4305,7 @@
       },
       "users_mutation_response": {
         "type": "object",
-        "required": [
-          "affected_rows",
-          "returning"
-        ],
+        "required": ["affected_rows", "returning"],
         "properties": {
           "affected_rows": {
             "type": "integer",
@@ -4338,10 +4342,7 @@
       },
       "users_on_conflict": {
         "type": "object",
-        "required": [
-          "constraint",
-          "update_columns"
-        ],
+        "required": ["constraint", "update_columns"],
         "properties": {
           "constraint": {
             "type": "object"
@@ -4377,10 +4378,7 @@
       },
       "Subscription": {
         "type": "object",
-        "required": [
-          "users",
-          "users_aggregate"
-        ],
+        "required": ["users", "users_aggregate"],
         "properties": {
           "users": {
             "type": "array",
@@ -4462,9 +4460,7 @@
       },
       "users_arr_rel_insert_input": {
         "type": "object",
-        "required": [
-          "data"
-        ],
+        "required": ["data"],
         "properties": {
           "data": {
             "type": "array",
@@ -4479,9 +4475,7 @@
       },
       "users_obj_rel_insert_input": {
         "type": "object",
-        "required": [
-          "data"
-        ],
+        "required": ["data"],
         "properties": {
           "data": {
             "type": "object"
