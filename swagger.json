@@ -3,17 +3,45 @@
   "info": {
     "title": "SpaceX REST API"
   },
-  "tags": [
-    {
-      "name": "Endpoints"
-    }
-  ],
   "paths": {
+    "/rest/capsule/{id}": {
+      "get": {
+        "operationId": "capsuleQuery",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Capsule"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/rest/capsules": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "capsulesQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CapsulesFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -67,9 +95,16 @@
     },
     "/rest/capsules-past": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "capsulesPastQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CapsulesFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -123,9 +158,16 @@
     },
     "/rest/capsules-upcoming": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "capsulesUpcomingQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CapsulesFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -177,36 +219,8 @@
         }
       }
     },
-    "/rest/capsule/{id}": {
-      "get": {
-        "tags": ["Endpoints"],
-        "operationId": "capsuleQuery",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/ID"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Capsule"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/rest/company": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "companyQuery",
         "parameters": [],
         "responses": {
@@ -222,11 +236,44 @@
         }
       }
     },
+    "/rest/core/{id}": {
+      "get": {
+        "operationId": "coreQuery",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Core"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/rest/cores": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "coresQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CoresFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -280,9 +327,16 @@
     },
     "/rest/cores-past": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "coresPastQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CoresFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -336,9 +390,16 @@
     },
     "/rest/cores-upcoming": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "coresUpcomingQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/CoresFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -390,10 +451,9 @@
         }
       }
     },
-    "/rest/core/{id}": {
+    "/rest/dragon/{id}": {
       "get": {
-        "tags": ["Endpoints"],
-        "operationId": "coreQuery",
+        "operationId": "dragonQuery",
         "parameters": [
           {
             "in": "path",
@@ -409,7 +469,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Core"
+                  "$ref": "#/components/schemas/Dragon"
                 }
               }
             }
@@ -419,7 +479,6 @@
     },
     "/rest/dragons": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "dragonsQuery",
         "parameters": [
           {
@@ -457,38 +516,18 @@
         }
       }
     },
-    "/rest/dragon/{id}": {
-      "get": {
-        "tags": ["Endpoints"],
-        "operationId": "dragonQuery",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/ID"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dragon"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/rest/histories": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "historiesQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/HistoryFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -540,9 +579,68 @@
         }
       }
     },
+    "/rest/histories-result": {
+      "get": {
+        "operationId": "historiesResultQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/HistoryFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoriesResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/rest/history/{id}": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "historyQuery",
         "parameters": [
           {
@@ -567,9 +665,34 @@
         }
       }
     },
+    "/rest/landpad/{id}": {
+      "get": {
+        "operationId": "landpadQuery",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Landpad"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/rest/landpads": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "landpadsQuery",
         "parameters": [
           {
@@ -607,10 +730,9 @@
         }
       }
     },
-    "/rest/landpad/{id}": {
+    "/rest/launch/{id}": {
       "get": {
-        "tags": ["Endpoints"],
-        "operationId": "landpadQuery",
+        "operationId": "launchQuery",
         "parameters": [
           {
             "in": "path",
@@ -626,7 +748,61 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Landpad"
+                  "$ref": "#/components/schemas/Launch"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/launch-latest": {
+      "get": {
+        "operationId": "launchLatestQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Launch"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/launch-next": {
+      "get": {
+        "operationId": "launchNextQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Launch"
                 }
               }
             }
@@ -636,9 +812,16 @@
     },
     "/rest/launches": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "launchesQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LaunchFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -692,9 +875,16 @@
     },
     "/rest/launches-past": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "launchesPastQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LaunchFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -739,6 +929,66 @@
                   "items": {
                     "$ref": "#/components/schemas/Launch"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/launches-past-result": {
+      "get": {
+        "operationId": "launchesPastResultQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LaunchFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LaunchesPastResult"
                 }
               }
             }
@@ -748,9 +998,16 @@
     },
     "/rest/launches-upcoming": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "launchesUpcomingQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LaunchFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -802,10 +1059,9 @@
         }
       }
     },
-    "/rest/launch/{id}": {
+    "/rest/launchpad/{id}": {
       "get": {
-        "tags": ["Endpoints"],
-        "operationId": "launchQuery",
+        "operationId": "launchpadQuery",
         "parameters": [
           {
             "in": "path",
@@ -821,63 +1077,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Launch"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/rest/launch-latest": {
-      "get": {
-        "tags": ["Endpoints"],
-        "operationId": "launchLatestQuery",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "offset",
-            "required": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Launch"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/rest/launch-next": {
-      "get": {
-        "tags": ["Endpoints"],
-        "operationId": "launchNextQuery",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "offset",
-            "required": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Launch"
+                  "$ref": "#/components/schemas/Launchpad"
                 }
               }
             }
@@ -887,7 +1087,6 @@
     },
     "/rest/launchpads": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "launchpadsQuery",
         "parameters": [
           {
@@ -925,10 +1124,9 @@
         }
       }
     },
-    "/rest/launchpad/{id}": {
+    "/rest/mission/{id}": {
       "get": {
-        "tags": ["Endpoints"],
-        "operationId": "launchpadQuery",
+        "operationId": "missionQuery",
         "parameters": [
           {
             "in": "path",
@@ -944,7 +1142,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Launchpad"
+                  "$ref": "#/components/schemas/Mission"
                 }
               }
             }
@@ -954,9 +1152,16 @@
     },
     "/rest/missions": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "missionsQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/MissionsFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -992,10 +1197,53 @@
         }
       }
     },
-    "/rest/mission/{id}": {
+    "/rest/missions-result": {
       "get": {
-        "tags": ["Endpoints"],
-        "operationId": "missionQuery",
+        "operationId": "missionsResultQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/MissionsFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MissionResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/payload/{id}": {
+      "get": {
+        "operationId": "payloadQuery",
         "parameters": [
           {
             "in": "path",
@@ -1011,7 +1259,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mission"
+                  "$ref": "#/components/schemas/Payload"
                 }
               }
             }
@@ -1021,9 +1269,16 @@
     },
     "/rest/payloads": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "payloadsQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/PayloadsFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -1075,36 +1330,8 @@
         }
       }
     },
-    "/rest/payload/{id}": {
-      "get": {
-        "tags": ["Endpoints"],
-        "operationId": "payloadQuery",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/ID"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Payload"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/rest/roadster": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "roadsterQuery",
         "parameters": [],
         "responses": {
@@ -1120,9 +1347,34 @@
         }
       }
     },
+    "/rest/rocket/{id}": {
+      "get": {
+        "operationId": "rocketQuery",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rocket"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/rest/rockets": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "rocketsQuery",
         "parameters": [
           {
@@ -1160,10 +1412,45 @@
         }
       }
     },
-    "/rest/rocket/{id}": {
+    "/rest/rockets-result": {
       "get": {
-        "tags": ["Endpoints"],
-        "operationId": "rocketQuery",
+        "operationId": "rocketsResultQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RocketsResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/ship/{id}": {
+      "get": {
+        "operationId": "shipQuery",
         "parameters": [
           {
             "in": "path",
@@ -1179,7 +1466,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rocket"
+                  "$ref": "#/components/schemas/Ship"
                 }
               }
             }
@@ -1189,9 +1476,16 @@
     },
     "/rest/ships": {
       "get": {
-        "tags": ["Endpoints"],
         "operationId": "shipsQuery",
         "parameters": [
+          {
+            "in": "query",
+            "name": "find",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/ShipsFind"
+            }
+          },
           {
             "in": "query",
             "name": "limit",
@@ -1243,17 +1537,50 @@
         }
       }
     },
-    "/rest/ship/{id}": {
+    "/rest/ships-result": {
       "get": {
-        "tags": ["Endpoints"],
-        "operationId": "shipQuery",
+        "operationId": "shipsResultQuery",
         "parameters": [
           {
-            "in": "path",
-            "name": "id",
-            "required": true,
+            "in": "query",
+            "name": "find",
+            "required": false,
             "schema": {
-              "$ref": "#/components/schemas/ID"
+              "$ref": "#/components/schemas/ShipsFind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -1262,7 +1589,292 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ship"
+                  "$ref": "#/components/schemas/ShipsResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/users": {
+      "get": {
+        "operationId": "usersQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "distinctOn",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/users_select_column"
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order_by",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/users_order_by"
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/users_bool_exp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/users"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/users-aggregate": {
+      "get": {
+        "operationId": "usersAggregateQuery",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "distinctOn",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/users_select_column"
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "order_by",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/users_order_by"
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/users_bool_exp"
+            }
+          },
+          {
+            "in": "query",
+            "name": "usersAggregateAggregateAggregateCountColumns",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/users_select_column"
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "usersAggregateAggregateAggregateCountDistinct",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/users_aggregate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/users-by-pk/{id}": {
+      "get": {
+        "operationId": "usersByPkQuery",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/users"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/delete-users": {
+      "post": {
+        "operationId": "deleteUsersMutation",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["where"],
+                "properties": {
+                  "where": {
+                    "$ref": "#/components/schemas/users_bool_exp"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/users_mutation_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/insert-users": {
+      "post": {
+        "operationId": "insertUsersMutation",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["objects"],
+                "properties": {
+                  "objects": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/users_insert_input"
+                    }
+                  },
+                  "on_conflict": {
+                    "$ref": "#/components/schemas/users_on_conflict"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/users_mutation_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/update-users": {
+      "post": {
+        "operationId": "updateUsersMutation",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["where"],
+                "properties": {
+                  "_set": {
+                    "$ref": "#/components/schemas/users_set_input"
+                  },
+                  "where": {
+                    "$ref": "#/components/schemas/users_bool_exp"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/users_mutation_response"
                 }
               }
             }
@@ -1275,8 +1887,11 @@
     "schemas": {
       "Query": {
         "type": "object",
-        "required": [],
+        "required": ["users", "users_aggregate"],
         "properties": {
+          "capsule": {
+            "$ref": "#/components/schemas/Capsule"
+          },
           "capsules": {
             "type": "array",
             "items": {
@@ -1295,11 +1910,11 @@
               "$ref": "#/components/schemas/Capsule"
             }
           },
-          "capsule": {
-            "$ref": "#/components/schemas/Capsule"
-          },
           "company": {
             "$ref": "#/components/schemas/Info"
+          },
+          "core": {
+            "$ref": "#/components/schemas/Core"
           },
           "cores": {
             "type": "array",
@@ -1319,8 +1934,8 @@
               "$ref": "#/components/schemas/Core"
             }
           },
-          "core": {
-            "$ref": "#/components/schemas/Core"
+          "dragon": {
+            "$ref": "#/components/schemas/Dragon"
           },
           "dragons": {
             "type": "array",
@@ -1328,17 +1943,20 @@
               "$ref": "#/components/schemas/Dragon"
             }
           },
-          "dragon": {
-            "$ref": "#/components/schemas/Dragon"
-          },
           "histories": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/History"
             }
           },
+          "historiesResult": {
+            "$ref": "#/components/schemas/HistoriesResult"
+          },
           "history": {
             "$ref": "#/components/schemas/History"
+          },
+          "landpad": {
+            "$ref": "#/components/schemas/Landpad"
           },
           "landpads": {
             "type": "array",
@@ -1346,8 +1964,14 @@
               "$ref": "#/components/schemas/Landpad"
             }
           },
-          "landpad": {
-            "$ref": "#/components/schemas/Landpad"
+          "launch": {
+            "$ref": "#/components/schemas/Launch"
+          },
+          "launchLatest": {
+            "$ref": "#/components/schemas/Launch"
+          },
+          "launchNext": {
+            "$ref": "#/components/schemas/Launch"
           },
           "launches": {
             "type": "array",
@@ -1361,20 +1985,17 @@
               "$ref": "#/components/schemas/Launch"
             }
           },
+          "launchesPastResult": {
+            "$ref": "#/components/schemas/LaunchesPastResult"
+          },
           "launchesUpcoming": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Launch"
             }
           },
-          "launch": {
-            "$ref": "#/components/schemas/Launch"
-          },
-          "launchLatest": {
-            "$ref": "#/components/schemas/Launch"
-          },
-          "launchNext": {
-            "$ref": "#/components/schemas/Launch"
+          "launchpad": {
+            "$ref": "#/components/schemas/Launchpad"
           },
           "launchpads": {
             "type": "array",
@@ -1382,8 +2003,8 @@
               "$ref": "#/components/schemas/Launchpad"
             }
           },
-          "launchpad": {
-            "$ref": "#/components/schemas/Launchpad"
+          "mission": {
+            "$ref": "#/components/schemas/Mission"
           },
           "missions": {
             "type": "array",
@@ -1391,8 +2012,11 @@
               "$ref": "#/components/schemas/Mission"
             }
           },
-          "mission": {
-            "$ref": "#/components/schemas/Mission"
+          "missionsResult": {
+            "$ref": "#/components/schemas/MissionResult"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/Payload"
           },
           "payloads": {
             "type": "array",
@@ -1400,11 +2024,11 @@
               "$ref": "#/components/schemas/Payload"
             }
           },
-          "payload": {
-            "$ref": "#/components/schemas/Payload"
-          },
           "roadster": {
             "$ref": "#/components/schemas/Roadster"
+          },
+          "rocket": {
+            "$ref": "#/components/schemas/Rocket"
           },
           "rockets": {
             "type": "array",
@@ -1412,8 +2036,11 @@
               "$ref": "#/components/schemas/Rocket"
             }
           },
-          "rocket": {
-            "$ref": "#/components/schemas/Rocket"
+          "rocketsResult": {
+            "$ref": "#/components/schemas/RocketsResult"
+          },
+          "ship": {
+            "$ref": "#/components/schemas/Ship"
           },
           "ships": {
             "type": "array",
@@ -1421,8 +2048,20 @@
               "$ref": "#/components/schemas/Ship"
             }
           },
-          "ship": {
-            "$ref": "#/components/schemas/Ship"
+          "shipsResult": {
+            "$ref": "#/components/schemas/ShipsResult"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/users"
+            }
+          },
+          "users_aggregate": {
+            "$ref": "#/components/schemas/users_aggregate"
+          },
+          "users_by_pk": {
+            "$ref": "#/components/schemas/users"
           }
         }
       },
@@ -1456,7 +2095,7 @@
           "type": {
             "type": "string"
           },
-          "capsule": {
+          "dragon": {
             "$ref": "#/components/schemas/Dragon"
           }
         }
@@ -1690,6 +2329,35 @@
           }
         }
       },
+      "CapsulesFind": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mission": {
+            "type": "string"
+          },
+          "original_launch": {
+            "type": "object"
+          },
+          "reuse_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "Info": {
         "type": "object",
         "required": [],
@@ -1825,6 +2493,70 @@
           },
           "water_landing": {
             "type": "boolean"
+          }
+        }
+      },
+      "CoresFind": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "asds_attempts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asds_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "block": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "missions": {
+            "type": "string"
+          },
+          "original_launch": {
+            "type": "object"
+          },
+          "reuse_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rtls_attempts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rtls_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string"
+          },
+          "water_landing": {
+            "type": "boolean"
+          }
+        }
+      },
+      "HistoryFind": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "end": {
+            "type": "object"
+          },
+          "flight_number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "object"
+          },
+          "start": {
+            "type": "object"
           }
         }
       },
@@ -2564,6 +3296,31 @@
           }
         }
       },
+      "HistoriesResult": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "result": {
+            "$ref": "#/components/schemas/Result"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/History"
+            }
+          }
+        }
+      },
+      "Result": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
       "Landpad": {
         "type": "object",
         "required": [],
@@ -2614,6 +3371,220 @@
           },
           "region": {
             "type": "string"
+          }
+        }
+      },
+      "LaunchFind": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "apoapsis_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "block": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cap_serial": {
+            "type": "string"
+          },
+          "capsule_reuse": {
+            "type": "string"
+          },
+          "core_flight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "core_reuse": {
+            "type": "string"
+          },
+          "core_serial": {
+            "type": "string"
+          },
+          "customer": {
+            "type": "string"
+          },
+          "eccentricity": {
+            "type": "number",
+            "format": "float"
+          },
+          "end": {
+            "type": "object"
+          },
+          "epoch": {
+            "type": "object"
+          },
+          "fairings_recovered": {
+            "type": "string"
+          },
+          "fairings_recovery_attempt": {
+            "type": "string"
+          },
+          "fairings_reuse": {
+            "type": "string"
+          },
+          "fairings_reused": {
+            "type": "string"
+          },
+          "fairings_ship": {
+            "type": "string"
+          },
+          "gridfins": {
+            "type": "string"
+          },
+          "id": {
+            "type": "object"
+          },
+          "inclination_deg": {
+            "type": "number",
+            "format": "float"
+          },
+          "land_success": {
+            "type": "string"
+          },
+          "landing_intent": {
+            "type": "string"
+          },
+          "landing_type": {
+            "type": "string"
+          },
+          "landing_vehicle": {
+            "type": "string"
+          },
+          "launch_date_local": {
+            "type": "object"
+          },
+          "launch_date_utc": {
+            "type": "object"
+          },
+          "launch_success": {
+            "type": "string"
+          },
+          "launch_year": {
+            "type": "string"
+          },
+          "legs": {
+            "type": "string"
+          },
+          "lifespan_years": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "mean_motion": {
+            "type": "number",
+            "format": "float"
+          },
+          "mission_id": {
+            "type": "string"
+          },
+          "mission_name": {
+            "type": "string"
+          },
+          "nationality": {
+            "type": "string"
+          },
+          "norad_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orbit": {
+            "type": "string"
+          },
+          "payload_id": {
+            "type": "string"
+          },
+          "payload_type": {
+            "type": "string"
+          },
+          "periapsis_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "period_min": {
+            "type": "number",
+            "format": "float"
+          },
+          "raan": {
+            "type": "number",
+            "format": "float"
+          },
+          "reference_system": {
+            "type": "string"
+          },
+          "regime": {
+            "type": "string"
+          },
+          "reused": {
+            "type": "string"
+          },
+          "rocket_id": {
+            "type": "string"
+          },
+          "rocket_name": {
+            "type": "string"
+          },
+          "rocket_type": {
+            "type": "string"
+          },
+          "second_stage_block": {
+            "type": "string"
+          },
+          "semi_major_axis_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "ship": {
+            "type": "string"
+          },
+          "side_core1_reuse": {
+            "type": "string"
+          },
+          "side_core2_reuse": {
+            "type": "string"
+          },
+          "site_id": {
+            "type": "string"
+          },
+          "site_name_long": {
+            "type": "string"
+          },
+          "site_name": {
+            "type": "string"
+          },
+          "start": {
+            "type": "object"
+          },
+          "tbd": {
+            "type": "string"
+          },
+          "tentative_max_precision": {
+            "type": "string"
+          },
+          "tentative": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchesPastResult": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "result": {
+            "$ref": "#/components/schemas/Result"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Launch"
+            }
           }
         }
       },
@@ -2688,6 +3659,119 @@
             "items": {
               "$ref": "#/components/schemas/Payload"
             }
+          }
+        }
+      },
+      "MissionsFind": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "payload_id": {
+            "type": "string"
+          }
+        }
+      },
+      "MissionResult": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "result": {
+            "$ref": "#/components/schemas/Result"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Mission"
+            }
+          }
+        }
+      },
+      "PayloadsFind": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "apoapsis_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "customer": {
+            "type": "string"
+          },
+          "eccentricity": {
+            "type": "number",
+            "format": "float"
+          },
+          "epoch": {
+            "type": "object"
+          },
+          "inclination_deg": {
+            "type": "number",
+            "format": "float"
+          },
+          "lifespan_years": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "mean_motion": {
+            "type": "number",
+            "format": "float"
+          },
+          "nationality": {
+            "type": "string"
+          },
+          "norad_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orbit": {
+            "type": "string"
+          },
+          "payload_id": {
+            "type": "object"
+          },
+          "payload_type": {
+            "type": "string"
+          },
+          "periapsis_km": {
+            "type": "number",
+            "format": "float"
+          },
+          "period_min": {
+            "type": "number",
+            "format": "float"
+          },
+          "raan": {
+            "type": "number",
+            "format": "float"
+          },
+          "reference_system": {
+            "type": "string"
+          },
+          "regime": {
+            "type": "string"
+          },
+          "reused": {
+            "type": "boolean"
+          },
+          "semi_major_axis_km": {
+            "type": "number",
+            "format": "float"
           }
         }
       },
@@ -2788,6 +3872,528 @@
           }
         }
       },
+      "RocketsResult": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "result": {
+            "$ref": "#/components/schemas/Result"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rocket"
+            }
+          }
+        }
+      },
+      "ShipsFind": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "imo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mmsi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "abs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "class": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight_lbs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight_kg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year_built": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "home_port": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "speed_kn": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "course_deg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "latitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "float"
+          },
+          "successful_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attempted_landings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mission": {
+            "type": "string"
+          }
+        }
+      },
+      "ShipsResult": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "result": {
+            "$ref": "#/components/schemas/Result"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ship"
+            }
+          }
+        }
+      },
+      "users_select_column": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "object"
+          },
+          "rocket": {
+            "type": "object"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "object"
+          }
+        }
+      },
+      "users_order_by": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "object"
+          },
+          "rocket": {
+            "type": "object"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "object"
+          }
+        }
+      },
+      "users_bool_exp": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_and": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "_not": {
+            "type": "object"
+          },
+          "_or": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "object"
+          },
+          "rocket": {
+            "type": "object"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "object"
+          }
+        }
+      },
+      "uuid_comparison_exp": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_eq": {
+            "type": "object"
+          },
+          "_gt": {
+            "type": "object"
+          },
+          "_gte": {
+            "type": "object"
+          },
+          "_in": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "_is_null": {
+            "type": "boolean"
+          },
+          "_lt": {
+            "type": "object"
+          },
+          "_lte": {
+            "type": "object"
+          },
+          "_neq": {
+            "type": "object"
+          },
+          "_nin": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "String_comparison_exp": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_eq": {
+            "type": "string"
+          },
+          "_gt": {
+            "type": "string"
+          },
+          "_gte": {
+            "type": "string"
+          },
+          "_ilike": {
+            "type": "string"
+          },
+          "_in": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "_is_null": {
+            "type": "boolean"
+          },
+          "_like": {
+            "type": "string"
+          },
+          "_lt": {
+            "type": "string"
+          },
+          "_lte": {
+            "type": "string"
+          },
+          "_neq": {
+            "type": "string"
+          },
+          "_nilike": {
+            "type": "string"
+          },
+          "_nin": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "_nlike": {
+            "type": "string"
+          },
+          "_nsimilar": {
+            "type": "string"
+          },
+          "_similar": {
+            "type": "string"
+          }
+        }
+      },
+      "timestamptz_comparison_exp": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "_eq": {
+            "type": "object"
+          },
+          "_gt": {
+            "type": "object"
+          },
+          "_gte": {
+            "type": "object"
+          },
+          "_in": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "_is_null": {
+            "type": "boolean"
+          },
+          "_lt": {
+            "type": "object"
+          },
+          "_lte": {
+            "type": "object"
+          },
+          "_neq": {
+            "type": "object"
+          },
+          "_nin": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "users": {
+        "type": "object",
+        "required": ["id", "timestamp"],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rocket": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "string"
+          }
+        }
+      },
+      "users_aggregate": {
+        "type": "object",
+        "required": ["nodes"],
+        "properties": {
+          "aggregate": {
+            "$ref": "#/components/schemas/users_aggregate_fields"
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/users"
+            }
+          }
+        }
+      },
+      "users_aggregate_fields": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "max": {
+            "$ref": "#/components/schemas/users_max_fields"
+          },
+          "min": {
+            "$ref": "#/components/schemas/users_min_fields"
+          }
+        }
+      },
+      "users_max_fields": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "rocket": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "string"
+          }
+        }
+      },
+      "users_min_fields": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "rocket": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "string"
+          }
+        }
+      },
+      "Mutation": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "delete_users": {
+            "$ref": "#/components/schemas/users_mutation_response"
+          },
+          "insert_users": {
+            "$ref": "#/components/schemas/users_mutation_response"
+          },
+          "update_users": {
+            "$ref": "#/components/schemas/users_mutation_response"
+          }
+        }
+      },
+      "users_mutation_response": {
+        "type": "object",
+        "required": ["affected_rows", "returning"],
+        "properties": {
+          "affected_rows": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "returning": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/users"
+            }
+          }
+        }
+      },
+      "users_insert_input": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rocket": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "string"
+          }
+        }
+      },
+      "users_on_conflict": {
+        "type": "object",
+        "required": ["constraint", "update_columns"],
+        "properties": {
+          "constraint": {
+            "type": "object"
+          },
+          "update_columns": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "users_set_input": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rocket": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "string"
+          }
+        }
+      },
+      "Subscription": {
+        "type": "object",
+        "required": ["users", "users_aggregate"],
+        "properties": {
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/users"
+            }
+          },
+          "users_aggregate": {
+            "$ref": "#/components/schemas/users_aggregate"
+          },
+          "users_by_pk": {
+            "$ref": "#/components/schemas/users"
+          }
+        }
+      },
       "CoreMission": {
         "type": "object",
         "required": [],
@@ -2798,6 +4404,84 @@
           "flight": {
             "type": "integer",
             "format": "int32"
+          }
+        }
+      },
+      "users_aggregate_order_by": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "count": {
+            "type": "object"
+          },
+          "max": {
+            "type": "object"
+          },
+          "min": {
+            "type": "object"
+          }
+        }
+      },
+      "users_max_order_by": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "object"
+          },
+          "rocket": {
+            "type": "object"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "object"
+          }
+        }
+      },
+      "users_min_order_by": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "name": {
+            "type": "object"
+          },
+          "rocket": {
+            "type": "object"
+          },
+          "timestamp": {
+            "type": "object"
+          },
+          "twitter": {
+            "type": "object"
+          }
+        }
+      },
+      "users_arr_rel_insert_input": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "on_conflict": {
+            "type": "object"
+          }
+        }
+      },
+      "users_obj_rel_insert_input": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "object"
+          },
+          "on_conflict": {
+            "type": "object"
           }
         }
       }
