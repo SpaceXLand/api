@@ -43,7 +43,7 @@
     "graphql-rate-limit": "^1.2.2",
     "graphql-tag": "^2.10.0",
     "graphql-tools": "^4.0.5",
-    "graphql-validation-complexity": "^0.2.4",
+    "graphql-validation-complexity": "^0.3.0",
     "lodash": "^4.17.11",
     "lower-case": "^1.1.4",
     "moment": "^2.23.0",
