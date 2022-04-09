@@ -46,7 +46,7 @@
     "graphql-validation-complexity": "^0.3.0",
     "lodash": "^4.17.19",
     "lower-case": "^1.1.4",
-    "moment": "^2.23.0",
+    "moment": "^2.29.2",
     "mongodb": "^3.1.10",
     "node-fetch": "^2.6.0",
     "sofa-api": "0.7.0",
