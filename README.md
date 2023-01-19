@@ -1,5 +1,7 @@
 <h1 align="center">SpaceX Land API</h1>
 
+<h3 align="center">⚠️ Not maintained</h1>
+</br>
 <p align="center">
 <a href="https://github.com/spacexland/api/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 <a href="https://github.com/spacexland/api/blob/master/CONTRIBUTING.md#feature"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>  
