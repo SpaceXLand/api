@@ -44,7 +44,7 @@
     "graphql-tag": "^2.10.0",
     "graphql-tools": "^4.0.5",
     "graphql-validation-complexity": "^0.3.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "lower-case": "^1.1.4",
     "moment": "^2.23.0",
     "mongodb": "^3.1.10",
